@@ -30,3 +30,5 @@ const pairElement = (arg) =>
 
   return arg.split("").map(char => [char, pairs[char]])
 }
+
+console.log(pairElement("ATCGA"));

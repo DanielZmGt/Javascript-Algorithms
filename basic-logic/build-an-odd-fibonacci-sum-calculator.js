@@ -13,3 +13,5 @@ const sumFibs = (num) => {
   }
   return sum
 }
+
+console.log(sumFibs(4));
