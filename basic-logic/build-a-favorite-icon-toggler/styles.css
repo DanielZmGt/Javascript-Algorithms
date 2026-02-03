@@ -1,0 +1,22 @@
+body {
+  background-color: grey
+}
+
+h1, 
+.thorn-things {
+color: orange;
+  background-color: #12345a;
+}
+
+li {
+  color: white;
+  background-color: brown
+
+}
+
+
+.filled {
+  color: #000000;
+  background-color: white
+
+}
