@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS - Minimalist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="scores">
+                <div class="score-box">
+                    <span class="label">PLAYER</span>
+                    <span id="player-score" class="value">0</span>
+                </div>
+                <div class="score-box">
+                    <span class="label">COMPUTER</span>
+                    <span id="computer-score" class="value">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <p id="results-msg" class="message">Choose your move</p>
+            
+            <div class="options-container">
+                <button id="rock-btn" class="btn">Rock</button>
+                <button id="paper-btn" class="btn">Paper</button>
+                <button id="scissors-btn" class="btn">Scissors</button>
+            </div>
+
+            <div class="end-game">
+                <p id="winner-msg"></p>
+                <button id="reset-game-btn" class="btn primary">Play Again</button>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

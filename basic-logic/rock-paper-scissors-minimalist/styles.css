@@ -1,0 +1,97 @@
+:root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --border: #e0e0e0;
+    --accent: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.scores {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.score-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.value {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.message {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    min-height: 1.5em;
+    font-weight: 400;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btn {
+    background: none;
+    border: 1px solid var(--border);
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    color: var(--text);
+}
+
+.btn:hover {
+    border-color: var(--accent);
+    background-color: #f9f9f9;
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: white;
+    margin-top: 2rem;
+}
+
+.end-game {
+    display: none;
+    margin-top: 2rem;
+}
+
+#winner-msg {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
