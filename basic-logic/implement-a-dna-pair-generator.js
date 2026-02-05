@@ -15,7 +15,7 @@ for (let i = 0; i < argArray.length; i++) {
   return result;
 };
 
-console.log(pairElement("ATCGA"));
+console.log(pairElement("ATCGA")); 
 // Output: [["A","T"], ["T","A"], ["C",
 */
 
@@ -30,5 +30,3 @@ const pairElement = (arg) =>
 
   return arg.split("").map(char => [char, pairs[char]])
 }
-
-console.log(pairElement("ATCGA"));

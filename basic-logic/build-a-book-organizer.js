@@ -1,5 +1,3 @@
-
-
 const books = [
   {
     title: "Eragon",
@@ -77,4 +75,3 @@ console.log(sortByYear(books[4], books[5]))
 const filteredBooks = books.filter(book => book.releaseYear <= 2007)
 filteredBooks.sort(sortByYear);
 console.log(filteredBooks)
-

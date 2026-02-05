@@ -1,17 +1,11 @@
-const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";       
-
-function generatePassword(length) {
-    let result = "";
-
-    for (let i = 0; i < length; i++) {
-
-       const randomIndex = Math.floor(Math.random() * charset.length);
-                result += charset[randomIndex];
-    }
-
-    return result;
+const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()"
+const generatePassword = (long) => {
+  let result = ""
+  for (let i = 0; i < long; i++) {
+const randomCharIndex = Math.floor(Math.random() * characters.length)
+result += characters[randomCharIndex]
 }
-
-const password = generatePassword(12);
-
-console.log("Generated password: " + password);
+return result
+}
+const password = generatePassword(12)
+console.log(`Generated password: ${password}`)
