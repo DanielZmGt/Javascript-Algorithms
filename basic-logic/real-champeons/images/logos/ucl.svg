@@ -1,0 +1,12 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="250" cy="250" r="240" fill="#001A4F"/>
+    <!-- Simplified Starball pattern -->
+    <g fill="white">
+        <path d="M250 50 L280 150 L380 150 L300 220 L330 320 L250 260 L170 320 L200 220 L120 150 L220 150 Z" transform="translate(0,-20) scale(0.8) transform-origin(250 250)"/>
+        <path d="M250 50 L280 150 L380 150 L300 220 L330 320 L250 260 L170 320 L200 220 L120 150 L220 150 Z" transform="rotate(72 250 250) translate(0,-20) scale(0.8) transform-origin(250 250)"/>
+        <path d="M250 50 L280 150 L380 150 L300 220 L330 320 L250 260 L170 320 L200 220 L120 150 L220 150 Z" transform="rotate(144 250 250) translate(0,-20) scale(0.8) transform-origin(250 250)"/>
+        <path d="M250 50 L280 150 L380 150 L300 220 L330 320 L250 260 L170 320 L200 220 L120 150 L220 150 Z" transform="rotate(216 250 250) translate(0,-20) scale(0.8) transform-origin(250 250)"/>
+        <path d="M250 50 L280 150 L380 150 L300 220 L330 320 L250 260 L170 320 L200 220 L120 150 L220 150 Z" transform="rotate(288 250 250) translate(0,-20) scale(0.8) transform-origin(250 250)"/>
+    </g>
+    <text x="50%" y="90%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="40" fill="white" font-weight="bold">CHAMPIONS LEAGUE</text>
+</svg>

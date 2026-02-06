@@ -1,0 +1,29 @@
+{
+  "team": "Real Madrid",
+  "year": 2024,
+  "headCoach": "Carlo Ancelotti",
+  "players": [
+    { "name": "Thibaut Courtois", "number": 1, "position": "goalkeeper", "isCaptain": false, "goalsScored": 0 },
+    { "name": "Andriy Lunin", "number": 13, "position": "goalkeeper", "isCaptain": false, "goalsScored": 0 },
+    { "name": "Dani Carvajal", "number": 2, "position": "defender", "isCaptain": false, "goalsScored": 1 },
+    { "name": "Antonio Rüdiger", "number": 22, "position": "defender", "isCaptain": false, "goalsScored": 0 },
+    { "name": "Nacho Fernández", "number": 6, "position": "defender", "isCaptain": true, "goalsScored": 0 },
+    { "name": "Ferland Mendy", "number": 23, "position": "defender", "isCaptain": false, "goalsScored": 0 },
+    { "name": "Éder Militão", "number": 3, "position": "defender", "isCaptain": false, "goalsScored": 0 },
+    { "name": "David Alaba", "number": 4, "position": "defender", "isCaptain": false, "goalsScored": 0 },
+    { "name": "Fran García", "number": 20, "position": "defender", "isCaptain": false, "goalsScored": 0 },
+    { "name": "Jude Bellingham", "number": 5, "position": "midfielder", "isCaptain": false, "goalsScored": 4 },
+    { "name": "Toni Kroos", "number": 8, "position": "midfielder", "isCaptain": false, "goalsScored": 0 },
+    { "name": "Federico Valverde", "number": 15, "position": "midfielder", "isCaptain": false, "goalsScored": 1 },
+    { "name": "Eduardo Camavinga", "number": 12, "position": "midfielder", "isCaptain": false, "goalsScored": 0 },
+    { "name": "Aurélien Tchouaméni", "number": 18, "position": "midfielder", "isCaptain": false, "goalsScored": 0 },
+    { "name": "Luka Modrić", "number": 10, "position": "midfielder", "isCaptain": false, "goalsScored": 0 },
+    { "name": "Dani Ceballos", "number": 19, "position": "midfielder", "isCaptain": false, "goalsScored": 1 },
+    { "name": "Arda Güler", "number": 24, "position": "midfielder", "isCaptain": false, "goalsScored": 0 },
+    { "name": "Vinícius Júnior", "number": 7, "position": "forward", "isCaptain": false, "goalsScored": 6 },
+    { "name": "Rodrygo Goes", "number": 11, "position": "forward", "isCaptain": false, "goalsScored": 5 },
+    { "name": "Joselu Mato", "number": 14, "position": "forward", "isCaptain": false, "goalsScored": 5 },
+    { "name": "Brahim Díaz", "number": 21, "position": "forward", "isCaptain": false, "goalsScored": 2 },
+    { "name": "Lucas Vázquez", "number": 17, "position": "forward", "isCaptain": false, "goalsScored": 0 }
+  ]
+}
