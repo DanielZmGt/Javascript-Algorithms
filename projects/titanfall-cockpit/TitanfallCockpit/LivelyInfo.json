@@ -1,0 +1,10 @@
+{
+  "App": "Lively",
+  "Title": "Titanfall Cockpit HUD",
+  "Desc": "A dynamic Titanfall-inspired cockpit HUD.",
+  "Author": "Gemini Agent",
+  "License": "MIT",
+  "Type": 0,
+  "IsDefault": false,
+  "FileName": "index.html"
+}

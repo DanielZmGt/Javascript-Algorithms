@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titanfall Cockpit HUD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="boot-screen" class="active">
+        <div class="boot-text">
+            <p>> NEURAL LINK INITIALIZING...</p>
+            <p>> ESTABLISHING TITAN CONNECTION...</p>
+            <p>> DATA LINK: STABLE</p>
+            <p>> PILOT AUTHENTICATED: COOPER, J.</p>
+            <div class="loading-bar"><div class="progress"></div></div>
+        </div>
+    </div>
+
+    <div id="cockpit-container">
+        <!-- Physical Cockpit Frame -->
+        <div class="cockpit-frame top"></div>
+        <div class="cockpit-frame left-pillar"></div>
+        <div class="cockpit-frame right-pillar"></div>
+        <div class="cockpit-frame bottom-console">
+            <div class="joystick-base"></div>
+            <div class="toggle-switches">
+                <div class="switch"></div><div class="switch"></div><div class="switch"></div>
+            </div>
+        </div>
+
+        <!-- Scanline & Vignette Overlay -->
+        <div class="overlay crt"></div>
+        <div class="overlay vignette"></div>
+
+        <!-- Left Panel: Vitals -->
+        <div class="hud-panel left">
+            <div class="glitch-box" data-text="TITAN STATUS">TITAN STATUS</div>
+            <div class="stat-row">
+                <span class="label">HULL</span>
+                <div class="bar-container"><div class="bar hull" style="width: 85%;"></div></div>
+            </div>
+            <div class="stat-row">
+                <span class="label">SHIELD</span>
+                <div class="bar-container"><div class="bar shield" style="width: 40%;"></div></div>
+            </div>
+            <div class="hexagon-grid"></div>
+        </div>
+
+        <!-- Center HUD: Crosshair & Core -->
+        <div class="hud-panel center">
+            <div class="crosshair">
+                <div class="bracket top-left"></div>
+                <div class="bracket top-right"></div>
+                <div class="bracket bottom-left"></div>
+                <div class="bracket bottom-right"></div>
+                <div class="center-dot"></div>
+            </div>
+            <div class="core-meter">
+                <div class="core-label">CORE READY</div>
+                <div class="core-percent">100%</div>
+                <div class="core-ring"></div>
+            </div>
+        </div>
+
+        <!-- Right Panel: Comms & Clock -->
+        <div class="hud-panel right">
+            <div id="clock">00:00:00</div>
+            <div class="comms-log">
+                <p class="incoming">> BT-7274: Protocol 3: Protect the Pilot.</p>
+                <p class="incoming">> SENSORS: ENEMY CONTACT LIKELY</p>
+            </div>
+            <div class="compass">
+                <div class="compass-tick">N</div>
+                <div class="compass-tick">E</div>
+                <div class="compass-tick">S</div>
+                <div class="compass-tick">W</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

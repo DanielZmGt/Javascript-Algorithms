@@ -1,0 +1,284 @@
+:root {
+    --cyan: #00f2ff;
+    --orange: #ff8c00;
+    --bg-dark: #050a0f;
+    --panel-bg: rgba(0, 30, 50, 0.4);
+    --border-glow: 0 0 10px rgba(0, 242, 255, 0.5);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-dark);
+    background-image: 
+        linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    color: var(--cyan);
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+    user-select: none;
+}
+
+/* Boot Screen */
+#boot-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-out;
+}
+
+#boot-screen.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.boot-text {
+    width: 400px;
+    font-size: 14px;
+}
+
+.loading-bar {
+    width: 100%;
+    height: 4px;
+    background: #111;
+    margin-top: 20px;
+    border: 1px solid var(--cyan);
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background: var(--cyan);
+    box-shadow: var(--border-glow);
+    animation: load 3s forwards ease-in-out;
+}
+
+@keyframes load {
+    0% { width: 0%; }
+    20% { width: 15%; }
+    50% { width: 60%; }
+    100% { width: 100%; }
+}
+
+/* Main Container */
+#cockpit-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    box-sizing: border-box;
+    perspective: 1000px;
+}
+
+/* Overlays */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.crt {
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 4px, 3px 100%;
+}
+
+.vignette {
+    background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.8) 100%);
+}
+
+/* Cockpit Structural Elements */
+.cockpit-frame {
+    position: absolute;
+    background: #0a0e12;
+    box-shadow: inset 0 0 20px rgba(0,0,0,1), 0 0 10px rgba(0, 242, 255, 0.1);
+    z-index: 5;
+    border: 2px solid #1a1f24;
+}
+
+.top {
+    top: -20px; left: 10%; right: 10%; height: 60px;
+    border-radius: 0 0 50px 50px;
+    background: linear-gradient(to bottom, #1a1f24, #0a0e12);
+}
+
+.left-pillar {
+    left: -20px; top: 0; bottom: 0; width: 60px;
+    transform: skewX(5deg);
+    background: linear-gradient(to right, #1a1f24, #0a0e12);
+}
+
+.right-pillar {
+    right: -20px; top: 0; bottom: 0; width: 60px;
+    transform: skewX(-5deg);
+    background: linear-gradient(to left, #1a1f24, #0a0e12);
+}
+
+.bottom-console {
+    bottom: 0; left: 0; right: 0; height: 180px;
+    background: linear-gradient(to top, #05070a, #1a1f24);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 20px;
+    border-top: 4px solid #2a2f34;
+    z-index: 100;
+}
+
+.joystick-base {
+    width: 120px; height: 150px;
+    background: #0f1215;
+    border: 3px solid #333;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.8);
+    position: relative;
+}
+
+.joystick-base::after {
+    content: '';
+    position: absolute;
+    top: 20px; left: 50%; transform: translateX(-50%);
+    width: 40px; height: 80px;
+    background: #1a1f24;
+    border-radius: 10px;
+}
+
+.toggle-switches {
+    display: flex; gap: 20px; margin-left: 50px; margin-bottom: 30px;
+}
+
+.switch {
+    width: 15px; height: 30px;
+    background: #222;
+    border: 1px solid #444;
+    position: relative;
+}
+
+.switch::before {
+    content: '';
+    position: absolute;
+    top: 5px; left: 50%; transform: translateX(-50%);
+    width: 8px; height: 12px;
+    background: var(--orange);
+    box-shadow: 0 0 5px var(--orange);
+}
+
+/* Glass Glare Effect */
+#cockpit-container::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, transparent 40%, rgba(255,255,255,0.01) 60%, transparent 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* HUD Panels */
+.hud-panel {
+    background: var(--panel-bg);
+    border: 1px solid var(--cyan);
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: var(--border-glow);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: transform 0.1s ease-out;
+}
+
+.left { width: 300px; align-self: flex-start; border-left: 5px solid var(--cyan); }
+.right { width: 300px; align-self: flex-end; border-right: 5px solid var(--cyan); text-align: right; }
+.center { 
+    background: none; 
+    border: none; 
+    box-shadow: none; 
+    flex-grow: 1; 
+    justify-content: center; 
+    align-items: center; 
+    backdrop-filter: none;
+}
+
+/* Bars */
+.stat-row .label { font-size: 12px; margin-bottom: 5px; display: block; }
+.bar-container { width: 100%; height: 10px; background: rgba(0,0,0,0.5); border: 1px solid var(--cyan); }
+.bar { height: 100%; transition: width 0.5s ease; }
+.hull { background: var(--orange); }
+.shield { background: var(--cyan); }
+
+/* Crosshair */
+.crosshair {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.bracket {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--cyan);
+}
+
+.top-left { top: 0; left: 0; border-right: 0; border-bottom: 0; }
+.top-right { top: 0; right: 0; border-left: 0; border-bottom: 0; }
+.bottom-left { bottom: 0; left: 0; border-right: 0; border-top: 0; }
+.bottom-right { bottom: 0; right: 0; border-left: 0; border-top: 0; }
+.center-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: var(--orange);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+/* Core Meter */
+.core-meter {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.core-label { font-size: 12px; color: var(--orange); letter-spacing: 2px; }
+.core-percent { font-size: 32px; font-weight: bold; margin-bottom: 10px; }
+.core-ring {
+    width: 60px;
+    height: 60px;
+    border: 4px solid var(--orange);
+    border-top-color: transparent;
+    border-radius: 50%;
+    margin: 0 auto;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* Clock & Comms */
+#clock { font-size: 40px; font-weight: bold; }
+.comms-log { font-size: 11px; color: rgba(0, 242, 255, 0.7); max-width: 250px; }
+
+/* Compass */
+.compass {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid var(--cyan);
+    padding-top: 10px;
+    margin-top: 20px;
+}
