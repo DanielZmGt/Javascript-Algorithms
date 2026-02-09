@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería & Enmarcados del Bajío | ZG Woodworks</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-header">
+                <h1>Galería & Enmarcados del Bajío</h1>
+                <p class="subtitle">ZG WOODWORKS</p>
+                <p class="intro-text">
+                    Welcome to Galería & Enmarcados del Bajío, where we blend traditional craftsmanship with modern design. 
+                    We specialize in custom wood framing, restoration, and unique gallery pieces that elevate your cherished memories and art. 
+                    Explore our portfolio below or use our Virtual Framer to visualize your next project.
+                </p>
+            </header>
+
+            <!-- VIEW: VIRTUAL FRAMER (Default) -->
+            <div id="view-framer" class="view-section active">
+                <section class="preview-stage">
+                    <div class="upload-controls">
+                        <label for="image-upload" class="upload-btn">
+                            Upload Your Image
+                            <input type="file" id="image-upload" accept="image/*">
+                        </label>
+                    </div>
+                    <div class="canvas-container">
+                        <div id="frame-preview-wrapper">
+                            <img src="assets/Gemini_Generated_Image_o4nmdqo4nmdqo4nm.png" id="preview-image" alt="Artwork Preview">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="catalog-panel">
+                    <h3 class="section-title">Select a Molding Profile</h3>
+                    <div id="molding-list" class="molding-scroll-track">
+                        <!-- JS will populate this -->
+                    </div>
+                </section>
+            </div>
+
+            <!-- VIEW: PORTFOLIO GALLERY -->
+            <div id="view-gallery" class="view-section" style="display: none;">
+                <div class="gallery-container">
+                    <h2 class="section-heading">Our Recent Work</h2>
+                    <div id="portfolio-grid" class="gallery-grid">
+                        <!-- JS will populate this -->
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand-container">
+                <div class="logo-wrapper">
+                    <img src="assets/logo.jpg" alt="G&E Logo" class="brand-logo">
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li data-target="view-gallery">Gallery</li>
+                    <li data-target="view-framer" class="active">Virtual Framer</li>
+                    <li>About Us</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>&copy; 2026 ZG Woodworks</p>
+            </div>
+        </aside>
+    </div>
+    
+    <!-- Simple Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  transition: background 0.3s, color 0.3s;
+  background-color: rgba(173, 191, 194, 0.657);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+#theme-dropdown[hidden] {
+  display: none;
+}
+
+button {
+  transition: transform .5s ease;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+#theme-switcher-button {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(65, 51, 51, 0.938);
+  background-color: rgba(173, 191, 220, 0.657);
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  background-color: rgba(173, 191, 194, 0.657);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+
+li {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.1s ease;
+}
+
+/* Updated Selectors to match JS logic and Test 26 */
+.theme-yoda, #theme-yoda { background-color: #ADC178; color: #6C584C; border: 1px solid #90F89A; }
+.theme-pikachu, #theme-pikachu { background-color: #FAD61D; color: #F62D14; border: 1px solid #84633C; outline: 1px solid #000000; }
+.theme-jedi, #theme-jedi { background-color: #D5CFB6; color: #6C571B; border: 1px solid #2E67F8; outline: 1px solid #2FFA00; }
+.theme-sith, #theme-sith { background-color: #000000; color: #FF0000; border: 1px solid #242424; }
+.theme-bt-7274, #theme-bt-7274 { background-color: #343937; color: #FF8242; border: 1px solid #42BFFF; }
+
+#status {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
