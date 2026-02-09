@@ -1,0 +1,282 @@
+[
+  {
+    "sessionId": "f6505a63-dc93-437e-b820-b6d1d71c0abc",
+    "messageId": 0,
+    "type": "user",
+    "message": "why my hard drive says i have 80gb of installed programs but the list of installed programs doesnt list even 30gb",
+    "timestamp": "2026-02-07T00:57:12.216Z"
+  },
+  {
+    "sessionId": "f6505a63-dc93-437e-b820-b6d1d71c0abc",
+    "messageId": 1,
+    "type": "user",
+    "message": "go ahead",
+    "timestamp": "2026-02-07T00:57:59.717Z"
+  },
+  {
+    "sessionId": "f6505a63-dc93-437e-b820-b6d1d71c0abc",
+    "messageId": 2,
+    "type": "user",
+    "message": "clean up all the files that arent for programing",
+    "timestamp": "2026-02-07T01:01:10.313Z"
+  },
+  {
+    "sessionId": "f6505a63-dc93-437e-b820-b6d1d71c0abc",
+    "messageId": 3,
+    "type": "user",
+    "message": "and non essential",
+    "timestamp": "2026-02-07T01:01:30.263Z"
+  },
+  {
+    "sessionId": "f6505a63-dc93-437e-b820-b6d1d71c0abc",
+    "messageId": 4,
+    "type": "user",
+    "message": "organize all my directories",
+    "timestamp": "2026-02-07T01:03:04.595Z"
+  },
+  {
+    "sessionId": "f6505a63-dc93-437e-b820-b6d1d71c0abc",
+    "messageId": 5,
+    "type": "user",
+    "message": "keep all the xls and xlsx in a folder named marcela alogn with any of the standalone .exe ive made",
+    "timestamp": "2026-02-07T01:05:40.125Z"
+  },
+  {
+    "sessionId": "f6505a63-dc93-437e-b820-b6d1d71c0abc",
+    "messageId": 6,
+    "type": "user",
+    "message": "/resume",
+    "timestamp": "2026-02-07T01:07:00.774Z"
+  },
+  {
+    "sessionId": "4afde363-fbd9-4843-879f-04ebcc81a495",
+    "messageId": 0,
+    "type": "user",
+    "message": "delete the shortcuts and any reference to deleted programs",
+    "timestamp": "2026-02-07T08:33:48.479Z"
+  },
+  {
+    "sessionId": "4afde363-fbd9-4843-879f-04ebcc81a495",
+    "messageId": 1,
+    "type": "user",
+    "message": "delete the one that are safe to delete, nothing from the system",
+    "timestamp": "2026-02-07T08:34:51.545Z"
+  },
+  {
+    "sessionId": "4afde363-fbd9-4843-879f-04ebcc81a495",
+    "messageId": 2,
+    "type": "user",
+    "message": "now delete empty folders",
+    "timestamp": "2026-02-07T08:36:40.508Z"
+  },
+  {
+    "sessionId": "4afde363-fbd9-4843-879f-04ebcc81a495",
+    "messageId": 3,
+    "type": "user",
+    "message": "wait, did you make sure there wasnt any hidden files on them?",
+    "timestamp": "2026-02-07T08:40:50.193Z"
+  },
+  {
+    "sessionId": "4afde363-fbd9-4843-879f-04ebcc81a495",
+    "messageId": 4,
+    "type": "user",
+    "message": "HIDDEN_ONLY|C:\\Users\\zam_z\\AppData\\Local\\Microsoft\\Windows\\Burn|Burn what is this?",
+    "timestamp": "2026-02-07T08:43:46.150Z"
+  },
+  {
+    "sessionId": "4afde363-fbd9-4843-879f-04ebcc81a495",
+    "messageId": 5,
+    "type": "user",
+    "message": "can you detect malicius files?",
+    "timestamp": "2026-02-07T08:48:38.022Z"
+  },
+  {
+    "sessionId": "4afde363-fbd9-4843-879f-04ebcc81a495",
+    "messageId": 6,
+    "type": "user",
+    "message": "do the first two",
+    "timestamp": "2026-02-07T08:49:27.998Z"
+  },
+  {
+    "sessionId": "4afde363-fbd9-4843-879f-04ebcc81a495",
+    "messageId": 7,
+    "type": "user",
+    "message": "sure",
+    "timestamp": "2026-02-07T08:53:08.949Z"
+  },
+  {
+    "sessionId": "4cf1f480-bed6-4c29-8f34-18e4ea977e56",
+    "messageId": 0,
+    "type": "user",
+    "message": "why is my wsl opening at stsrt up?",
+    "timestamp": "2026-02-07T23:37:56.106Z"
+  },
+  {
+    "sessionId": "de16d4b4-797d-4970-9511-94d925a673df",
+    "messageId": 0,
+    "type": "user",
+    "message": "make me a dynamic titanfall theme like if i was in the titan's cockpit",
+    "timestamp": "2026-02-08T00:03:16.285Z"
+  },
+  {
+    "sessionId": "de16d4b4-797d-4970-9511-94d925a673df",
+    "messageId": 1,
+    "type": "user",
+    "message": "for my windows desktop",
+    "timestamp": "2026-02-08T00:04:07.305Z"
+  },
+  {
+    "sessionId": "de16d4b4-797d-4970-9511-94d925a673df",
+    "messageId": 2,
+    "type": "user",
+    "message": "sure",
+    "timestamp": "2026-02-08T00:04:25.942Z"
+  },
+  {
+    "sessionId": "de16d4b4-797d-4970-9511-94d925a673df",
+    "messageId": 3,
+    "type": "user",
+    "message": "gO AHEAD AND INSTALL IT",
+    "timestamp": "2026-02-08T00:06:30.711Z"
+  },
+  {
+    "sessionId": "de16d4b4-797d-4970-9511-94d925a673df",
+    "messageId": 4,
+    "type": "user",
+    "message": "open the error theme in my gallery. thats the error it showed when i tried to set the theme",
+    "timestamp": "2026-02-08T01:41:45.470Z"
+  },
+  {
+    "sessionId": "de16d4b4-797d-4970-9511-94d925a673df",
+    "messageId": 5,
+    "type": "user",
+    "message": "\"C:\\Users\\zam_z\\OneDrive\\Pictures\\error.png",
+    "timestamp": "2026-02-08T01:44:12.792Z"
+  },
+  {
+    "sessionId": "de16d4b4-797d-4970-9511-94d925a673df",
+    "messageId": 6,
+    "type": "user",
+    "message": "\"C:\\Users\\zam_z\\OneDrive\\Pictures\\Untitled.png\" is it suposed to look just like this? no instruments or joysticks?",
+    "timestamp": "2026-02-08T01:47:54.520Z"
+  },
+  {
+    "sessionId": "de16d4b4-797d-4970-9511-94d925a673df",
+    "messageId": 7,
+    "type": "user",
+    "message": "it didnt change",
+    "timestamp": "2026-02-08T01:52:13.798Z"
+  },
+  {
+    "sessionId": "de16d4b4-797d-4970-9511-94d925a673df",
+    "messageId": 8,
+    "type": "user",
+    "message": "gallery says coming soon",
+    "timestamp": "2026-02-08T01:53:38.204Z"
+  },
+  {
+    "sessionId": "de16d4b4-797d-4970-9511-94d925a673df",
+    "messageId": 9,
+    "type": "user",
+    "message": "the drag and drop didnt work",
+    "timestamp": "2026-02-08T01:54:52.620Z"
+  },
+  {
+    "sessionId": "de16d4b4-797d-4970-9511-94d925a673df",
+    "messageId": 10,
+    "type": "user",
+    "message": "program wallpaper on msix package not alllowed says",
+    "timestamp": "2026-02-08T02:00:31.040Z"
+  },
+  {
+    "sessionId": "de16d4b4-797d-4970-9511-94d925a673df",
+    "messageId": 11,
+    "type": "user",
+    "message": "nope",
+    "timestamp": "2026-02-08T02:02:24.653Z"
+  },
+  {
+    "sessionId": "de16d4b4-797d-4970-9511-94d925a673df",
+    "messageId": 12,
+    "type": "user",
+    "message": "reinstall lively so it works",
+    "timestamp": "2026-02-08T02:03:22.729Z"
+  },
+  {
+    "sessionId": "54618070-d5fc-46a8-bea5-5eeeedf293a7",
+    "messageId": 0,
+    "type": "user",
+    "message": "i want a sidebar that has shortcuts to write javascript and html elements that is displayed on my screen and i can use while building code",
+    "timestamp": "2026-02-08T03:13:28.891Z"
+  },
+  {
+    "sessionId": "54618070-d5fc-46a8-bea5-5eeeedf293a7",
+    "messageId": 1,
+    "type": "user",
+    "message": "write it in my documents",
+    "timestamp": "2026-02-08T03:14:59.905Z"
+  },
+  {
+    "sessionId": "54618070-d5fc-46a8-bea5-5eeeedf293a7",
+    "messageId": 2,
+    "type": "user",
+    "message": "python \"$env:USERPROFILE\\Documents\\CodeSidebar\\main.py\"",
+    "timestamp": "2026-02-08T03:22:32.465Z"
+  },
+  {
+    "sessionId": "54618070-d5fc-46a8-bea5-5eeeedf293a7",
+    "messageId": 3,
+    "type": "user",
+    "message": "i dont see it anymore",
+    "timestamp": "2026-02-08T03:32:38.230Z"
+  },
+  {
+    "sessionId": "54618070-d5fc-46a8-bea5-5eeeedf293a7",
+    "messageId": 4,
+    "type": "user",
+    "message": "make me a shortcut i can paste on my desktop and also make it to stay open as long as i dont close it",
+    "timestamp": "2026-02-08T03:34:13.079Z"
+  },
+  {
+    "sessionId": "54618070-d5fc-46a8-bea5-5eeeedf293a7",
+    "messageId": 5,
+    "type": "user",
+    "message": "its crashing",
+    "timestamp": "2026-02-08T03:34:47.926Z"
+  },
+  {
+    "sessionId": "54618070-d5fc-46a8-bea5-5eeeedf293a7",
+    "messageId": 6,
+    "type": "user",
+    "message": "it appeared but it wasnt the same, it had very few options",
+    "timestamp": "2026-02-08T03:35:36.971Z"
+  },
+  {
+    "sessionId": "54618070-d5fc-46a8-bea5-5eeeedf293a7",
+    "messageId": 7,
+    "type": "user",
+    "message": "i dont see the sidebar",
+    "timestamp": "2026-02-08T03:36:31.860Z"
+  },
+  {
+    "sessionId": "54618070-d5fc-46a8-bea5-5eeeedf293a7",
+    "messageId": 8,
+    "type": "user",
+    "message": "its working again",
+    "timestamp": "2026-02-08T03:37:13.695Z"
+  },
+  {
+    "sessionId": "54618070-d5fc-46a8-bea5-5eeeedf293a7",
+    "messageId": 9,
+    "type": "user",
+    "message": "seems loke its only open when you're open, make it an standalone and place it on my desktop",
+    "timestamp": "2026-02-08T03:38:04.954Z"
+  },
+  {
+    "sessionId": "2885aab7-7a88-4ee4-94d5-b3f39c40ac75",
+    "messageId": 0,
+    "type": "user",
+    "message": "look for scripts practice scripts ive done in my laptop and add them to the zam_z javascript algorithms, make the changes needed so they are the same format as the ones are already there",
+    "timestamp": "2026-02-09T09:29:48.520Z"
+  }
+]

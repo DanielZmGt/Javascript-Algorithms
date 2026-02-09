@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Titanfall Cockpit</title>
+    <style>
+        :root {
+            --cyan: #00f2ff; --orange: #ff8c00; --bg-dark: #050a0f;
+            --panel-bg: rgba(0, 30, 50, 0.4); --border-glow: 0 0 10px rgba(0, 242, 255, 0.5);
+        }
+        body, html {
+            margin: 0; padding: 0; width: 100%; height: 100%; background-color: var(--bg-dark);
+            background-image: linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px; color: var(--cyan); font-family: 'Courier New', monospace; overflow: hidden;
+        }
+        #boot-screen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: black; z-index: 1000; display: flex; justify-content: center; align-items: center; transition: opacity 1s; }
+        #boot-screen.fade-out { opacity: 0; pointer-events: none; }
+        .progress { width: 0%; height: 4px; background: var(--cyan); animation: load 3s forwards ease-in-out; }
+        @keyframes load { 100% { width: 100%; } }
+        
+        #cockpit-container { position: relative; width: 100vw; height: 100vh; display: flex; justify-content: space-between; padding: 40px; box-sizing: border-box; }
+        .cockpit-frame { position: absolute; background: #0a0e12; border: 2px solid #1a1f24; z-index: 5; }
+        .top { top: 0; left: 15%; right: 15%; height: 40px; border-radius: 0 0 40px 40px; }
+        .left-pillar { left: 0; top: 0; bottom: 0; width: 40px; background: linear-gradient(to right, #1a1f24, #0a0e12); }
+        .right-pillar { right: 0; top: 0; bottom: 0; width: 40px; background: linear-gradient(to left, #1a1f24, #0a0e12); }
+        .bottom-console { bottom: 0; left: 0; right: 0; height: 150px; background: #05070a; border-top: 4px solid #2a2f34; z-index: 100; display: flex; justify-content: center; align-items: center; }
+        
+        .hud-panel { background: var(--panel-bg); border: 1px solid var(--cyan); padding: 15px; backdrop-filter: blur(5px); box-shadow: var(--border-glow); width: 250px; }
+        .crosshair { width: 60px; height: 60px; border: 2px solid var(--cyan); position: relative; border-radius: 50%; opacity: 0.5; }
+        .core-percent { font-size: 24px; color: var(--orange); }
+        
+        /* Glass Glare */
+        .glare { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, transparent 50%); pointer-events: none; z-index: 2; }
+    </style>
+</head>
+<body>
+    <div id="boot-screen">
+        <div style="width: 300px;">
+            <p>> NEURAL LINK INITIALIZING...</p>
+            <div style="width:100%; background:#111; height:4px;"><div class="progress"></div></div>
+        </div>
+    </div>
+
+    <div id="cockpit-container">
+        <div class="glare"></div>
+        <div class="cockpit-frame top"></div>
+        <div class="cockpit-frame left-pillar"></div>
+        <div class="cockpit-frame right-pillar"></div>
+        <div class="cockpit-frame bottom-console">
+             <div style="width: 100px; height: 80px; background: #111; border: 2px solid #333; position: relative;">
+                <div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 20px; height: 40px; background: #222; border-radius: 5px;"></div>
+             </div>
+        </div>
+
+        <div class="hud-panel" style="align-self: flex-start;">
+            <p>TITAN STATUS</p>
+            <div style="width:100%; height:8px; border:1px solid var(--cyan);"><div style="width:80%; height:100%; background:var(--orange);"></div></div>
+            <p style="font-size:10px; margin-top:20px;">> PROTOCOL 3: PROTECT PILOT</p>
+        </div>
+
+        <div style="flex-grow:1; display:flex; flex-direction:column; justify-content:center; align-items:center;">
+            <div class="crosshair"></div>
+            <div class="core-percent" id="core">READY</div>
+        </div>
+
+        <div class="hud-panel" style="align-self: flex-start; text-align: right;">
+            <p id="clock">00:00</p>
+            <p style="font-size:10px;">SYSTEMS: NOMINAL</p>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(() => document.getElementById('boot-screen').classList.add('fade-out'), 3000);
+        setInterval(() => {
+            const now = new Date();
+            document.getElementById('clock').textContent = now.getHours().toString().padStart(2,'0') + ":" + now.getMinutes().toString().padStart(2,'0') + ":" + now.getSeconds().toString().padStart(2,'0');
+        }, 1000);
+        
+        document.addEventListener('mousemove', (e) => {
+            const x = (window.innerWidth / 2 - e.pageX) / 40;
+            const y = (window.innerHeight / 2 - e.pageY) / 40;
+            document.getElementById('cockpit-container').style.transform = `translateX(${x}px) translateY(${y}px)`;
+        });
+    </script>
+</body>
+</html>

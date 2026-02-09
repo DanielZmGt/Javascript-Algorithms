@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme Switcher</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <button
+    id="theme-switcher-button"
+    aria-haspopup="true"
+    aria-expanded="false"
+    aria-controls="theme-dropdown"
+  >Switch Theme</button>
+
+  <ul
+    id="theme-dropdown"
+    role="menu"
+    aria-labelledby="theme-switcher-button"
+    hidden
+  >
+    <li id="theme-yoda" role="menuitem" tabindex="0">Yoda</li>
+    <li id="theme-pikachu" role="menuitem" tabindex="0">Pikachu</li>
+    <li id="theme-jedi" role="menuitem" tabindex="0">Jedi</li>
+    <li id="theme-sith" role="menuitem" tabindex="0">Sith</li>
+    <li id="theme-bt-7274" role="menuitem" tabindex="0">BT-7274</li>
+  </ul>
+
+  <div id="status" aria-live="polite"></div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
