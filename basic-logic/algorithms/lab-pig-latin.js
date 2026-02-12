@@ -28,5 +28,6 @@ return pigLatinWord
 
 
 
-
+const translatePigLatinpro = (str, i = str.search(/[aeiou]/)) => 
+  i === 0 ? str + "way" : i === -1 ? str + "ay" : str.slice(i) + str.slice(0, i) + "ay";
 
