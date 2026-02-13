@@ -3,7 +3,7 @@ const themes = [
   { name: "pikachu", message: "Pika Pika!!!" },
   { name: "jedi", message: "I have a bad feeling about this" },
   { name: "sith", message: "I have brought peace, freedom, justice, and security to my new Empire!" },
-  { name: "bt-7274", message: "Protocol 1: link to pilot Protocol 2: uphold the mission Protocol 3: protect the pilot" }
+  { name: "bt-7274", message: "It's your lucky day hero, I'm not going to kill you. I don't work for free." }
 ];
 
 const statusElement = document.getElementById("status");
