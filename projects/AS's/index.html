@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aunt Sarah's | Bakery & Chef Services</title>
+    <meta name="description" content="Artisanal breads, custom cakes, and exclusive private chef services by Aunt Sarah." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['"Inter"', 'sans-serif'],
+              cursive: ['"Dancing Script"', 'cursive'],
+            },
+            colors: {
+              bakery: {
+                50: '#fbf7ff',
+                100: '#f2e8ff',
+                200: '#e4ceff',
+                300: '#d1aaff',
+                400: '#b87aff',
+                500: '#9d4edd', // Main Brand Purple
+                600: '#8A6EA8', // Logo Purple Muted
+                700: '#6c3b9f',
+                800: '#5a3286',
+                900: '#4a286d',
+              },
+              accent: {
+                blue: '#5B9BD5', // Logo Blue
+                yellow: '#FDFD96', // Logo Yellow
+                green: '#9DC88D'   // Leafy green for freshness
+              }
+            }
+          }
+        }
+      }
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
