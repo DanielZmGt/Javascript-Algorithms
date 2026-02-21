@@ -1,6 +1,6 @@
 # Modern Music Player
 
-![Modern Music Player](https://i1.sndcdn.com/artworks-Hg7zp4MgNynIWQrI-yUDTcA-t500x500.png)
+![Modern Music Player](public-images/cover.png)
 
 A sleek, responsive, and functional music player web application built with modern HTML, CSS, and JavaScript. This project integrates with the SoundCloud Widget API, allowing users to play pre-loaded tracks and dynamically load any SoundCloud track by URL.
 
