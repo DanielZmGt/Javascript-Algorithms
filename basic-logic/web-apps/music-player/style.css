@@ -31,8 +31,8 @@ body {
 .player-container {
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
-    box-shadow: 0 15px 30px var(--shadow-dark), 
-                inset 0 0 0 1px var(--shadow-light);
+    box-shadow: 0 15px 30px var(--shadow-dark),
+        inset 0 0 0 1px var(--shadow-light);
     backdrop-filter: blur(10px);
     padding: 30px;
     width: 350px;
@@ -75,6 +75,7 @@ body {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -122,7 +123,7 @@ h3 {
     height: 14px;
     background-color: #fff;
     border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     opacity: 0;
     transition: opacity 0.2s;
 }
@@ -195,6 +196,7 @@ h3 {
 
 #volume-slider {
     -webkit-appearance: none;
+    appearance: none;
     width: 60%;
     height: 4px;
     background: rgba(255, 255, 255, 0.1);
@@ -206,24 +208,36 @@ h3 {
 
 #volume-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
+    appearance: none;
     width: 12px;
     height: 12px;
     background: var(--text-color);
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+#volume-slider::-moz-range-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: var(--text-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
 /* URL Input Styling */
 .url-input-container {
     display: flex;
     margin-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 15px;
 }
 
 #track-url {
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
     border: none;
     border-radius: 5px 0 0 5px;
     padding: 10px;
@@ -235,7 +249,7 @@ h3 {
 }
 
 #track-url::placeholder {
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 #load-track {
