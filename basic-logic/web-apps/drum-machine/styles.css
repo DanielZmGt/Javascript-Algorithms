@@ -1,0 +1,90 @@
+/* General Page Styling */
+body {
+    background: radial-gradient(circle, #444, #111);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* The Main Rack/Case */
+#drum-machine {
+    background: linear-gradient(145deg, #222, #333);
+    padding: 40px;
+    border-radius: 20px;
+    border: 4px solid #000;
+    box-shadow: 20px 20px 60px #080808, -5px -5px 20px #444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* The Grid of Drum Pads */
+#pad-bank {
+    display: grid;
+    grid-template-columns: repeat(3, 110px);
+    grid-gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Individual Drum Pads (The Rubber "Alesis" look) */
+.drum-pad {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at 30% 30%, #444, #222);
+    border: 6px solid #111;
+    border-radius: 50%;
+    /* Makes them circles like the image */
+    color: #888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 6px 6px 12px #111, -2px -2px 5px #555;
+    transition: all 0.05s ease;
+    user-select: none;
+}
+
+/* Visual feedback when "Hitting" the drum */
+.drum-pad:active,
+.drum-pad.active {
+    background: radial-gradient(circle at center, #ff2e2e, #800000);
+    /* Glows Red when hit */
+    box-shadow: 0 0 20px #ff2e2e;
+    transform: scale(0.95);
+    color: white;
+}
+
+/* The Digital LCD Screen */
+#display {
+    background-color: #000;
+    color: #ff2e2e;
+    /* Red text to match the image module */
+    padding: 15px 30px;
+    min-width: 200px;
+    text-align: center;
+    border: 2px solid #555;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    box-shadow: inset 0 0 10px #ff0000;
+    text-transform: uppercase;
+}
+
+/* Rack support tubes (Visual detail) */
+#drum-machine::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    width: 110%;
+    height: 15px;
+    background: linear-gradient(to bottom, #222, #000);
+    border-radius: 10px;
+    z-index: -1;
+}

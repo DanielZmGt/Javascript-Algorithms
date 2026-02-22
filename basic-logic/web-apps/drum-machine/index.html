@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Machine</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="drum-machine">
+        <div id="pad-bank">
+            <div class="drum-pad cymbal" id="ride-1">Q
+                <audio class="clip" id="Q"
+                    src="https://raw.githubusercontent.com/DanielZmGt/Javascript-Algorithms/master/basic-logic/web-apps/drum-machine/audio-resources/808Ride1.wav"></audio>
+            </div>
+            <div class="drum-pad cymbal" id="ride-bell">W
+                <audio class="clip" id="W"
+                    src="https://raw.githubusercontent.com/DanielZmGt/Javascript-Algorithms/master/basic-logic/web-apps/drum-machine/audio-resources/RideBell.wav"></audio>
+            </div>
+            <div class="drum-pad cymbal" id="ride-2">E
+                <audio class="clip" id="E"
+                    src="https://raw.githubusercontent.com/DanielZmGt/Javascript-Algorithms/master/basic-logic/web-apps/drum-machine/audio-resources/808Ride2.wav"></audio>
+            </div>
+
+            <div class="drum-pad tom" id="high-tom">A
+                <audio class="clip" id="A"
+                    src="https://raw.githubusercontent.com/DanielZmGt/Javascript-Algorithms/master/basic-logic/web-apps/drum-machine/audio-resources/808Tom.wav"></audio>
+            </div>
+            <div class="drum-pad tom" id="floor-tom">S
+                <audio class="clip" id="S"
+                    src="https://raw.githubusercontent.com/DanielZmGt/Javascript-Algorithms/master/basic-logic/web-apps/drum-machine/audio-resources/909Tom.wav"></audio>
+            </div>
+            <div class="drum-pad hi-hat" id="hat-closed-909">D
+                <audio class="clip" id="D"
+                    src="https://raw.githubusercontent.com/DanielZmGt/Javascript-Algorithms/master/basic-logic/web-apps/drum-machine/audio-resources/909HatCl.wav"></audio>
+            </div>
+
+            <div class="drum-pad snare" id="snare-drum">Z
+                <audio class="clip" id="Z"
+                    src="https://raw.githubusercontent.com/DanielZmGt/Javascript-Algorithms/master/basic-logic/web-apps/drum-machine/audio-resources/808Snare.wav"></audio>
+            </div>
+            <div class="drum-pad kick" id="bass-drum">X
+                <audio class="clip" id="X"
+                    src="https://raw.githubusercontent.com/DanielZmGt/Javascript-Algorithms/master/basic-logic/web-apps/drum-machine/audio-resources/808Kick.wav"></audio>
+            </div>
+            <div class="drum-pad hi-hat" id="hat-closed-808">C
+                <audio class="clip" id="C"
+                    src="https://raw.githubusercontent.com/DanielZmGt/Javascript-Algorithms/master/basic-logic/web-apps/drum-machine/audio-resources/808HatClose.wav"></audio>
+            </div>
+        </div>
+
+        <div id="module">
+            <p id="display">SYSTEM READY</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
