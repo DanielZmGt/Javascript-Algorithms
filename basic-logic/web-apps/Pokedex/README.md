@@ -17,11 +17,6 @@ A sleek, retro-style Pokédex application built with HTML, CSS (Tailwind), and J
   <em>Search results for Pikachu</em>
 </div>
 
-<div align="center">
-  <img src="screenshots/bulbasaur.png" alt="Bulbasaur Search Success" width="400">
-  <br>
-  <em>Search results for Bulbasaur</em>
-</div>
 
 ## Technical Implementation
 
