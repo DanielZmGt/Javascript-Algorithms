@@ -1,33 +1,38 @@
 # Pokédex Search
 
-A sleek, retro-style Pokédex application built with HTML, CSS (Tailwind), and JavaScript. It uses the [PokeAPI](https://pokeapi.co/) to fetch and display Pokémon data, including stats, types, and sprites.
+A sleek, retro-style Pokédex application built with HTML, CSS (Tailwind), and JavaScript. It uses the [PokeAPI](https://pokeapi.co/) to provide comprehensive data for all known Pokémon.
 
 ## Features
 
-- **Real-time Search**: Find Pokémon by name or ID.
-- **Dynamic Stats**: View detailed stats with animated progress bars.
-- **Responsive Design**: Works on mobile and desktop devices.
-- **Retro Aesthetic**: Custom pixel-art borders and "Press Start 2P" typography for a classic handheld feel.
+- **Multi-Tab Data Display**: Categorized information for a clean user experience.
+  - **About**: Weights, Heights, Base Experience, and Types.
+  - **Stats**: Animated base stat bars (HP, Attack, Defense, etc.).
+  - **Abilities**: Full list of abilities including Hidden ones.
+  - **Moves**: Scrollable list of moves the Pokémon can learn.
+  - **Gallery**: A collection of various sprites including shiny and back views.
+- **Audio Cries**: Play the actual cry for almost every Pokémon.
+- **Retro Aesthetic**: Custom pixel-art borders and "Press Start 2P" typography.
+- **Responsive Design**: Optimized for both desktop and mobile viewing.
 
 ## Screenshots
 
 <div align="center">
-  <img src="screenshots/pikachu.png" alt="Pikachu Search Success" width="400">
+  <img src="screenshots/mewtwo_about.png" alt="Mewtwo About Tab" width="400">
   <br>
-  <em>Search results for Pikachu</em>
+  <em>About section and Stats</em>
 </div>
 
 <div align="center">
-  <img src="screenshots/bulbasaur.png" alt="Bulbasaur Search Success" width="400">
+  <img src="screenshots/mewtwo_gallery.png" alt="Mewtwo Gallery" width="400">
   <br>
-  <em>Search results for Bulbasaur</em>
+  <em>Sprite Gallery showing various forms</em>
 </div>
 
 ## Technical Implementation
 
-- **CSS & Design**: Utilizes Tailwind CSS for layout and custom Vanilla CSS for the pixel-border effect and animations.
-- **API Integration**: Fetches data from PokeAPI using `fetch` with robust error handling for "Pokémon not found" scenarios.
-- **Stat Bars**: Dynamically calculated progress bars that animate when data is loaded.
+- **API Integration**: Fetches from PokeAPI's REST endpoints using asynchronous JavaScript.
+- **UI Logic**: Custom tab switching system and dynamic list rendering.
+- **CSS Styling**: Combines Tailwind CSS utility classes with Vanilla CSS for complex retro effects (like pixelized borders).
 
 ## How to Run
 

@@ -36,73 +36,120 @@
         </form>
 
         <!-- Results Display -->
-        <div id="results-container" class="bg-red-700 p-4 rounded-xl shadow-2xl pixel-border">
-            <div class="screen rounded-lg p-4 space-y-4">
-                <!-- Top Section: Name, ID, Sprite -->
+        <div id="results-container" class="bg-red-700 p-3 sm:p-4 rounded-xl shadow-2xl pixel-border">
+            <div class="screen rounded-lg p-3 sm:p-4 space-y-4">
+                <!-- Top Section: Name, ID, Sprite & Cry -->
                 <div class="flex items-center justify-between border-b-4 border-gray-800 pb-2">
                     <div class="truncate mr-2">
                         <h2 id="creature-name" class="text-xl sm:text-2xl font-bold text-gray-800 uppercase truncate">?
                         </h2>
                         <p id="creature-id" class="text-lg text-gray-800"></p>
+                        <button id="cry-button"
+                            class="mt-1 px-2 py-1 bg-yellow-400 text-[8px] text-gray-900 rounded-sm pixel-border hover:bg-yellow-500 transition-colors hidden">PLAY
+                            CRY</button>
+                        <audio id="pokemon-cry" class="hidden"></audio>
                     </div>
-                    <div class="w-24 h-24 bg-gray-300/50 rounded-md flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="w-20 h-20 sm:w-24 sm:h-24 bg-gray-300/50 rounded-md flex items-center justify-center flex-shrink-0">
                         <img id="sprite" src="" alt="Sprite" class="w-full h-full object-contain hidden" />
                     </div>
                 </div>
 
-                <!-- Mid Section: Info & Types -->
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center text-gray-800 gap-2">
-                    <div class="text-[10px] sm:text-xs space-y-1">
-                        <p id="weight">Weight: -</p>
-                        <p id="height">Height: -</p>
-                    </div>
-                    <div id="types" class="flex flex-wrap gap-2 text-[10px]"></div>
+                <!-- Tab Navigation -->
+                <div id="tab-nav"
+                    class="flex flex-wrap gap-1 border-b-2 border-gray-800/20 pb-2 overflow-x-auto no-scrollbar">
+                    <button
+                        class="tab-btn active text-[8px] sm:text-[10px] px-2 py-1 bg-gray-800 text-white rounded-t-sm"
+                        data-tab="about">ABOUT</button>
+                    <button class="tab-btn text-[8px] sm:text-[10px] px-2 py-1 bg-gray-600 text-white rounded-t-sm"
+                        data-tab="stats">STATS</button>
+                    <button class="tab-btn text-[8px] sm:text-[10px] px-2 py-1 bg-gray-600 text-white rounded-t-sm"
+                        data-tab="abilities">ABILITIES</button>
+                    <button class="tab-btn text-[8px] sm:text-[10px] px-2 py-1 bg-gray-600 text-white rounded-t-sm"
+                        data-tab="moves">MOVES</button>
+                    <button class="tab-btn text-[8px] sm:text-[10px] px-2 py-1 bg-gray-600 text-white rounded-t-sm"
+                        data-tab="gallery">GALLERY</button>
                 </div>
 
-                <!-- Stats Section -->
-                <div class="space-y-2 pt-2">
+                <!-- Tab Content: About -->
+                <div id="tab-about" class="tab-content space-y-2 text-[10px] sm:text-xs">
+                    <div class="grid grid-cols-2 gap-2 text-gray-800">
+                        <p id="weight" class="bg-gray-200/50 p-1 rounded-sm">Weight: -</p>
+                        <p id="height" class="bg-gray-200/50 p-1 rounded-sm">Height: -</p>
+                        <p id="base-exp" class="bg-gray-200/50 p-1 rounded-sm">Base Exp: -</p>
+                        <p id="is-default" class="bg-gray-200/50 p-1 rounded-sm">Default: -</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-gray-800 mb-1">Types:</p>
+                        <div id="types" class="flex flex-wrap gap-1"></div>
+                    </div>
+                    <div>
+                        <p class="font-bold text-gray-800 mb-1">Held Items:</p>
+                        <div id="held-items" class="flex flex-wrap gap-1">-</div>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Stats -->
+                <div id="tab-stats" class="tab-content hidden space-y-2 pt-2">
                     <div class="grid grid-cols-4 items-center gap-2 text-[10px] sm:text-xs">
                         <span class="font-bold text-gray-800">HP:</span>
-                        <div id="hp" class="text-center font-bold">-</div>
+                        <div id="hp" class="text-center font-bold text-gray-800">-</div>
                         <div class="col-span-2 stat-bar-bg rounded-full h-3 p-0.5">
-                            <div id="hp-bar" class="stat-bar-fill bg-green-500 h-full rounded-full"></div>
+                            <div id="hp-bar" class="stat-bar-fill h-full rounded-full"></div>
                         </div>
                     </div>
                     <div class="grid grid-cols-4 items-center gap-2 text-[10px] sm:text-xs">
                         <span class="font-bold text-gray-800">ATK:</span>
-                        <div id="attack" class="text-center font-bold">-</div>
+                        <div id="attack" class="text-center font-bold text-gray-800">-</div>
                         <div class="col-span-2 stat-bar-bg rounded-full h-3 p-0.5">
-                            <div id="attack-bar" class="stat-bar-fill bg-red-500 h-full rounded-full"></div>
+                            <div id="attack-bar" class="stat-bar-fill h-full rounded-full"></div>
                         </div>
                     </div>
                     <div class="grid grid-cols-4 items-center gap-2 text-[10px] sm:text-xs">
                         <span class="font-bold text-gray-800">DEF:</span>
-                        <div id="defense" class="text-center font-bold">-</div>
+                        <div id="defense" class="text-center font-bold text-gray-800">-</div>
                         <div class="col-span-2 stat-bar-bg rounded-full h-3 p-0.5">
-                            <div id="defense-bar" class="stat-bar-fill bg-blue-500 h-full rounded-full"></div>
+                            <div id="defense-bar" class="stat-bar-fill h-full rounded-full"></div>
                         </div>
                     </div>
                     <div class="grid grid-cols-4 items-center gap-2 text-[10px] sm:text-xs">
                         <span class="font-bold text-gray-800">S-ATK:</span>
-                        <div id="special-attack" class="text-center font-bold">-</div>
+                        <div id="special-attack" class="text-center font-bold text-gray-800">-</div>
                         <div class="col-span-2 stat-bar-bg rounded-full h-3 p-0.5">
-                            <div id="special-attack-bar" class="stat-bar-fill bg-purple-500 h-full rounded-full"></div>
+                            <div id="special-attack-bar" class="stat-bar-fill h-full rounded-full"></div>
                         </div>
                     </div>
                     <div class="grid grid-cols-4 items-center gap-2 text-[10px] sm:text-xs">
                         <span class="font-bold text-gray-800">S-DEF:</span>
-                        <div id="special-defense" class="text-center font-bold">-</div>
+                        <div id="special-defense" class="text-center font-bold text-gray-800">-</div>
                         <div class="col-span-2 stat-bar-bg rounded-full h-3 p-0.5">
-                            <div id="special-defense-bar" class="stat-bar-fill bg-yellow-500 h-full rounded-full"></div>
+                            <div id="special-defense-bar" class="stat-bar-fill h-full rounded-full"></div>
                         </div>
                     </div>
                     <div class="grid grid-cols-4 items-center gap-2 text-[10px] sm:text-xs">
                         <span class="font-bold text-gray-800">SPD:</span>
-                        <div id="speed" class="text-center font-bold">-</div>
+                        <div id="speed" class="text-center font-bold text-gray-800">-</div>
                         <div class="col-span-2 stat-bar-bg rounded-full h-3 p-0.5">
-                            <div id="speed-bar" class="stat-bar-fill bg-pink-500 h-full rounded-full"></div>
+                            <div id="speed-bar" class="stat-bar-fill h-full rounded-full"></div>
                         </div>
                     </div>
+                </div>
+
+                <!-- Tab Content: Abilities -->
+                <div id="tab-abilities" class="tab-content hidden space-y-2 text-[10px] sm:text-xs text-gray-800">
+                    <ul id="abilities-list" class="space-y-1"></ul>
+                </div>
+
+                <!-- Tab Content: Moves -->
+                <div id="tab-moves" class="tab-content hidden">
+                    <div class="h-32 overflow-y-auto no-scrollbar border-2 border-gray-800/10 p-1 rounded-sm">
+                        <ul id="moves-list" class="grid grid-cols-2 gap-1 text-[8px] sm:text-[10px] text-gray-800"></ul>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Gallery -->
+                <div id="tab-gallery" class="tab-content hidden">
+                    <div id="gallery-grid" class="grid grid-cols-3 gap-2 overflow-y-auto h-32 no-scrollbar p-1"></div>
                 </div>
             </div>
         </div>

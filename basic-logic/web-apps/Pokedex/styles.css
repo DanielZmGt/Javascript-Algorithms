@@ -7,6 +7,15 @@ body {
     display: none !important;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 .pixel-border {
     border-style: solid;
     border-width: 4px;
@@ -28,7 +37,6 @@ body {
     background-color: #c0c0c0;
     box-shadow: inset 2px 2px #888888;
     height: 0.75rem;
-    /* Fallback for h-3 */
 }
 
 .stat-bar-fill {
@@ -36,39 +44,59 @@ body {
     transition: width 0.5s ease-in-out;
     width: 0%;
     height: 100%;
-    /* Fallback for h-full */
     border-radius: 9999px;
-    /* Fallback for rounded-full */
 }
 
-/* Fallback colors for stat bars if Tailwind fails */
+/* Fallback colors for stat bars */
 #hp-bar {
     background-color: #ef4444;
 }
 
-/* Red-500 */
 #attack-bar {
     background-color: #f97316;
 }
 
-/* Orange-500 */
 #defense-bar {
     background-color: #eab308;
 }
 
-/* Yellow-500 */
 #special-attack-bar {
     background-color: #3b82f6;
 }
 
-/* Blue-500 */
 #special-defense-bar {
     background-color: #22c55e;
 }
 
-/* Green-500 */
 #speed-bar {
     background-color: #ec4899;
 }
 
-/* Pink-500 */
+.tab-btn {
+    transition: all 0.2s ease-in-out;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-btn.active {
+    background-color: #1f2937;
+    border-bottom: 2px solid #fbbf24;
+    transform: translateY(-1px);
+}
+
+.tab-btn:not(.active):hover {
+    background-color: #4b5563;
+}
+
+#gallery-grid img {
+    image-rendering: pixelated;
+    transition: transform 0.2s ease;
+}
+
+#gallery-grid img:hover {
+    transform: scale(1.1);
+}
+
+.ability-item {
+    border-left: 3px solid #306230;
+    padding-left: 0.5rem;
+}
