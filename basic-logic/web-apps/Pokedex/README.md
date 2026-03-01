@@ -22,11 +22,14 @@ A sleek, retro-style Pokédex application built with HTML, CSS (Tailwind), and J
   <em>About section and Stats</em>
 </div>
 
+<<<<<<< HEAD
 <div align="center">
   <img src="screenshots/mewtwo_gallery.png" alt="Mewtwo Gallery" width="400">
   <br>
   <em>Sprite Gallery showing various forms</em>
 </div>
+=======
+>>>>>>> 5d7a34b2b7c08690a429a1bd8af40464325be130
 
 ## Technical Implementation
 
