@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex Search</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-gray-800 flex items-center justify-center min-h-screen p-4">
+    <!-- Main App Container -->
+    <div class="w-full max-w-md mx-auto">
+        <h1 class="text-3xl text-white text-center mb-4 tracking-wider">
+            Pokédex
+        </h1>
+
+        <!-- Custom Error Message -->
+        <div id="error-message"
+            class="hidden bg-red-500 text-white text-xs p-3 rounded-lg mb-4 text-center pixel-border">
+            Pokémon not found. Please try again!
+        </div>
+
+        <!-- Search Form -->
+        <form id="search-form" class="flex gap-2 mb-4">
+            <input type="text" id="search-input"
+                class="flex-grow p-3 bg-gray-200 text-gray-800 placeholder-gray-500 rounded-lg focus:outline-none focus:ring-4 focus:ring-yellow-400 pixel-border text-sm"
+                placeholder="Name or ID (e.g. pikachu or 25)" required />
+            <button id="search-button" type="submit"
+                class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-400 pixel-border text-sm transition-colors">
+                Search
+            </button>
+        </form>
+
+        <!-- Results Display -->
+        <div id="results-container" class="bg-red-700 p-4 rounded-xl shadow-2xl pixel-border">
+            <div class="screen rounded-lg p-4 space-y-4">
+                <!-- Top Section: Name, ID, Sprite -->
+                <div class="flex items-center justify-between border-b-4 border-gray-800 pb-2">
+                    <div class="truncate mr-2">
+                        <h2 id="creature-name" class="text-xl sm:text-2xl font-bold text-gray-800 uppercase truncate">?
+                        </h2>
+                        <p id="creature-id" class="text-lg text-gray-800"></p>
+                    </div>
+                    <div class="w-24 h-24 bg-gray-300/50 rounded-md flex items-center justify-center flex-shrink-0">
+                        <img id="sprite" src="" alt="Sprite" class="w-full h-full object-contain hidden" />
+                    </div>
+                </div>
+
+                <!-- Mid Section: Info & Types -->
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center text-gray-800 gap-2">
+                    <div class="text-[10px] sm:text-xs space-y-1">
+                        <p id="weight">Weight: -</p>
+                        <p id="height">Height: -</p>
+                    </div>
+                    <div id="types" class="flex flex-wrap gap-2 text-[10px]"></div>
+                </div>
+
+                <!-- Stats Section -->
+                <div class="space-y-2 pt-2">
+                    <div class="grid grid-cols-4 items-center gap-2 text-[10px] sm:text-xs">
+                        <span class="font-bold text-gray-800">HP:</span>
+                        <div id="hp" class="text-center font-bold">-</div>
+                        <div class="col-span-2 stat-bar-bg rounded-full h-3 p-0.5">
+                            <div id="hp-bar" class="stat-bar-fill bg-green-500 h-full rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-4 items-center gap-2 text-[10px] sm:text-xs">
+                        <span class="font-bold text-gray-800">ATK:</span>
+                        <div id="attack" class="text-center font-bold">-</div>
+                        <div class="col-span-2 stat-bar-bg rounded-full h-3 p-0.5">
+                            <div id="attack-bar" class="stat-bar-fill bg-red-500 h-full rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-4 items-center gap-2 text-[10px] sm:text-xs">
+                        <span class="font-bold text-gray-800">DEF:</span>
+                        <div id="defense" class="text-center font-bold">-</div>
+                        <div class="col-span-2 stat-bar-bg rounded-full h-3 p-0.5">
+                            <div id="defense-bar" class="stat-bar-fill bg-blue-500 h-full rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-4 items-center gap-2 text-[10px] sm:text-xs">
+                        <span class="font-bold text-gray-800">S-ATK:</span>
+                        <div id="special-attack" class="text-center font-bold">-</div>
+                        <div class="col-span-2 stat-bar-bg rounded-full h-3 p-0.5">
+                            <div id="special-attack-bar" class="stat-bar-fill bg-purple-500 h-full rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-4 items-center gap-2 text-[10px] sm:text-xs">
+                        <span class="font-bold text-gray-800">S-DEF:</span>
+                        <div id="special-defense" class="text-center font-bold">-</div>
+                        <div class="col-span-2 stat-bar-bg rounded-full h-3 p-0.5">
+                            <div id="special-defense-bar" class="stat-bar-fill bg-yellow-500 h-full rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-4 items-center gap-2 text-[10px] sm:text-xs">
+                        <span class="font-bold text-gray-800">SPD:</span>
+                        <div id="speed" class="text-center font-bold">-</div>
+                        <div class="col-span-2 stat-bar-bg rounded-full h-3 p-0.5">
+                            <div id="speed-bar" class="stat-bar-fill bg-pink-500 h-full rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to your external JS file -->
+    <script src="script.js"></script>
+</body>
+
+</html>

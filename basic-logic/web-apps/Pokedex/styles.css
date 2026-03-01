@@ -1,0 +1,74 @@
+body {
+    font-family: "Press Start 2P", cursive;
+    background-color: #3a3a3a;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.pixel-border {
+    border-style: solid;
+    border-width: 4px;
+    border-image-slice: 2;
+    border-image-width: 2;
+    border-image-repeat: stretch;
+    border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgb(33,37,41)" /></svg>');
+    border-image-outset: 2;
+    position: relative;
+    background: #dedede;
+}
+
+.screen {
+    background-color: #9bbc0f;
+    border: 12px solid #306230;
+}
+
+.stat-bar-bg {
+    background-color: #c0c0c0;
+    box-shadow: inset 2px 2px #888888;
+    height: 0.75rem;
+    /* Fallback for h-3 */
+}
+
+.stat-bar-fill {
+    box-shadow: inset -2px -2px #555555;
+    transition: width 0.5s ease-in-out;
+    width: 0%;
+    height: 100%;
+    /* Fallback for h-full */
+    border-radius: 9999px;
+    /* Fallback for rounded-full */
+}
+
+/* Fallback colors for stat bars if Tailwind fails */
+#hp-bar {
+    background-color: #ef4444;
+}
+
+/* Red-500 */
+#attack-bar {
+    background-color: #f97316;
+}
+
+/* Orange-500 */
+#defense-bar {
+    background-color: #eab308;
+}
+
+/* Yellow-500 */
+#special-attack-bar {
+    background-color: #3b82f6;
+}
+
+/* Blue-500 */
+#special-defense-bar {
+    background-color: #22c55e;
+}
+
+/* Green-500 */
+#speed-bar {
+    background-color: #ec4899;
+}
+
+/* Pink-500 */
