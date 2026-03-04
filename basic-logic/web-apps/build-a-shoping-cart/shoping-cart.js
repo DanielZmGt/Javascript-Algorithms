@@ -16,84 +16,84 @@ const products = [
         name: "All-Mountain Snowboard",
         price: 499.99,
         category: "Snowboard",
-        image: "https://images.unsplash.com/photo-1523315572836-e414c9c1b9b1?auto=format&fit=crop&w=600&q=80"
+        image: "https://raw.githubusercontent.com/DanielZmGt/Javascript-Algorithms/main/basic-logic/web-apps/build-a-shoping-cart/public/image/snowboard.jpg"
     },
     {
         id: 2,
         name: "Snowboard Bindings",
         price: 199.99,
         category: "Snowboard",
-        image: "https://images.unsplash.com/photo-1551524164-687a55dd1126?auto=format&fit=crop&w=600&q=80"
+        image: "https://raw.githubusercontent.com/DanielZmGt/Javascript-Algorithms/main/basic-logic/web-apps/build-a-shoping-cart/public/image/bindings.jpg"
     },
     {
         id: 3,
         name: "Snowboard Boots",
         price: 249.99,
         category: "Snowboard",
-        image: "https://images.unsplash.com/photo-1521671413015-ce2b0103c8c7?auto=format&fit=crop&w=600&q=80"
+        image: "https://raw.githubusercontent.com/DanielZmGt/Javascript-Algorithms/main/basic-logic/web-apps/build-a-shoping-cart/public/image/boots.jpg"
     },
     {
         id: 4,
         name: "Snowboard Helmet",
         price: 89.99,
         category: "Snowboard",
-        image: "https://images.unsplash.com/photo-1596706788220-30fc719a868f?auto=format&fit=crop&w=600&q=80"
+        image: "https://raw.githubusercontent.com/DanielZmGt/Javascript-Algorithms/main/basic-logic/web-apps/build-a-shoping-cart/public/image/helmet.jpg"
     },
     {
         id: 5,
         name: "Snow Goggles",
         price: 129.99,
         category: "Snowboard",
-        image: "https://images.unsplash.com/photo-1558227845-81d7ebf0581f?auto=format&fit=crop&w=600&q=80"
+        image: "https://raw.githubusercontent.com/DanielZmGt/Javascript-Algorithms/main/basic-logic/web-apps/build-a-shoping-cart/public/image/goggles.jpg"
     },
     {
         id: 6,
         name: "Climbing Harness",
         price: 79.99,
         category: "Rock Climbing",
-        image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=600&q=80"
+        image: "https://raw.githubusercontent.com/DanielZmGt/Javascript-Algorithms/main/basic-logic/web-apps/build-a-shoping-cart/public/image/harness.jpg"
     },
     {
         id: 7,
         name: "Climbing Rope (60m)",
         price: 159.99,
         category: "Rock Climbing",
-        image: "https://images.unsplash.com/photo-1532431602446-c0c4a0fc35b9?auto=format&fit=crop&w=600&q=80"
+        image: "https://raw.githubusercontent.com/DanielZmGt/Javascript-Algorithms/main/basic-logic/web-apps/build-a-shoping-cart/public/image/rope.jpg"
     },
     {
         id: 8,
         name: "Carabiners (5 Pack)",
         price: 49.99,
         category: "Rock Climbing",
-        image: "https://images.unsplash.com/photo-1588698940801-4978ab484501?auto=format&fit=crop&w=600&q=80"
+        image: "https://raw.githubusercontent.com/DanielZmGt/Javascript-Algorithms/main/basic-logic/web-apps/build-a-shoping-cart/public/image/carabiners.jpg"
     },
     {
         id: 9,
         name: "Chalk Bag",
         price: 19.99,
         category: "Rock Climbing",
-        image: "https://images.unsplash.com/photo-1529124483758-294715f33336?auto=format&fit=crop&w=600&q=80"
+        image: "https://raw.githubusercontent.com/DanielZmGt/Javascript-Algorithms/main/basic-logic/web-apps/build-a-shoping-cart/public/image/chalkbag.jpg"
     },
     {
         id: 10,
         name: "Climbing Shoes",
         price: 139.99,
         category: "Rock Climbing",
-        image: "https://images.unsplash.com/photo-1621508212134-4536f987d605?auto=format&fit=crop&w=600&q=80"
+        image: "https://raw.githubusercontent.com/DanielZmGt/Javascript-Algorithms/main/basic-logic/web-apps/build-a-shoping-cart/public/image/shoes.jpg"
     },
     {
         id: 11,
         name: "Belay Device",
         price: 29.99,
         category: "Rock Climbing",
-        image: "https://images.unsplash.com/photo-1556041696-6e2dbf77c442?auto=format&fit=crop&w=600&q=80"
+        image: "https://raw.githubusercontent.com/DanielZmGt/Javascript-Algorithms/main/basic-logic/web-apps/build-a-shoping-cart/public/image/belay.jpg"
     },
     {
         id: 12,
         name: "Quickdraws (6 Pack)",
         price: 89.99,
         category: "Rock Climbing",
-        image: "https://images.unsplash.com/photo-1605333177699-2a91219b109e?auto=format&fit=crop&w=600&q=80"
+        image: "https://raw.githubusercontent.com/DanielZmGt/Javascript-Algorithms/main/basic-logic/web-apps/build-a-shoping-cart/public/image/quickdraws.jpg"
     },
 ];
 
