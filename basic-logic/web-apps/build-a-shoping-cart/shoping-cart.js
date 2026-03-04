@@ -23,14 +23,14 @@ const products = [
         name: "Snowboard Bindings",
         price: 199.99,
         category: "Snowboard",
-        image: "./public/image/bindings.jpg"
+        image: "./public/image/bindings.png"
     },
     {
         id: 3,
         name: "Snowboard Boots",
         price: 249.99,
         category: "Snowboard",
-        image: "./public/image/boots.jpg"
+        image: "./public/image/boots.png"
     },
     {
         id: 4,
@@ -51,7 +51,7 @@ const products = [
         name: "Climbing Harness",
         price: 79.99,
         category: "Rock Climbing",
-        image: "./public/image/harness.jpg"
+        image: "./public/image/harness.png"
     },
     {
         id: 7,
