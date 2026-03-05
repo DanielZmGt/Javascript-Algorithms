@@ -322,6 +322,33 @@
             color: var(--hostile-orange);
         }
 
+        /* Card Info Button Styles */
+        .card-info-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            /* account for chamfer */
+            background: none;
+            border: none;
+            color: var(--militia-blue);
+            font-size: 1.25rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            z-index: 5;
+            padding: 0.25rem;
+            opacity: 0.7;
+        }
+
+        .card:hover .card-info-btn {
+            opacity: 1;
+        }
+
+        .card-info-btn:hover {
+            color: var(--text-primary);
+            text-shadow: 0 0 10px rgba(0, 216, 255, 0.8);
+            transform: scale(1.1);
+        }
+
         .modal-content h2 {
             font-family: 'Share Tech Mono', monospace;
             color: var(--militia-blue);
@@ -343,7 +370,6 @@
 <body>
 
     <header>
-        <button class="info-btn" id="infoBtn" title="System Info"><i class="fas fa-info-circle"></i></button>
         <h1>SYS_DANIEL // WEB-APPS_PORTFOLIO</h1>
         <p class="subtitle">Data Core: Javascript Algorithms & Interface Modules</p>
     </header>
@@ -352,6 +378,9 @@
         <div class="grid">
 
             <a href="Pokedex/index.html" class="card">
+                <button class="card-info-btn" data-title="Pokédex Search"
+                    data-description="A sleek, retro-style Pokédex application built with HTML, CSS (Tailwind), and JavaScript. It uses the PokeAPI to provide comprehensive data for all known Pokémon, including animated stats, abilities, moves, and audio cries."><i
+                        class="fas fa-info-circle"></i></button>
                 <div class="icon"><i class="fas fa-gamepad"></i></div>
                 <h3>Pokedex Module</h3>
                 <p>Interactive biological encyclopedia utilizing external API uplinks. Features comprehensive data
@@ -360,6 +389,9 @@
             </a>
 
             <a href="music-player/index.html" class="card">
+                <button class="card-info-btn" data-title="Modern Music Player"
+                    data-description="A sleek, responsive, and functional music player web application. It integrates with the SoundCloud Widget API, allowing users to play pre-loaded tracks and dynamically load any SoundCloud track by URL."><i
+                        class="fas fa-info-circle"></i></button>
                 <div class="icon"><i class="fas fa-headphones"></i></div>
                 <h3>Audio Interface</h3>
                 <p>Sleek acoustic integration with visualizer diagnostics and remote playlist management.</p>
@@ -367,6 +399,9 @@
             </a>
 
             <a href="drum-machine/index.html" class="card">
+                <button class="card-info-btn" data-title="Drum Machine"
+                    data-description="An interactive percussive engine featuring manual keyboard override and multi-kit sound banks. Users can click on the on-screen drum pads or use their physical keyboard to trigger different high-quality drum sound samples sequentially."><i
+                        class="fas fa-info-circle"></i></button>
                 <div class="icon"><i class="fas fa-drum"></i></div>
                 <h3>Rhythm Synth</h3>
                 <p>Interactive percussive engine with manual keyboard override and multi-kit sound banks.</p>
@@ -374,6 +409,9 @@
             </a>
 
             <a href="rock-paper-scissors-retro/index.html" class="card">
+                <button class="card-info-btn" data-title="RPS Simulation (Retro)"
+                    data-description="A strategic hand-combat simulation running on legacy arcade-style aesthetic protocols. This version of the classic game implements vintage visual themes, complete with pixelated fonts and CRT-style scanline overlays, while maintaining core game mechanics."><i
+                        class="fas fa-info-circle"></i></button>
                 <div class="icon"><i class="fas fa-hand-scissors"></i></div>
                 <h3>Sim: RPS-Retro</h3>
                 <p>Strategic hand-combat simulation running on legacy arcade-style aesthetic protocols.</p>
@@ -381,6 +419,9 @@
             </a>
 
             <a href="build-a-markdown-to-html-converter/index.html" class="card">
+                <button class="card-info-btn" data-title="MD to HTML Converter"
+                    data-description="A real-time translation engine for converting raw markdown syntax into compiled HTML syntax. This utility provides a split-view interface allowing users to write markdown in one pane and see the rendered HTML output simultaneously in the other."><i
+                        class="fas fa-info-circle"></i></button>
                 <div class="icon"><i class="fas fa-file-code"></i></div>
                 <h3>MD > HTML Parser</h3>
                 <p>Real-time translation engine for converting raw markdown into compiled HTML syntax.</p>
@@ -388,6 +429,9 @@
             </a>
 
             <a href="lab-regex-sandbox/index.html" class="card">
+                <button class="card-info-btn" data-title="Regex Sandbox"
+                    data-description="A diagnostic tool for testing regular expressions. It provides live syntax highlighting and match targeting against arbitrary user text to help experiment with and fine-tune JS RegExp strings in a safe sandbox environment."><i
+                        class="fas fa-info-circle"></i></button>
                 <div class="icon"><i class="fas fa-search"></i></div>
                 <h3>Regex Sandbox</h3>
                 <p>Diagnostic tool for testing regular expressions with live syntax highlighting and match targeting.
@@ -396,6 +440,9 @@
             </a>
 
             <a href="build-a-lightbox-viewer/index.html" class="card">
+                <button class="card-info-btn" data-title="Lightbox Viewer"
+                    data-description="A lightweight gallery projection system for rendering high-resolution visual data. This implements a common image gallery pattern where clicking a thumbnail opens a full-screen, focused view of the image (a lightbox) with navigation controls."><i
+                        class="fas fa-info-circle"></i></button>
                 <div class="icon"><i class="fas fa-images"></i></div>
                 <h3>Optical Viewer</h3>
                 <p>Lightweight gallery projection system for rendering high-resolution visual data.</p>
@@ -403,6 +450,9 @@
             </a>
 
             <a href="lab-theme-switcher/index.html" class="card">
+                <button class="card-info-btn" data-title="Theme Switcher"
+                    data-description="A dynamic visual theme recalibration tool featuring local storage memory persistence. It demonstrates how to toggle CSS variables across an entire application document and cache the user's preference in their browser."><i
+                        class="fas fa-info-circle"></i></button>
                 <div class="icon"><i class="fas fa-adjust"></i></div>
                 <h3>Environment Toggle</h3>
                 <p>Dynamic visual theme recalibration tool featuring local storage memory persistence.</p>
@@ -410,6 +460,9 @@
             </a>
 
             <a href="build-a-customer-complaint-form/index.html" class="card">
+                <button class="card-info-btn" data-title="Customer Complaint Form"
+                    data-description="A multi-stage validated data entry protocol for securely handling external communications. Forms act as a crucial UI component for data collection natively. This project demonstrates handling different form elements and basic validation."><i
+                        class="fas fa-info-circle"></i></button>
                 <div class="icon"><i class="fas fa-comment-alt"></i></div>
                 <h3>Comms Uplink</h3>
                 <p>Multi-stage validated data entry protocol for securely handling external communications.</p>
@@ -417,6 +470,9 @@
             </a>
 
             <a href="build-a-real-time-counter/index.html" class="card">
+                <button class="card-info-btn" data-title="Real-Time Counter"
+                    data-description="A high-precision chronometer app. This project demonstrates core JavaScript timing functionality, allowing you to start, stop, and reset a timer. It accurately keeps track of simulated passing time, useful for workouts or productivity sessions."><i
+                        class="fas fa-info-circle"></i></button>
                 <div class="icon"><i class="fas fa-clock"></i></div>
                 <h3>Chrono-Tracker</h3>
                 <p>High-precision chronometer featuring start, stop, and reset overrides with ms tracking.</p>
@@ -424,6 +480,9 @@
             </a>
 
             <a href="build-a-favorite-icon-toggler/index.html" class="card">
+                <button class="card-info-btn" data-title="Favorite Icon Toggler"
+                    data-description="A micro-interaction diagnostic showcasing binary state management and animation routines. It features a clickable icon that toggles states (e.g., liked/unliked) with a smooth transition, demonstrating basic UI interactions."><i
+                        class="fas fa-info-circle"></i></button>
                 <div class="icon"><i class="fas fa-heart"></i></div>
                 <h3>Status Toggler</h3>
                 <p>Micro-interaction diagnostic showcasing binary state management and animation routines.</p>
@@ -431,6 +490,9 @@
             </a>
 
             <a href="rock-paper-scissors-game/index.html" class="card">
+                <button class="card-info-btn" data-title="RPS Simulation (Combat)"
+                    data-description="A standard combat simulation of Rock, Paper, Scissors featuring persistent scorekeeping and automated hostile AI. This application demonstrates game logic loops, state management for scores, and handling randomized computer choices against user input."><i
+                        class="fas fa-info-circle"></i></button>
                 <div class="icon"><i class="fas fa-robot"></i></div>
                 <h3>Sim: RPS-Combat</h3>
                 <p>Standard combat simulation featuring persistent scorekeeping and automated hostile AI.</p>
@@ -438,6 +500,9 @@
             </a>
 
             <a href="rock-paper-scissors-minimalist/index.html" class="card">
+                <button class="card-info-btn" data-title="RPS Simulation (Minimalist)"
+                    data-description="A stripped-down, minimal-profile iteration of the Rock, Paper, Scissors combat simulation. It focuses purely on the mechanical execution of the game logic without the overhead of heavy visual assets, serving as a clean codebase reference."><i
+                        class="fas fa-info-circle"></i></button>
                 <div class="icon"><i class="fas fa-minus-circle"></i></div>
                 <h3>Sim: RPS-Stealth</h3>
                 <p>Stripped-down, minimal-profile iteration of the combat simulation. Pure mechanical focus.</p>
@@ -445,6 +510,9 @@
             </a>
 
             <a href="build-a-shoping-cart/index.html" class="card">
+                <button class="card-info-btn" data-title="Shopping Cart"
+                    data-description="An e-commerce interface designed to act as a supply station for extreme sports equipment. The application manages state to allow users to add items to their cart, adjust quantities, review subtotals, and simulate a checkout process."><i
+                        class="fas fa-info-circle"></i></button>
                 <div class="icon"><i class="fas fa-shopping-cart"></i></div>
                 <h3>Supply Station</h3>
                 <p>E-commerce interface for extreme sports equipment procurement and management.</p>
@@ -463,12 +531,8 @@
     <div class="modal-overlay" id="infoModalOverlay">
         <div class="modal-content">
             <i class="fas fa-times close-btn" id="closeModalBtn"></i>
-            <h2>System Diagnostics</h2>
-            <p>Welcome to the Web-Apps Portfolio Data Core.</p>
-            <p>This repository contains a collection of interactive interface modules and algorithm demonstrations built
-                with HTML, CSS, and Vanilla JavaScript.</p>
-            <p>Each module represents a distinct study in front-end architecture, API integration, or interactive state
-                management.</p>
+            <h2 id="modalTitle">System Diagnostics</h2>
+            <p id="modalDesc">Welcome to the Web-Apps Portfolio Data Core.</p>
             <div
                 style="margin-top: 2rem; color: var(--text-secondary); font-family: 'Share Tech Mono', monospace; font-size: 0.9rem;">
                 <p>> STATUS: All systems nominal.</p>
@@ -478,13 +542,30 @@
     </div>
 
     <script>
-        const infoBtn = document.getElementById('infoBtn');
+        const infoBtns = document.querySelectorAll('.card-info-btn');
         const modalOverlay = document.getElementById('infoModalOverlay');
         const closeModalBtn = document.getElementById('closeModalBtn');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDesc = document.getElementById('modalDesc');
 
-        // Open modal
-        infoBtn.addEventListener('click', () => {
-            modalOverlay.classList.add('active');
+        // Open modal and set specific content
+        infoBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                // Prevent the click from navigating to the link in the parent <a> tag
+                e.preventDefault();
+                e.stopPropagation();
+
+                // Get data from the button's attributes
+                const title = btn.getAttribute('data-title');
+                const description = btn.getAttribute('data-description');
+
+                // Update the modal
+                if (title) modalTitle.textContent = title;
+                if (description) modalDesc.textContent = description;
+
+                // Show the modal
+                modalOverlay.classList.add('active');
+            });
         });
 
         // Close modal via button
