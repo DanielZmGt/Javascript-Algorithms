@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Idea Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-container">
+    <header class="glass-header">
+      <div class="header-content">
+        <h1>Project Idea Board</h1>
+        <p>Kanban-style task tracking with local storage</p>
+      </div>
+      <button id="addIdeaBtn" class="primary-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14M5 12h14"></path>
+        </svg>
+        New Idea
+      </button>
+    </header>
+
+    <main class="board-container">
+      <!-- Pending Column -->
+      <div class="column" data-status="PENDING">
+        <div class="column-header">
+          <h2>Pending Execution</h2>
+          <span class="count-badge" id="count-pending">0</span>
+        </div>
+        <!-- Dropzone area -->
+        <div class="column-content" id="list-pending"></div>
+      </div>
+
+      <!-- Success Column -->
+      <div class="column" data-status="SUCCESS">
+        <div class="column-header">
+          <h2>Executed Successfully</h2>
+          <span class="count-badge" id="count-success">0</span>
+        </div>
+        <div class="column-content" id="list-success"></div>
+      </div>
+
+      <!-- Failure Column -->
+      <div class="column" data-status="FAILURE">
+        <div class="column-header">
+          <h2>Execution Failed</h2>
+          <span class="count-badge" id="count-failure">0</span>
+        </div>
+        <div class="column-content" id="list-failure"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal overlay for new idea -->
+  <div id="ideaModal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <h2>Formulate New Idea</h2>
+      <form id="ideaForm">
+        <div class="input-group">
+          <label for="ideaTitle">Title</label>
+          <input type="text" id="ideaTitle" required placeholder="Enter idea title..." autocomplete="off">
+        </div>
+        <div class="input-group">
+          <label for="ideaDescription">Description</label>
+          <textarea id="ideaDescription" required placeholder="Describe the idea in detail..." rows="4"></textarea>
+        </div>
+        <div class="modal-actions">
+          <button type="button" id="cancelBtn" class="secondary-btn">Cancel</button>
+          <button type="submit" class="primary-btn">Save Idea</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
