@@ -1,5 +1,5 @@
 // 1. Regex approach
-function translatePigLatin(str) {
+export const translatePigLatin = (str) => {
   let consonantRegex = /^[^aeiou]+/;
   let myConsonants = str.match(consonantRegex);
   return myConsonants !== null
@@ -8,7 +8,7 @@ function translatePigLatin(str) {
 }
 
 // 2. Alternative approach with vowel check
-function translatePigLatinAlt(str) {
+export const translatePigLatinAlt = (str) => {
   if (str.match(/^[aeiou]/)) return str + "way";
   const consonants = str.match(/^[^aeiou]+/)[0];
   return str.substring(consonants.length) + consonants + "ay";

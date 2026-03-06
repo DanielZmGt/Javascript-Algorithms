@@ -1,12 +1,12 @@
 // 1. Formula-based solution (Arithmetic Progression)
-const sumAll = (arr) => {
+export const sumAll = (arr) => {
   const min = Math.min(...arr)
   const max = Math.max(...arr)
   return (max - min + 1) * (min + max) / 2
 }
 
 // 2. Iterative solution
-const sumAllIterative = (arr) => {
+export const sumAllIterative = (arr) => {
   let sum = 0;
   for (let i = Math.min(...arr); i <= Math.max(...arr); i++) {
     sum += i;

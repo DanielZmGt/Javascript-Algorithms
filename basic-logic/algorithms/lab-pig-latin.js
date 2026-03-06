@@ -1,4 +1,4 @@
-const translatePigLatin = (str) => {
+export const translatePigLatin = (str) => {
 
 const vowelIndex = str.search(/[aeiou]/)
 
@@ -13,7 +13,7 @@ if (vowelIndex === -1){
 
 
 
-const translatePigLatin1 = (str) => {
+export const translatePigLatin1 = (str) => {
 let pigLatinWord = ""
 if (str.indexOf(str.match(/[aeiou]/)) === -1){pigLatinWord = str + "ay"}
 if (str.indexOf(str.match(/[aeiou]/)) === 0){pigLatinWord = str + "way"}

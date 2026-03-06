@@ -1,4 +1,4 @@
-function truthCheck(collection, pre) {
+export const truthCheck = (collection, pre) => {
 return collection.every(obj => {
   return Boolean(obj[pre])
 })

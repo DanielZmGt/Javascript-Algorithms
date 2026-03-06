@@ -1,6 +1,6 @@
 const poll = new Map
 
-function addOption(option) {
+export const addOption = (option) => {
     let optionString = "";
     if (!option) {
         return optionString = "Option cannot be empty.";
@@ -13,7 +13,7 @@ function addOption(option) {
     return optionString;
 }
 
-const vote = (option, voterId) => {
+export const vote = (option, voterId) => {
     let voteString = ""
     if (!poll.has(option)) {
         return voteString = `Option "${option}" does not exist.`
@@ -38,7 +38,7 @@ vote("Mexico", 117)
 vote("Mexico", 109)
 vote("Mexico", 101)
 
-const displayResults = () => {
+export const displayResults = () => {
     let resultString = "Poll Results:"
     poll.forEach((votes, option) => {
         resultString += `\n${option}: ${votes.size} votes`

@@ -1,5 +1,5 @@
 // 1. Basic approach using split, map and fromCharCode
-function binaryAgent(str) {
+export const binaryAgent = (str) => {
   return str
     .split(" ")
     .map(bin => String.fromCharCode(parseInt(bin, 2)))
@@ -7,7 +7,7 @@ function binaryAgent(str) {
 }
 
 // 2. Alternative approach with reduce
-function binaryAgentReduce(str) {
+export const binaryAgentReduce = (str) => {
   return str.split(" ").reduce((acc, bin) => {
     return acc + String.fromCharCode(parseInt(bin, 2));
   }, "");

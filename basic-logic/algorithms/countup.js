@@ -1,4 +1,4 @@
-function countup(number) {
+export const countup = (number) => {
 
   if (number < 1) {
     return []};

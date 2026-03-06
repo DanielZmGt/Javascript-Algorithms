@@ -1,5 +1,5 @@
 
-const pyramid = (character, rowsCount, inverted) => {
+export const pyramid = (character, rowsCount, inverted) => {
 const rows = []
 
 for (let i = 1; i <= rowsCount; i++) {

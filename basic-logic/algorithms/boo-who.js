@@ -1,5 +1,5 @@
 // 1. Basic approach using typeof
-function booWho(bool) {
+export const booWho = (bool) => {
   return typeof bool === "boolean";
 }
 

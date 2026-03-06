@@ -1,5 +1,5 @@
 // 1. Using replace and regular expressions
-function spinalCase(str) {
+export const spinalCase = (str) => {
   return str
     .split(/\s|_|(?=[A-Z])/)
     .join("-")
@@ -7,7 +7,7 @@ function spinalCase(str) {
 }
 
 // 2. Alternative regex approach
-function spinalCaseAlt(str) {
+export const spinalCaseAlt = (str) => {
   return str
     .replace(/([a-z])([A-Z])/g, "$1 $2")
     .split(/\s|_/)

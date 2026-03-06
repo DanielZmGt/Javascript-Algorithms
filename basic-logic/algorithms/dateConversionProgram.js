@@ -2,7 +2,7 @@ const currentDate = new Date
 const currentDateFormat = `Current Date and Time: ${currentDate}`
 console.log(currentDateFormat)
 
-const formatDateMMDDYYYY = (date) => {
+export const formatDateMMDDYYYY = (date) => {
     const options = {
         month: 'numeric',
         day: 'numeric',
@@ -15,7 +15,7 @@ const formatDateMMDDYYYY = (date) => {
 }
 console.log(formatDateMMDDYYYY(currentDate))
 
-const formatDateLong = (date) => {
+export const formatDateLong = (date) => {
 
     const option = {
         month: "long",

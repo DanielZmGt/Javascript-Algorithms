@@ -1,6 +1,6 @@
 
 // 1. Iterative approach
-const findLongestWordLength = (sentence) => {
+export const findLongestWordLength = (sentence) => {
   const wordsArr = sentence.split(" ")
   let longestWordLength = 0;
   for (let word of wordsArr) {
@@ -12,14 +12,14 @@ const findLongestWordLength = (sentence) => {
 }
 
 // 2. Using reduce
-const findLongestWordReduce = (sentence) => {
+export const findLongestWordReduce = (sentence) => {
   return sentence.split(' ').reduce((longest, word) => {
     return Math.max(longest, word.length);
   }, 0);
 }
 
 // 3. Using sort
-const findLongestWordSort = (sentence) => {
+export const findLongestWordSort = (sentence) => {
   return sentence.split(' ').sort((a, b) => b.length - a.length)[0].length;
 }
 

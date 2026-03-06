@@ -1,7 +1,7 @@
 
 let email = ("apple.pie@example.com")
 
-function maskEmail(email) {
+export const maskEmail = (email) => {
   const [local, domain] = email.split("@");
 
   if (local.length <= 2) return email;

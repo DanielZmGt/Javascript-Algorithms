@@ -19,13 +19,13 @@ const recordCollection = {
   }
 };
 
-/*const updateRecords = (records, id, prop, value) => {
+/*export const updateRecords = (records, id, prop, value) => {
   if (value === (''))
   {delete records[id][prop];
   } else if (prop !== "tracks") {records[id][prop] = value;}
     */
 
-    function updateRecords(records, id, prop, value) {
+    export const updateRecords = (records, id, prop, value) => {
   if (value === "") {
     delete records[id][prop];
   } else if (prop !== "tracks") {

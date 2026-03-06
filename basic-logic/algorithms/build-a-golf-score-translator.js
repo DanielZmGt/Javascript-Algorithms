@@ -1,6 +1,6 @@
 
 const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
-const golfScore = (par, strokes) => {
+export const golfScore = (par, strokes) => {
   let message = ('')
   if (strokes === 1) {
     message = names[0];

@@ -3,7 +3,7 @@
 const test = "Hola"
 
 // 1. Iterative approach
-const repeatStringNumTimes = (str, num) => {
+export const repeatStringNumTimes = (str, num) => {
   let newStr = ("")
   if (num <= 0) return "";
   for (let i = 0; i < num; i++) {
@@ -13,7 +13,7 @@ const repeatStringNumTimes = (str, num) => {
 }
 
 // 2. Recursive approach
-const repeatStringRecursive = (str, num) => {
+export const repeatStringRecursive = (str, num) => {
   if (num <= 0) return "";
   if (num === 1) return str;
   return str + repeatStringRecursive(str, num - 1);

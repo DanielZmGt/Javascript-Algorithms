@@ -1,5 +1,5 @@
 //Declare a function with an sting of any length as an argument.
-/*const pairElement = (arg) => {
+/*export const pairElement = (arg) => {
 //Make an array from the argument making one string per arg[index]
 let argArray = arg.split("")
 let result = []
@@ -19,8 +19,7 @@ console.log(pairElement("ATCGA"));
 // Output: [["A","T"], ["T","A"], ["C",
 */
 
-const pairElement = (arg) =>
-{
+export const pairElement = (arg) => {
   const pairs = {
     "A": "T",
     "T": "A",

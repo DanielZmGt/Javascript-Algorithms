@@ -1,0 +1,1007 @@
+[
+    {
+        "filename": "arguments-optional.js",
+        "type": "Interactive",
+        "exports": [
+            {
+                "name": "addTogether",
+                "args": []
+            },
+            {
+                "name": "addTogetherAlt",
+                "args": []
+            }
+        ],
+        "title": "Arguments Optional",
+        "description": "[Stateful Neural Pathway] Requires interactive parameter injection. Executes advanced multi-stage logic for Arguments Optional."
+    },
+    {
+        "filename": "binary-agents.js",
+        "type": "Interactive",
+        "exports": [
+            {
+                "name": "binaryAgent",
+                "args": [
+                    "str"
+                ]
+            },
+            {
+                "name": "binaryAgentReduce",
+                "args": [
+                    "str"
+                ]
+            }
+        ],
+        "title": "Binary Agents",
+        "description": "[Stateful Neural Pathway] Requires interactive parameter injection. Executes advanced multi-stage logic for Binary Agents."
+    },
+    {
+        "filename": "boo-who.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "booWho",
+                "args": [
+                    "bool"
+                ]
+            }
+        ],
+        "title": "Boo Who",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Boo Who. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "bookmark.js",
+        "type": "Interactive",
+        "exports": [
+            {
+                "name": "getBookmarks",
+                "args": []
+            },
+            {
+                "name": "displayOrCloseForm",
+                "args": []
+            },
+            {
+                "name": "displayOrHideCategory",
+                "args": []
+            }
+        ],
+        "title": "Bookmark",
+        "description": "[Stateful Neural Pathway] Requires interactive parameter injection. Executes advanced multi-stage logic for Bookmark."
+    },
+    {
+        "filename": "build-a-book-organizer.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "sortByYear",
+                "args": [
+                    "book1",
+                    "book2"
+                ]
+            }
+        ],
+        "title": "Build A Book Organizer",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Build A Book Organizer. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "build-a-factorial-calculator.js",
+        "type": "Interactive",
+        "exports": [
+            {
+                "name": "factorializeIterative",
+                "args": [
+                    "number"
+                ]
+            },
+            {
+                "name": "factorializeRecursive",
+                "args": [
+                    "num"
+                ]
+            },
+            {
+                "name": "factorializeFunctional",
+                "args": [
+                    "num"
+                ]
+            }
+        ],
+        "title": "Build A Factorial Calculator",
+        "description": "[Stateful Neural Pathway] Requires interactive parameter injection. Executes advanced multi-stage logic for Build A Factorial Calculator."
+    },
+    {
+        "filename": "build-a-first-element-finder.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "findElement",
+                "args": [
+                    "arr",
+                    "func"
+                ]
+            }
+        ],
+        "title": "Build A First Element Finder",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Build A First Element Finder. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "build-a-golf-score-translator.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "golfScore",
+                "args": [
+                    "par",
+                    "strokes"
+                ]
+            }
+        ],
+        "title": "Build A Golf Score Translator",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Build A Golf Score Translator. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "build-a-gradebook-app.js",
+        "type": "Interactive",
+        "exports": [
+            {
+                "name": "getAverage",
+                "args": [
+                    "gradesArr"
+                ]
+            },
+            {
+                "name": "getGrade",
+                "args": [
+                    "score"
+                ]
+            },
+            {
+                "name": "hasPassingGrade",
+                "args": [
+                    "score"
+                ]
+            },
+            {
+                "name": "studentMsg",
+                "args": [
+                    "scoreArr",
+                    "studentScore"
+                ]
+            }
+        ],
+        "title": "Build A Gradebook App",
+        "description": "[Stateful Neural Pathway] Requires interactive parameter injection. Executes advanced multi-stage logic for Build A Gradebook App."
+    },
+    {
+        "filename": "build-a-longest-word-finder-app.js",
+        "type": "Interactive",
+        "exports": [
+            {
+                "name": "findLongestWordLength",
+                "args": [
+                    "sentence"
+                ]
+            },
+            {
+                "name": "findLongestWordReduce",
+                "args": [
+                    "sentence"
+                ]
+            },
+            {
+                "name": "findLongestWordSort",
+                "args": [
+                    "sentence"
+                ]
+            }
+        ],
+        "title": "Build A Longest Word Finder App",
+        "description": "[Stateful Neural Pathway] Requires interactive parameter injection. Executes advanced multi-stage logic for Build A Longest Word Finder App."
+    },
+    {
+        "filename": "build-a-lunch-picker-program.js",
+        "type": "Interactive",
+        "exports": [
+            {
+                "name": "addLunchToEnd",
+                "args": [
+                    "arr",
+                    "item"
+                ]
+            },
+            {
+                "name": "addLunchToStart",
+                "args": [
+                    "arr",
+                    "item"
+                ]
+            },
+            {
+                "name": "removeLastLunch",
+                "args": [
+                    "arr"
+                ]
+            },
+            {
+                "name": "removeFirstLunch",
+                "args": [
+                    "arr"
+                ]
+            },
+            {
+                "name": "getRandomLunch",
+                "args": [
+                    "arr"
+                ]
+            },
+            {
+                "name": "showLunchMenu",
+                "args": [
+                    "arr"
+                ]
+            }
+        ],
+        "title": "Build A Lunch Picker Program",
+        "description": "[Stateful Neural Pathway] Requires interactive parameter injection. Executes advanced multi-stage logic for Build A Lunch Picker Program."
+    },
+    {
+        "filename": "build-a-missing-letter-detector.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "fearNotLetter",
+                "args": [
+                    "str"
+                ]
+            }
+        ],
+        "title": "Build A Missing Letter Detector",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Build A Missing Letter Detector. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "build-a-prime-number-sum-calculator.js",
+        "type": "Interactive",
+        "exports": [
+            {
+                "name": "isPrime",
+                "args": [
+                    "num"
+                ]
+            },
+            {
+                "name": "sumPrimes",
+                "args": [
+                    "num"
+                ]
+            }
+        ],
+        "title": "Build A Prime Number Sum Calculator",
+        "description": "[Stateful Neural Pathway] Requires interactive parameter injection. Executes advanced multi-stage logic for Build A Prime Number Sum Calculator."
+    },
+    {
+        "filename": "build-a-record-collection.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "updateRecords",
+                "args": [
+                    "records",
+                    "id",
+                    "prop",
+                    "value"
+                ]
+            }
+        ],
+        "title": "Build A Record Collection",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Build A Record Collection. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "build-a-string-inverter.js",
+        "type": "Interactive",
+        "exports": [
+            {
+                "name": "reverseString",
+                "args": [
+                    "str"
+                ]
+            },
+            {
+                "name": "reverseString2",
+                "args": [
+                    "str"
+                ]
+            },
+            {
+                "name": "reverseStringRecursive",
+                "args": [
+                    "str"
+                ]
+            }
+        ],
+        "title": "Build A String Inverter",
+        "description": "[Stateful Neural Pathway] Requires interactive parameter injection. Executes advanced multi-stage logic for Build A String Inverter."
+    },
+    {
+        "filename": "build-a-string-repeating-function.js",
+        "type": "Interactive",
+        "exports": [
+            {
+                "name": "repeatStringNumTimes",
+                "args": [
+                    "str",
+                    "num"
+                ]
+            },
+            {
+                "name": "repeatStringRecursive",
+                "args": [
+                    "str",
+                    "num"
+                ]
+            }
+        ],
+        "title": "Build A String Repeating Function",
+        "description": "[Stateful Neural Pathway] Requires interactive parameter injection. Executes advanced multi-stage logic for Build A String Repeating Function."
+    },
+    {
+        "filename": "build-a-title-case-converter.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "titleCase3",
+                "args": [
+                    "str"
+                ]
+            }
+        ],
+        "title": "Build A Title Case Converter",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Build A Title Case Converter. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "build-an-all-true-property-validator.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "truthCheck",
+                "args": [
+                    "collection",
+                    "pre"
+                ]
+            }
+        ],
+        "title": "Build An All True Property Validator",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Build An All True Property Validator. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "build-an-email-masker.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "maskEmail",
+                "args": [
+                    "email"
+                ]
+            }
+        ],
+        "title": "Build An Email Masker",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Build An Email Masker. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "build-an-inventory-management-program.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "removeProduct",
+                "args": [
+                    "name",
+                    "quantity"
+                ]
+            }
+        ],
+        "title": "Build An Inventory Management Program",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Build An Inventory Management Program. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "build-an-odd-fibonacci-sum-calculator.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "sumFibs",
+                "args": [
+                    "num"
+                ]
+            }
+        ],
+        "title": "Build An Odd Fibonacci Sum Calculator",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Build An Odd Fibonacci Sum Calculator. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "build-the-largest-number-finder.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "largestOfAll",
+                "args": [
+                    "arr"
+                ]
+            }
+        ],
+        "title": "Build The Largest Number Finder",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Build The Largest Number Finder. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "convert-celsius-to-fahrenheit.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "convertToF",
+                "args": [
+                    "celsius"
+                ]
+            }
+        ],
+        "title": "Convert Celsius To Fahrenheit",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Convert Celsius To Fahrenheit. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "countup.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "countup",
+                "args": [
+                    "number"
+                ]
+            }
+        ],
+        "title": "Countup",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Countup. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "create-a-deep-flattening-tool.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "steamrollArray",
+                "args": [
+                    "arr"
+                ]
+            }
+        ],
+        "title": "Create A Deep Flattening Tool",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Create A Deep Flattening Tool. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "dateConversionProgram.js",
+        "type": "Interactive",
+        "exports": [
+            {
+                "name": "formatDateMMDDYYYY",
+                "args": [
+                    "date"
+                ]
+            },
+            {
+                "name": "formatDateLong",
+                "args": [
+                    "date"
+                ]
+            }
+        ],
+        "title": "DateConversionProgram",
+        "description": "[Stateful Neural Pathway] Requires interactive parameter injection. Executes advanced multi-stage logic for DateConversionProgram."
+    },
+    {
+        "filename": "implement-a-dna-pair-generator.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "pairElement",
+                "args": [
+                    "arg"
+                ]
+            }
+        ],
+        "title": "Implement A Dna Pair Generator",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Implement A Dna Pair Generator. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "implement-a-matching-object-filter.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "whatIsInAName",
+                "args": [
+                    "collection",
+                    "source"
+                ]
+            }
+        ],
+        "title": "Implement A Matching Object Filter",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Implement A Matching Object Filter. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "implement-a-range-based-lcm-calculator.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "smallestCommons",
+                "args": [
+                    "arr"
+                ]
+            }
+        ],
+        "title": "Implement A Range Based Lcm Calculator",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Implement A Range Based Lcm Calculator. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "implement-a-spinal-case-converter.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "spinalCase",
+                "args": [
+                    "str"
+                ]
+            }
+        ],
+        "title": "Implement A Spinal Case Converter",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Implement A Spinal Case Converter. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "implement-a-string-ending-checker-function.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "confirmEnding",
+                "args": [
+                    "str",
+                    "strEnd"
+                ]
+            }
+        ],
+        "title": "Implement A String Ending Checker Function",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Implement A String Ending Checker Function. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "implement-a-unique-sorted-union.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "uniteUnique",
+                "args": [
+                    "...args"
+                ]
+            }
+        ],
+        "title": "Implement A Unique Sorted Union",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Implement A Unique Sorted Union. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "implement-a-value-remover-function.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "destroyer",
+                "args": [
+                    "arr",
+                    "...arg"
+                ]
+            }
+        ],
+        "title": "Implement A Value Remover Function",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Implement A Value Remover Function. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "implement-an-element-skipper.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "dropElements",
+                "args": [
+                    "arr",
+                    "func"
+                ]
+            }
+        ],
+        "title": "Implement An Element Skipper",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Implement An Element Skipper. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "implement-the-chunky-monkey-algorithm.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "chunkArrayInGroups",
+                "args": [
+                    "arr",
+                    "num"
+                ]
+            }
+        ],
+        "title": "Implement The Chunky Monkey Algorithm",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Implement The Chunky Monkey Algorithm. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "implement-the-mutations-algorithm.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "mutation",
+                "args": [
+                    "arr"
+                ]
+            }
+        ],
+        "title": "Implement The Mutations Algorithm",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Implement The Mutations Algorithm. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "implement-the-slice-and-splice-algorithm.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "frankenSplice",
+                "args": [
+                    "arr1",
+                    "arr2",
+                    "index"
+                ]
+            }
+        ],
+        "title": "Implement The Slice And Splice Algorithm",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Implement The Slice And Splice Algorithm. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "lab-counting-cards.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "cardCounter",
+                "args": [
+                    "card"
+                ]
+            }
+        ],
+        "title": "Lab Counting Cards",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Lab Counting Cards. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "lab-password-generator.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "generatePassword",
+                "args": [
+                    "long"
+                ]
+            }
+        ],
+        "title": "Lab Password Generator",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Lab Password Generator. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "lab-pig-latin.js",
+        "type": "Interactive",
+        "exports": [
+            {
+                "name": "translatePigLatin",
+                "args": [
+                    "str"
+                ]
+            },
+            {
+                "name": "translatePigLatin1",
+                "args": [
+                    "str"
+                ]
+            }
+        ],
+        "title": "Lab Pig Latin",
+        "description": "[Stateful Neural Pathway] Requires interactive parameter injection. Executes advanced multi-stage logic for Lab Pig Latin."
+    },
+    {
+        "filename": "lab-profile-lookup.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "lookUpProfile",
+                "args": [
+                    "name",
+                    "prop"
+                ]
+            }
+        ],
+        "title": "Lab Profile Lookup",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Lab Profile Lookup. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "lab-pyramid-generator.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "pyramid",
+                "args": [
+                    "character",
+                    "rowsCount",
+                    "inverted"
+                ]
+            }
+        ],
+        "title": "Lab Pyramid Generator",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Lab Pyramid Generator. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "lab-quiz-game.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "getResults",
+                "args": [
+                    "currentQuestion",
+                    "computerChoice"
+                ]
+            }
+        ],
+        "title": "Lab Quiz Game",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Lab Quiz Game. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "lab-sorted-index-finder.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "getIndexToIns",
+                "args": [
+                    "arr",
+                    "num"
+                ]
+            }
+        ],
+        "title": "Lab Sorted Index Finder",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Lab Sorted Index Finder. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "lab-string-permutation.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "permuteString",
+                "args": [
+                    "string",
+                    "prefix",
+                    "results"
+                ]
+            }
+        ],
+        "title": "Lab String Permutation",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Lab String Permutation. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "lab-sum-all-numbers-algorithm.js",
+        "type": "Interactive",
+        "exports": [
+            {
+                "name": "sumAll",
+                "args": [
+                    "arr"
+                ]
+            },
+            {
+                "name": "sumAllIterative",
+                "args": [
+                    "arr"
+                ]
+            }
+        ],
+        "title": "Lab Sum All Numbers Algorithm",
+        "description": "[Stateful Neural Pathway] Requires interactive parameter injection. Executes advanced multi-stage logic for Lab Sum All Numbers Algorithm."
+    },
+    {
+        "filename": "lab-symmetric-difference.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "diffArray",
+                "args": [
+                    "arr1",
+                    "arr2"
+                ]
+            }
+        ],
+        "title": "Lab Symmetric Difference",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Lab Symmetric Difference. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "map-the-debris.js",
+        "type": "Interactive",
+        "exports": [
+            {
+                "name": "orbitalPeriod",
+                "args": [
+                    "arr"
+                ]
+            },
+            {
+                "name": "orbitalPeriodMap",
+                "args": [
+                    "arr"
+                ]
+            }
+        ],
+        "title": "Map The Debris",
+        "description": "[Stateful Neural Pathway] Requires interactive parameter injection. Executes advanced multi-stage logic for Map The Debris."
+    },
+    {
+        "filename": "pig-latin.js",
+        "type": "Interactive",
+        "exports": [
+            {
+                "name": "translatePigLatin",
+                "args": [
+                    "str"
+                ]
+            },
+            {
+                "name": "translatePigLatinAlt",
+                "args": [
+                    "str"
+                ]
+            }
+        ],
+        "title": "Pig Latin",
+        "description": "[Stateful Neural Pathway] Requires interactive parameter injection. Executes advanced multi-stage logic for Pig Latin."
+    },
+    {
+        "filename": "plant-nursery-catalog-fcc.js",
+        "type": "Interactive",
+        "exports": [
+            {
+                "name": "sellPlants",
+                "args": [
+                    "plant",
+                    "size",
+                    "potsNo"
+                ]
+            },
+            {
+                "name": "displayCatalog",
+                "args": []
+            },
+            {
+                "name": "displayPlantsSet",
+                "args": []
+            }
+        ],
+        "title": "Plant Nursery Catalog Fcc",
+        "description": "[Stateful Neural Pathway] Requires interactive parameter injection. Executes advanced multi-stage logic for Plant Nursery Catalog Fcc."
+    },
+    {
+        "filename": "recursion-countdown.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "countdown",
+                "args": [
+                    "n"
+                ]
+            }
+        ],
+        "title": "Recursion Countdown",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Recursion Countdown. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "search-and-replace.js",
+        "type": "Interactive",
+        "exports": [
+            {
+                "name": "myReplace",
+                "args": [
+                    "str",
+                    "before",
+                    "after"
+                ]
+            },
+            {
+                "name": "myReplaceShort",
+                "args": [
+                    "str",
+                    "before",
+                    "after"
+                ]
+            }
+        ],
+        "title": "Search And Replace",
+        "description": "[Stateful Neural Pathway] Requires interactive parameter injection. Executes advanced multi-stage logic for Search And Replace."
+    },
+    {
+        "filename": "spinal-tap-case.js",
+        "type": "Interactive",
+        "exports": [
+            {
+                "name": "spinalCase",
+                "args": [
+                    "str"
+                ]
+            },
+            {
+                "name": "spinalCaseAlt",
+                "args": [
+                    "str"
+                ]
+            }
+        ],
+        "title": "Spinal Tap Case",
+        "description": "[Stateful Neural Pathway] Requires interactive parameter injection. Executes advanced multi-stage logic for Spinal Tap Case."
+    },
+    {
+        "filename": "truncate-a-string.js",
+        "type": "Simple",
+        "exports": [
+            {
+                "name": "truncateString",
+                "args": [
+                    "str",
+                    "num"
+                ]
+            }
+        ],
+        "title": "Truncate A String",
+        "description": "[Standard Heuristic Algorithm] Executes the purely functional protocol for Truncate A String. Supply the required parameters to compute the sequence."
+    },
+    {
+        "filename": "vote-system-certification-project.js",
+        "type": "Interactive",
+        "exports": [
+            {
+                "name": "addOption",
+                "args": [
+                    "option"
+                ]
+            },
+            {
+                "name": "vote",
+                "args": [
+                    "option",
+                    "voterId"
+                ]
+            },
+            {
+                "name": "displayResults",
+                "args": []
+            }
+        ],
+        "title": "Vote System Certification Project",
+        "description": "[Stateful Neural Pathway] Requires interactive parameter injection. Executes advanced multi-stage logic for Vote System Certification Project."
+    },
+    {
+        "filename": "where-do-i-belong.js",
+        "type": "Interactive",
+        "exports": [
+            {
+                "name": "getIndexToIns",
+                "args": [
+                    "arr",
+                    "num"
+                ]
+            },
+            {
+                "name": "getIndexToInsFilter",
+                "args": [
+                    "arr",
+                    "num"
+                ]
+            },
+            {
+                "name": "getIndexToInsSort",
+                "args": [
+                    "arr",
+                    "num"
+                ]
+            }
+        ],
+        "title": "Where Do I Belong",
+        "description": "[Stateful Neural Pathway] Requires interactive parameter injection. Executes advanced multi-stage logic for Where Do I Belong."
+    }
+]

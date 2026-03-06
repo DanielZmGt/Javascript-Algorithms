@@ -26,7 +26,7 @@ let contacts = [
   },
 ];
 
-const lookUpProfile = (name, prop) => {
+export const lookUpProfile = (name, prop) => {
 
   for (let i = 0; i < contacts.length; i++) {
     if (contacts[i].firstName === name) {

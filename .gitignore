@@ -1,0 +1,32 @@
+# --- System Files ---
+.DS_Store
+Thumbs.db
+
+# --- Python Logic (For your Refactor Script) ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+.env
+
+# --- Node / JavaScript (Portfolio) ---
+node_modules/
+.npm
+dist/
+.cache/
+.parcel-cache/
+
+# --- IDEs and Editors ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Logs ---
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

@@ -1,5 +1,5 @@
 // 1. Basic approach using for loop
-function getIndexToIns(arr, num) {
+export const getIndexToIns = (arr, num) => {
   arr.sort((a, b) => a - b);
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] >= num) return i;
@@ -8,12 +8,12 @@ function getIndexToIns(arr, num) {
 }
 
 // 2. Using filter
-function getIndexToInsFilter(arr, num) {
+export const getIndexToInsFilter = (arr, num) => {
   return arr.filter(val => num > val).length;
 }
 
 // 3. Using push, sort and indexOf
-function getIndexToInsSort(arr, num) {
+export const getIndexToInsSort = (arr, num) => {
   return arr
     .concat(num)
     .sort((a, b) => a - b)

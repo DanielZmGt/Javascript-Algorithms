@@ -1,7 +1,7 @@
 
 const cards = ["A", 2, 3, 4, 5, 6, 7, 8,9, 10, "J", "Q", "K"]
 let count = 0
-function cardCounter(card) {
+export const cardCounter = (card) => {
   switch (card) {
     case 2:
     case 3:

@@ -1,5 +1,5 @@
 
-const mutation = (arr) => {
+export const mutation = (arr) => {
 let target = arr[0].toLowerCase()
 let test = arr[1].toLowerCase()
 

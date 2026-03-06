@@ -1,4 +1,4 @@
-const countdown = (n) => {
+export const countdown = (n) => {
 
 
     if (n < 1) { return [] }

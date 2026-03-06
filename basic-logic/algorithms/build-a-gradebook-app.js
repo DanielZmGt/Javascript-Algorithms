@@ -1,5 +1,5 @@
 
-const getAverage = (gradesArr) => {
+export const getAverage = (gradesArr) => {
   let sum = 0
   let average = 0
   for (let i = 0; i < gradesArr.length; i++) {
@@ -10,7 +10,7 @@ const getAverage = (gradesArr) => {
 }
 console.log(getAverage([92, 88, 12, 77, 57, 100, 67, 38, 97, 89]));
 
-const getGrade = (score) => {
+export const getGrade = (score) => {
   let grade = ""
   if (score === 100) {grade = "A+"}
   else if (score > 100) {grade = "A++"}
@@ -23,13 +23,13 @@ const getGrade = (score) => {
 }
 console.log(getGrade(91));
 
-const hasPassingGrade = (score) => {
+export const hasPassingGrade = (score) => {
   if (getGrade(score) === "F") {return false}
   return true
 }
 console.log(hasPassingGrade(60));
 
-const studentMsg = (scoreArr, studentScore) => {
+export const studentMsg = (scoreArr, studentScore) => {
 let passedOrFailed = ""
   if (hasPassingGrade(studentScore) === true) {
     passedOrFailed  = "You passed the course."

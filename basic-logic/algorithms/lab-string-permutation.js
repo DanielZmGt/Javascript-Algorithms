@@ -1,4 +1,4 @@
-const permuteString = (string, prefix = "", results = []) => {
+export const permuteString = (string, prefix = "", results = []) => {
     if (string.length === 0) {
         if (!results.includes(prefix)) {
             results.push(prefix);

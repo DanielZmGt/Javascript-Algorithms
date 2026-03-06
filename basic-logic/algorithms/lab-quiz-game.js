@@ -64,7 +64,7 @@ const currentQuestion = getRandomQuestion(questions);
 const computerChoice = getRandomComputerChoice(currentQuestion.choices)
 const correctAnswer = currentQuestion.answer
 
-const getResults = (currentQuestion, computerChoice) => {
+export const getResults = (currentQuestion, computerChoice) => {
   if (computerChoice === currentQuestion.answer) {
     return "The computer's choice is correct!"
     } else {

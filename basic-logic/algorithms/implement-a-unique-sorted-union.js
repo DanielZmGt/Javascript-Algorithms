@@ -1,4 +1,4 @@
-const uniteUnique = (...args) => {
+export const uniteUnique = (...args) => {
   let unique = [] 
   
   for (let i = 0; i < args.length; i++){

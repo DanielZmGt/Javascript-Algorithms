@@ -1,5 +1,5 @@
 // 1. Basic approach using closures
-function addTogether() {
+export const addTogether = function () {
   const [first, second] = arguments;
   if (typeof first !== "number") return undefined;
   if (second === undefined) return (second) => addTogether(first, second);
@@ -8,7 +8,7 @@ function addTogether() {
 }
 
 // 2. Alternative approach with check types
-function addTogetherAlt() {
+export const addTogetherAlt = function () {
   const [arg1, arg2] = arguments;
   const isNum = (n) => typeof n === 'number';
 

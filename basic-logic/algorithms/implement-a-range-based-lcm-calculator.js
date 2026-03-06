@@ -1,6 +1,6 @@
 const getGCD = (a, b) => (b === 0 ? a : getGCD(b, a % b));
 const getLCM = (a, b) => (a * b) / getGCD(a, b);
-const smallestCommons = (arr) =>{
+export const smallestCommons = (arr) => {
   let asc = (a, b) => a - b;
   arr.sort(asc)
 

@@ -1,4 +1,4 @@
-/*const whatIsInAName = (collection, source) => {
+/*export const whatIsInAName = (collection, source) => {
 const sourceKeys = Object.keys(source);
 return collection.filter(obj => {
   return sourceKeys.every(key => {
@@ -7,7 +7,7 @@ return collection.filter(obj => {
 });
 };*/
 
-const whatIsInAName = (collection, source) => {
+export const whatIsInAName = (collection, source) => {
 const sourcePairs = Object.entries(source);
 return collection.filter(obj => {
 return sourcePairs.every(([key, value]) => {

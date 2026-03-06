@@ -1,5 +1,5 @@
 // 1. Basic approach using for loop
-function orbitalPeriod(arr) {
+export const orbitalPeriod = (arr) => {
   const GM = 398600.4418;
   const earthRadius = 6367.4447;
   const newArr = [];
@@ -15,7 +15,7 @@ function orbitalPeriod(arr) {
 }
 
 // 2. Functional approach using map
-function orbitalPeriodMap(arr) {
+export const orbitalPeriodMap = (arr) => {
   const GM = 398600.4418;
   const earthRadius = 6367.4447;
   return arr.map(({ name, avgAlt }) => {

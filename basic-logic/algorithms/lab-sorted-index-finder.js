@@ -1,4 +1,4 @@
-const getIndexToIns = (arr, num) => {
+export const getIndexToIns = (arr, num) => {
   const index = arr
   .sort((a, b) => a - b)
   .findIndex(a => a >= num)

@@ -14,7 +14,7 @@ for (let i = 0; i < newArray.length; i++) {
 }
 console.log(titleCase2("I'm a little tea pot"))
 
-const titleCase3 = (str) => {
+export const titleCase3 = (str) => {
   return str
     .toLowerCase() // 1. Normalize everything to lowercase
     .replace(/(^|\s)\S/g, (match) => match.toUpperCase());

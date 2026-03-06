@@ -1,4 +1,4 @@
-function getBookmarks() {
+export const getBookmarks = () => {
     const bookmarksString = localStorage.getItem('bookmarks');
     if (!bookmarksString) return [];
 
@@ -23,12 +23,12 @@ function getBookmarks() {
     }
 }
 
-function displayOrCloseForm() {
+export const displayOrCloseForm = () => {
     document.getElementById('main-section').classList.toggle('hidden');
     document.getElementById('form-section').classList.toggle('hidden');
 }
 
-function displayOrHideCategory() {
+export const displayOrHideCategory = () => {
     document.getElementById('main-section').classList.toggle('hidden');
     document.getElementById('bookmark-list-section').classList.toggle('hidden');
 }

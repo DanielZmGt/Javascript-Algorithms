@@ -1,4 +1,4 @@
-const steamrollArray = (arr) => {
+export const steamrollArray = (arr) => {
   const flattenedArray = [];
    
   arr.forEach(item => {

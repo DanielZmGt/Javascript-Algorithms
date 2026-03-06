@@ -1,4 +1,4 @@
-const sumFibs = (num) => {
+export const sumFibs = (num) => {
   let prev = 0
   let curr = 1
   let sum = 0

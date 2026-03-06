@@ -1,4 +1,4 @@
-const destroyer = (arr, ...arg) => {
+export const destroyer = (arr, ...arg) => {
 const destroyers = new Set(arg);
  
  return arr.filter(item => !destroyers.has(item))

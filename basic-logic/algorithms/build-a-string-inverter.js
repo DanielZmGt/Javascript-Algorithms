@@ -1,6 +1,6 @@
 
 // 1. Iterative approach
-const reverseString = (str) => {
+export const reverseString = (str) => {
   let reverseWord = ("");
   for (let i = 0; i < str.length; i++) {
     let letter = str[str.length - 1 - i]
@@ -10,12 +10,12 @@ const reverseString = (str) => {
 }
 
 // 2. Built-in methods approach
-const reverseString2 = (str) => {
+export const reverseString2 = (str) => {
   return str.split('').reverse().join("")
 }
 
 // 3. Recursive approach
-const reverseStringRecursive = (str) => {
+export const reverseStringRecursive = (str) => {
   if (str === "") return "";
   return reverseStringRecursive(str.substr(1)) + str.charAt(0);
 }

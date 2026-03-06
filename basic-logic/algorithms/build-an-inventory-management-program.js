@@ -18,7 +18,7 @@ const addProduct = product => {
   console.log(`${item.name} added to inventory`)}
 }
 
-const removeProduct = (name, quantity) => {
+export const removeProduct = (name, quantity) => {
   const index = findProductIndex(name);
 if (index === -1) {
     console.log(`${name.toLowerCase()} not found`);

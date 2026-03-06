@@ -2,7 +2,7 @@
 let num = 15
 
 // 1. Iterative Approach (using a for loop)
-const factorializeIterative = (number) => {
+export const factorializeIterative = (number) => {
   let result = 1;
   for (let i = 1; i <= number; i++ ) {
     result *= i
@@ -11,14 +11,14 @@ const factorializeIterative = (number) => {
 } 
 
 // 2. Recursive Approach
-const factorializeRecursive = (num) => {
+export const factorializeRecursive = (num) => {
   if (num < 0) return -1;
   if (num === 0 || num === 1) return 1;
   return num * factorializeRecursive(num - 1);
 }
 
 // 3. Functional Approach (using reduce)
-const factorializeFunctional = (num) => {
+export const factorializeFunctional = (num) => {
   if (num < 0) return -1;
   if (num === 0) return 1;
   return Array.from({ length: num }, (_, i) => i + 1)
