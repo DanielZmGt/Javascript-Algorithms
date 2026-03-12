@@ -9,7 +9,7 @@ This repository houses a collection of JavaScript algorithms integrated into an 
 
 Thanks for visiting!
 
-## 🛠️ THE TECH STACK
+## 🛠️ STACK
 
 * **Logic Engine:** Pure JavaScript (ES Modules).
 * **Automation:** A custom Node.js refactor pipeline using **Esprima** for AST (Abstract Syntax Tree) analysis.
