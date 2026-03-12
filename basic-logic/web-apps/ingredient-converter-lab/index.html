@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingredient Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="converter-container">
+        <h1><i class="fas fa-balance-scale"></i> Ingredient Converter</h1>
+        <div class="form-group">
+            <label for="ingredient">Ingredient Name (Optional):</label>
+            <input type="text" id="ingredient" placeholder="e.g. Flour, Sugar">
+        </div>
+        <div class="form-group">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" value="1" min="0" step="0.1">
+        </div>
+        <div class="form-group">
+            <label for="fromUnit">Convert From:</label>
+            <select id="fromUnit">
+                <optgroup label="Volume">
+                    <option value="cup">Cups (cup)</option>
+                    <option value="tbsp">Tablespoons (tbsp)</option>
+                    <option value="tsp">Teaspoons (tsp)</option>
+                    <option value="ml">Milliliters (ml)</option>
+                    <option value="l">Liters (l)</option>
+                </optgroup>
+                <optgroup label="Weight">
+                    <option value="g">Grams (g)</option>
+                    <option value="oz">Ounces (oz)</option>
+                    <option value="lb">Pounds (lb)</option>
+                </optgroup>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="toUnit">Convert To:</label>
+            <select id="toUnit">
+                <optgroup label="Volume">
+                    <option value="ml">Milliliters (ml)</option>
+                    <option value="l">Liters (l)</option>
+                    <option value="cup">Cups (cup)</option>
+                    <option value="tbsp">Tablespoons (tbsp)</option>
+                    <option value="tsp">Teaspoons (tsp)</option>
+                </optgroup>
+                <optgroup label="Weight">
+                    <option value="g">Grams (g)</option>
+                    <option value="oz">Ounces (oz)</option>
+                    <option value="lb">Pounds (lb)</option>
+                </optgroup>
+            </select>
+        </div>
+        <button id="convertBtn">Execute Conversion</button>
+        <div id="result" class="result-display">Awaiting input...</div>
+        <a href="../index.html" class="back-link"><i class="fas fa-arrow-left"></i> Return to Portfolio</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
