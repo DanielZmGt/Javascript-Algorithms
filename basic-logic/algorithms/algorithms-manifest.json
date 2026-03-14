@@ -1003,5 +1003,17 @@
         ],
         "title": "Where Do I Belong",
         "description": "[Stateful Neural Pathway] Requires interactive parameter injection. Executes advanced multi-stage logic for Where Do I Belong."
+    },
+    {
+        "filename": "build-a-optional-arguments-sum-lab.js",
+        "type": "Interactive",
+        "exports": [
+            {
+                "name": "addTogether",
+                "args": ["...args"]
+            }
+        ],
+        "title": "Optional Arguments Sum Lab",
+        "description": "A function that sums two arguments, or returns a new function to accept the second argument."
     }
 ]
