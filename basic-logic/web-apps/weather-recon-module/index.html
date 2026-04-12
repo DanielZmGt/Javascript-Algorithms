@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Recon Module | Vanguard UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Scanline Overlay -->
+    <div class="scanlines"></div>
+
+    <div class="container">
+        <header class="module-header">
+            <a href="../index.html" class="back-btn" title="Return to Data Core"><i class="fas fa-chevron-left"></i> SYS_BACK</a>
+            <div class="header-titles">
+                <h1>SYS_WX // RECON_MODULE</h1>
+                <p class="subtitle">Atmospheric Analysis & Visual Uplink</p>
+            </div>
+            <div class="sys-status">
+                <span>UPLINK: <strong class="status-online">ACTIVE</strong></span>
+                <span>DATA: <strong id="data-status" class="status-waiting">AWAITING COORDS</strong></span>
+            </div>
+        </header>
+
+        <section class="control-panel">
+            <div class="search-box">
+                <i class="fas fa-crosshairs search-icon"></i>
+                <input type="text" id="location-input" class="tactical-input" placeholder="ENTER TARGET COORDINATES OR CITY NAME..." autocomplete="off">
+                <button id="search-btn" class="tactical-btn"><i class="fas fa-satellite-dish"></i> SCAN</button>
+            </div>
+            <div class="settings-box">
+                <input type="password" id="api-key-input" class="tactical-input small-input" placeholder="WINDY CAMS API KEY (OPTIONAL)">
+                <button id="save-key-btn" class="tactical-btn small-btn" title="Save API Key for Live Cams"><i class="fas fa-key"></i></button>
+            </div>
+        </section>
+
+        <main class="dashboard grid">
+            <!-- Left Panel: Current Telemetry -->
+            <div class="panel telemetry-panel">
+                <div class="panel-header">
+                    <i class="fas fa-thermometer-half"></i>
+                    <h2>Current Telemetry</h2>
+                </div>
+                <div class="telemetry-content" id="current-weather">
+                    <div class="target-location" id="target-name">TARGET: UNKNOWN</div>
+                    <div class="coords" id="target-coords">LAT: 0.0000 | LON: 0.0000</div>
+                    
+                    <div class="main-condition">
+                        <div class="weather-icon" id="current-icon"><i class="fas fa-satellite"></i></div>
+                        <div class="temperature"><span id="current-temp">--</span>°C</div>
+                        <div class="condition-text" id="current-desc">AWAITING SCAN</div>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <span class="stat-label">WIND SPD</span>
+                            <span class="stat-value" id="current-wind">-- km/h</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">HUMIDITY</span>
+                            <span class="stat-value" id="current-humidity">-- %</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">PRESSURE</span>
+                            <span class="stat-value" id="current-pressure">-- hPa</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">CLOUD CVR</span>
+                            <span class="stat-value" id="current-clouds">-- %</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Panel: Dual Recon Feed -->
+            <div class="panel recon-panel">
+                <div class="panel-header feed-tabs">
+                    <button class="tab-btn active" data-target="feed-radar"><i class="fas fa-globe"></i> RADAR FEED</button>
+                    <button class="tab-btn" data-target="feed-cams"><i class="fas fa-video"></i> VISUAL UPLINK</button>
+                </div>
+                <div class="feed-container">
+                    <div id="feed-radar" class="feed-content active">
+                        <div class="iframe-wrapper">
+                            <div class="placeholder-text" id="radar-placeholder">AWAITING TARGET COORDINATES...</div>
+                            <iframe id="windy-iframe" width="100%" height="100%" src="" frameborder="0" style="display: none;"></iframe>
+                        </div>
+                    </div>
+                    <div id="feed-cams" class="feed-content">
+                        <div class="cams-wrapper" id="cams-container">
+                            <div class="cam-status">
+                                <i class="fas fa-video-slash"></i>
+                                <p>NO VISUAL UPLINK ESTABLISHED</p>
+                                <p class="small">Provide Windy Webcams API key or scan location.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Panel: Prediction Timeline -->
+            <div class="panel forecast-panel full-width">
+                <div class="panel-header">
+                    <i class="fas fa-clock"></i>
+                    <h2>5-Day Prediction Timeline</h2>
+                </div>
+                <div class="forecast-grid" id="forecast-container">
+                    <!-- Forecast items injected via JS -->
+                    <div class="placeholder-text">AWAITING SCAN DATA...</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
