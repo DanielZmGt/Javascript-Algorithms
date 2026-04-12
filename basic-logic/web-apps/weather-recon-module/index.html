@@ -32,6 +32,7 @@
                 <i class="fas fa-crosshairs search-icon"></i>
                 <input type="text" id="location-input" class="tactical-input" placeholder="ENTER TARGET COORDINATES OR CITY NAME..." autocomplete="off">
                 <button id="search-btn" class="tactical-btn"><i class="fas fa-satellite-dish"></i> SCAN</button>
+                <button id="locate-btn" class="tactical-btn icon-only-btn" title="Acquire Local Coordinates"><i class="fas fa-location-arrow"></i></button>
             </div>
             <div class="settings-box">
                 <input type="password" id="api-key-input" class="tactical-input small-input" placeholder="WINDY CAMS API KEY (OPTIONAL)">
@@ -52,7 +53,7 @@
                     
                     <div class="main-condition">
                         <div class="weather-icon" id="current-icon"><i class="fas fa-satellite"></i></div>
-                        <div class="temperature"><span id="current-temp">--</span>°C</div>
+                        <div class="temperature"><span id="current-temp">--</span><span id="unit-toggle" class="unit-toggle" title="Toggle °C / °F">°C</span></div>
                         <div class="condition-text" id="current-desc">AWAITING SCAN</div>
                     </div>
 

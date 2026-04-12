@@ -202,6 +202,11 @@ h1 {
     transform: scale(0.98);
 }
 
+.icon-only-btn {
+    padding: 0.75rem 1rem;
+    font-size: 1.2rem;
+}
+
 .small-btn {
     padding: 0.75rem 1rem;
     border-color: var(--text-muted);
@@ -302,6 +307,18 @@ h1 {
     line-height: 1;
     font-weight: normal;
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.unit-toggle {
+    cursor: pointer;
+    transition: color 0.3s;
+    font-size: 2.5rem;
+    vertical-align: super;
+}
+
+.unit-toggle:hover {
+    color: var(--hostile-orange);
+    text-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
 }
 
 .condition-text {

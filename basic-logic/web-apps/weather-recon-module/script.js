@@ -2,12 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // DOM Elements
     const locationInput = document.getElementById('location-input');
     const searchBtn = document.getElementById('search-btn');
+    const locateBtn = document.getElementById('locate-btn');
     const apiKeyInput = document.getElementById('api-key-input');
     const saveKeyBtn = document.getElementById('save-key-btn');
     
     const targetName = document.getElementById('target-name');
     const targetCoords = document.getElementById('target-coords');
     const currentTemp = document.getElementById('current-temp');
+    const unitToggle = document.getElementById('unit-toggle');
     const currentDesc = document.getElementById('current-desc');
     const currentIcon = document.getElementById('current-icon');
     const currentWind = document.getElementById('current-wind');
@@ -27,12 +29,43 @@ document.addEventListener('DOMContentLoaded', () => {
     // State
     let currentLat = 0;
     let currentLon = 0;
+    let currentUnit = 'C';
+    let envApiKey = null;
+    
+    // Public API Key (Secured via Windy Dashboard Domain Restriction to GitHub Pages)
+    const PROD_API_KEY = '3GNUivP8eTsmH5t71wdnzElx0pTdiLad';
 
-    // Load saved API key
-    const savedKey = localStorage.getItem('windyCamsApiKey');
-    if (savedKey) {
-        apiKeyInput.value = savedKey;
-    }
+    // Attempt to load .env file
+    const loadEnv = async () => {
+        try {
+            const res = await fetch('.env');
+            if (res.ok) {
+                const text = await res.text();
+                const lines = text.split('\n');
+                lines.forEach(line => {
+                    const [key, val] = line.split('=');
+                    if (key && val && key.trim() === 'WINDY_API_KEY') {
+                        envApiKey = val.trim();
+                        apiKeyInput.value = '*** ENV KEY ACTIVE ***';
+                        apiKeyInput.disabled = true;
+                        saveKeyBtn.disabled = true;
+                    }
+                });
+            }
+        } catch (e) {
+            console.log('No .env file found or accessible. Using local storage fallback.');
+        }
+        
+        if (!envApiKey) {
+            // Load saved API key from storage if .env is not present
+            const savedKey = localStorage.getItem('windyCamsApiKey');
+            if (savedKey) {
+                apiKeyInput.value = savedKey;
+            }
+        }
+    };
+    
+    loadEnv();
 
     saveKeyBtn.addEventListener('click', () => {
         const key = apiKeyInput.value.trim();
@@ -43,6 +76,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if (currentLat && currentLon) fetchWebcams(currentLat, currentLon);
         } else {
             localStorage.removeItem('windyCamsApiKey');
+        }
+    });
+
+    unitToggle.addEventListener('click', () => {
+        currentUnit = currentUnit === 'C' ? 'F' : 'C';
+        unitToggle.textContent = `°${currentUnit}`;
+        if (currentLat && currentLon) {
+            fetchWeather(currentLat, currentLon);
+            updateWindyMap(currentLat, currentLon);
         }
     });
 
@@ -86,68 +128,27 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Apply color styling to temperature
-    const styleTemperature = (element, temp) => {
+    const styleTemperature = (element, temp, unit) => {
         element.textContent = Math.round(temp);
-        if (temp >= 30) element.style.color = 'var(--temp-hot)';
-        else if (temp >= 20) element.style.color = 'var(--temp-warm)';
-        else if (temp >= 10) element.style.color = 'var(--temp-mild)';
-        else if (temp > 0) element.style.color = 'var(--temp-cold)';
+        let tempC = unit === 'F' ? (temp - 32) * 5/9 : temp;
+
+        if (tempC >= 30) element.style.color = 'var(--temp-hot)';
+        else if (tempC >= 20) element.style.color = 'var(--temp-warm)';
+        else if (tempC >= 10) element.style.color = 'var(--temp-mild)';
+        else if (tempC > 0) element.style.color = 'var(--temp-cold)';
         else element.style.color = 'var(--temp-freezing)';
-    };
-
-    const searchLocation = async () => {
-        const query = locationInput.value.trim();
-        if (!query) return;
-
-        dataStatus.textContent = 'SCANNING...';
-        dataStatus.className = 'status-waiting';
-        targetName.textContent = 'TARGET: ACQUIRING...';
-
-        try {
-            // 1. Geocode
-            const geoRes = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(query)}&count=1&language=en&format=json`);
-            const geoData = await geoRes.json();
-
-            if (!geoData.results || geoData.results.length === 0) {
-                throw new Error("Location not found");
-            }
-
-            const loc = geoData.results[0];
-            currentLat = loc.latitude;
-            currentLon = loc.longitude;
-            
-            targetName.textContent = `TARGET: ${loc.name.toUpperCase()}${loc.country ? ', ' + loc.country.toUpperCase() : ''}`;
-            targetCoords.textContent = `LAT: ${currentLat.toFixed(4)} | LON: ${currentLon.toFixed(4)}`;
-
-            // 2. Fetch Weather
-            fetchWeather(currentLat, currentLon);
-
-            // 3. Update Windy Map
-            updateWindyMap(currentLat, currentLon);
-
-            // 4. Fetch Webcams
-            fetchWebcams(currentLat, currentLon);
-
-            dataStatus.textContent = 'DATA ACQUIRED';
-            dataStatus.className = 'status-online';
-            
-        } catch (error) {
-            console.error(error);
-            dataStatus.textContent = 'ERROR';
-            dataStatus.className = 'status-error';
-            targetName.textContent = 'TARGET: NOT FOUND';
-        }
     };
 
     const fetchWeather = async (lat, lon) => {
         try {
-            const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,weather_code,cloud_cover,surface_pressure,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=auto`;
+            const tempUnitParam = currentUnit === 'F' ? 'fahrenheit' : 'celsius';
+            const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,weather_code,cloud_cover,surface_pressure,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=auto&temperature_unit=${tempUnitParam}`;
             const res = await fetch(url);
             const data = await res.json();
 
             // Update Current
             const current = data.current;
-            styleTemperature(currentTemp, current.temperature_2m);
+            styleTemperature(currentTemp, current.temperature_2m, currentUnit);
             currentWind.textContent = `${current.wind_speed_10m} km/h`;
             currentHumidity.textContent = `${current.relative_humidity_2m} %`;
             currentPressure.textContent = `${current.surface_pressure} hPa`;
@@ -197,11 +198,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const updateWindyMap = (lat, lon) => {
         radarPlaceholder.style.display = 'none';
         windyIframe.style.display = 'block';
-        windyIframe.src = `https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=°C&metricWind=km/h&zoom=10&overlay=radar&product=radar&level=surface&lat=${lat}&lon=${lon}&detailLat=${lat}&detailLon=${lon}&marker=true`;
+        const mapTempUnit = currentUnit === 'F' ? '°F' : '°C';
+        windyIframe.src = `https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=${mapTempUnit}&metricWind=km/h&zoom=10&overlay=radar&product=radar&level=surface&lat=${lat}&lon=${lon}&detailLat=${lat}&detailLon=${lon}&marker=true`;
     };
 
     const fetchWebcams = async (lat, lon) => {
-        const apiKey = localStorage.getItem('windyCamsApiKey');
+        const apiKey = envApiKey || localStorage.getItem('windyCamsApiKey');
         if (!apiKey) {
             camsContainer.innerHTML = `
                 <div class="cam-status">
@@ -252,6 +254,85 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
     };
+
+    const processCoords = async (lat, lon, targetNameStr) => {
+        currentLat = lat;
+        currentLon = lon;
+        
+        targetName.textContent = `TARGET: ${targetNameStr.toUpperCase()}`;
+        targetCoords.textContent = `LAT: ${currentLat.toFixed(4)} | LON: ${currentLon.toFixed(4)}`;
+
+        fetchWeather(currentLat, currentLon);
+        updateWindyMap(currentLat, currentLon);
+        fetchWebcams(currentLat, currentLon);
+
+        dataStatus.textContent = 'DATA ACQUIRED';
+        dataStatus.className = 'status-online';
+    };
+
+    const searchLocation = async () => {
+        const query = locationInput.value.trim();
+        if (!query) return;
+
+        dataStatus.textContent = 'SCANNING...';
+        dataStatus.className = 'status-waiting';
+        targetName.textContent = 'TARGET: ACQUIRING...';
+
+        try {
+            const geoRes = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(query)}&count=1&language=en&format=json`);
+            const geoData = await geoRes.json();
+
+            if (!geoData.results || geoData.results.length === 0) {
+                throw new Error("Location not found");
+            }
+
+            const loc = geoData.results[0];
+            const tName = `${loc.name}${loc.country ? ', ' + loc.country : ''}`;
+            
+            await processCoords(loc.latitude, loc.longitude, tName);
+            
+        } catch (error) {
+            console.error(error);
+            dataStatus.textContent = 'ERROR';
+            dataStatus.className = 'status-error';
+            targetName.textContent = 'TARGET: NOT FOUND';
+        }
+    };
+
+    locateBtn.addEventListener('click', () => {
+        if ("geolocation" in navigator) {
+            dataStatus.textContent = 'DETECTING...';
+            dataStatus.className = 'status-waiting';
+            targetName.textContent = 'TARGET: LOCAL ACQUISITION...';
+
+            navigator.geolocation.getCurrentPosition(async (position) => {
+                const lat = position.coords.latitude;
+                const lon = position.coords.longitude;
+                let locName = 'LOCAL SECTOR';
+                
+                try {
+                    const geoRes = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=en`);
+                    const geoData = await geoRes.json();
+                    if (geoData.city) {
+                        locName = `${geoData.city}${geoData.countryCode ? ', ' + geoData.countryCode : ''}`;
+                    }
+                } catch (e) {
+                    console.error("Reverse geocoding failed", e);
+                }
+                
+                locationInput.value = `${lat.toFixed(4)}, ${lon.toFixed(4)}`;
+                await processCoords(lat, lon, locName);
+
+            }, (error) => {
+                console.error(error);
+                dataStatus.textContent = 'LOC ERR';
+                dataStatus.className = 'status-error';
+                targetName.textContent = 'TARGET: SIGNAL LOST';
+            });
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+    });
 
     searchBtn.addEventListener('click', searchLocation);
     locationInput.addEventListener('keypress', (e) => {
