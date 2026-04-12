@@ -139,6 +139,40 @@ h1 {
     position: relative;
 }
 
+.autocomplete-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-surface);
+    border: 1px solid var(--militia-blue-dim);
+    border-top: none;
+    z-index: 100;
+    max-height: 250px;
+    overflow-y: auto;
+    display: none;
+}
+
+.autocomplete-item {
+    padding: 0.75rem 1rem;
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--text-primary);
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 216, 255, 0.1);
+    transition: background 0.2s;
+}
+
+.autocomplete-item:hover {
+    background: rgba(0, 216, 255, 0.1);
+    color: var(--militia-blue);
+}
+
+.autocomplete-item span.country {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-left: 0.5rem;
+}
+
 .search-icon {
     position: absolute;
     left: 1rem;

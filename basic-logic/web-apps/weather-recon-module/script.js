@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const radarPlaceholder = document.getElementById('radar-placeholder');
     const forecastContainer = document.getElementById('forecast-container');
     const camsContainer = document.getElementById('cams-container');
+    const autocompleteResults = document.getElementById('autocomplete-results');
 
     const tabBtns = document.querySelectorAll('.tab-btn');
     const feedContents = document.querySelectorAll('.feed-content');
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentLon = 0;
     let currentUnit = 'C';
     let envApiKey = null;
+    let debounceTimer;
     
     // Public API Key (Secured via Windy Dashboard Domain Restriction to GitHub Pages)
     const PROD_API_KEY = '3GNUivP8eTsmH5t71wdnzElx0pTdiLad';
@@ -203,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const fetchWebcams = async (lat, lon) => {
-        const apiKey = envApiKey || localStorage.getItem('windyCamsApiKey');
+        const apiKey = envApiKey || localStorage.getItem('windyCamsApiKey') || PROD_API_KEY;
         if (!apiKey) {
             camsContainer.innerHTML = `
                 <div class="cam-status">
@@ -337,5 +339,57 @@ document.addEventListener('DOMContentLoaded', () => {
     searchBtn.addEventListener('click', searchLocation);
     locationInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') searchLocation();
+    });
+
+    locationInput.addEventListener('input', (e) => {
+        clearTimeout(debounceTimer);
+        const query = e.target.value.trim();
+        
+        if (query.length < 3) {
+            autocompleteResults.style.display = 'none';
+            return;
+        }
+
+        debounceTimer = setTimeout(async () => {
+            try {
+                const geoRes = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(query)}&count=5&language=en&format=json`);
+                const geoData = await geoRes.json();
+
+                autocompleteResults.innerHTML = '';
+                
+                if (geoData.results && geoData.results.length > 0) {
+                    autocompleteResults.style.display = 'block';
+                    geoData.results.forEach(loc => {
+                        const item = document.createElement('div');
+                        item.className = 'autocomplete-item';
+                        
+                        const admin1 = loc.admin1 ? `${loc.admin1}, ` : '';
+                        const country = loc.country || '';
+                        
+                        item.innerHTML = `${loc.name} <span class="country">${admin1}${country}</span>`;
+                        
+                        item.addEventListener('click', () => {
+                            locationInput.value = `${loc.name}, ${country}`;
+                            autocompleteResults.style.display = 'none';
+                            const tName = `${loc.name}${loc.country ? ', ' + loc.country : ''}`;
+                            processCoords(loc.latitude, loc.longitude, tName);
+                        });
+                        
+                        autocompleteResults.appendChild(item);
+                    });
+                } else {
+                    autocompleteResults.style.display = 'none';
+                }
+            } catch (err) {
+                console.error('Autocomplete error', err);
+            }
+        }, 500);
+    });
+
+    // Hide dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.search-box')) {
+            autocompleteResults.style.display = 'none';
+        }
     });
 });
