@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume &mdash; Daniel Sebastian Zamudio Guti&eacute;rrez</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: #f0ede8;
+      color: #1a1a1a;
+      line-height: 1.6;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      box-shadow: 0 4px 32px rgba(0,0,0,.12);
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      min-height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: #1c2b3a;
+      color: #e8e4de;
+      padding: 40px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .photo-wrap { text-align: center; }
+
+    .photo-wrap img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 50%;
+      border: 4px solid #c9a86c;
+      display: block;
+      margin: 0 auto 16px;
+    }
+
+    .photo-wrap h1 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: .02em;
+      color: #fff;
+      line-height: 1.3;
+    }
+
+    .photo-wrap .title {
+      font-size: .8rem;
+      color: #c9a86c;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      margin-top: 6px;
+    }
+
+    .sidebar-section h2 {
+      font-size: .68rem;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      color: #c9a86c;
+      border-bottom: 1px solid #c9a86c44;
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+    }
+
+    .contact-list {
+      list-style: none;
+      font-size: .82rem;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .contact-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .contact-list .icon {
+      width: 16px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      opacity: .75;
+    }
+
+    .skills-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: .82rem;
+    }
+
+    .skill-item span.label {
+      display: block;
+      margin-bottom: 4px;
+      color: #e8e4de;
+    }
+
+    .skill-bar {
+      background: #2e4257;
+      border-radius: 4px;
+      height: 5px;
+      overflow: hidden;
+    }
+
+    .skill-bar-fill {
+      height: 100%;
+      background: #c9a86c;
+      border-radius: 4px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      background: #2e4257;
+      color: #c9a86c;
+      border-radius: 4px;
+      padding: 3px 8px;
+      font-size: .73rem;
+      letter-spacing: .04em;
+    }
+
+    .lang-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: .82rem;
+    }
+
+    .lang-list li {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .lang-level {
+      color: #c9a86c;
+      font-size: .75rem;
+    }
+
+    /* Main */
+    .main {
+      padding: 44px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    .section-title {
+      font-size: .7rem;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      color: #c9a86c;
+      border-bottom: 2px solid #c9a86c;
+      padding-bottom: 6px;
+      margin-bottom: 18px;
+    }
+
+    .profile p {
+      font-size: .92rem;
+      color: #333;
+      line-height: 1.75;
+    }
+
+    .project { margin-bottom: 22px; }
+    .project:last-child { margin-bottom: 0; }
+
+    .project-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 6px;
+    }
+
+    .project-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1c2b3a;
+    }
+
+    .project-stack {
+      font-size: .73rem;
+      color: #888;
+      font-style: italic;
+    }
+
+    .project p {
+      font-size: .87rem;
+      color: #444;
+      line-height: 1.65;
+    }
+
+    .project ul {
+      margin-top: 6px;
+      padding-left: 18px;
+      font-size: .85rem;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    .workflow p {
+      font-size: .87rem;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        max-width: 100%;
+        grid-template-columns: 240px 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .page { grid-template-columns: 1fr; }
+      .sidebar { padding: 30px 20px; }
+      .main { padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="photo-wrap">
+      <!-- Place your photo as photo.jpg in the same folder -->
+      <img src="photo.jpg" alt="Daniel Zamudio" />
+      <h1>Daniel Sebastian<br>Zamudio Guti&eacute;rrez</h1>
+      <p class="title">Full&#8209;Stack Developer</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="sidebar-section">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16v16H4z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <a href="mailto:zam.zagd@gmail.com">zam.zagd@gmail.com</a>
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2A19.72 19.72 0 013.09 4.18 2 2 0 015.08 2h3a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 9.91a16 16 0 006.99 7l1.27-1.27a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 17.92z"/>
+          </svg>
+          541&#8209;916&#8209;6276
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+          Selma, Oregon 97538
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+          </svg>
+          <a href="https://github.com/DanielZmGt" target="_blank">github.com/DanielZmGt</a>
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+          </svg>
+          <a href="https://www.linkedin.com/in/daniel-zamudio-84a589385/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Technical Skills -->
+    <div class="sidebar-section">
+      <h2>Technical Skills</h2>
+      <ul class="skills-list">
+        <li class="skill-item">
+          <span class="label">Next.js / React</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:92%"></div></div>
+        </li>
+        <li class="skill-item">
+          <span class="label">TypeScript</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:88%"></div></div>
+        </li>
+        <li class="skill-item">
+          <span class="label">Python / FastAPI</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
+        </li>
+        <li class="skill-item">
+          <span class="label">Supabase / PostgreSQL</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:82%"></div></div>
+        </li>
+        <li class="skill-item">
+          <span class="label">Tailwind CSS</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div>
+        </li>
+        <li class="skill-item">
+          <span class="label">Docker</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:75%"></div></div>
+        </li>
+        <li class="skill-item">
+          <span class="label">JavaScript (Algorithms)</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:88%"></div></div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Stack & Tools -->
+    <div class="sidebar-section">
+      <h2>Stack &amp; Tools</h2>
+      <div class="tag-list">
+        <span class="tag">Next.js 15/16</span>
+        <span class="tag">React 19</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Python 3.11</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">Supabase</span>
+        <span class="tag">Tailwind CSS</span>
+        <span class="tag">Vite</span>
+        <span class="tag">Framer Motion</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Vercel</span>
+        <span class="tag">Railway</span>
+        <span class="tag">GitHub Actions</span>
+        <span class="tag">Playwright</span>
+        <span class="tag">Google Gemini</span>
+        <span class="tag">JWT / Auth</span>
+        <span class="tag">OCR / pandas</span>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="sidebar-section">
+      <h2>Languages</h2>
+      <ul class="lang-list">
+        <li><span>Spanish</span><span class="lang-level">Native</span></li>
+        <li><span>English</span><span class="lang-level">Advanced</span></li>
+      </ul>
+    </div>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- Professional Profile -->
+    <section class="profile">
+      <h2 class="section-title">Professional Profile</h2>
+      <p>
+        Full&#8209;Stack Developer with hands&#8209;on experience building production-grade web platforms that combine modern
+        frontends with robust microservices. Specialized in Next.js, React, and Python/FastAPI, with deep command of
+        Supabase, JWT&#8209;based authentication, and cloud deployments on Vercel and Railway. Passionate about solving
+        real business problems through well&#8209;structured, secure, and scalable software. Proven ability to design
+        end&#8209;to&#8209;end architectures &mdash; from database to UI &mdash; including generative AI integrations and
+        automated document processing.
+      </p>
+    </section>
+
+    <!-- Featured Projects -->
+    <section>
+      <h2 class="section-title">Featured Projects</h2>
+
+      <!-- 3ZG Tool Nest -->
+      <div class="project">
+        <div class="project-header">
+          <span class="project-name">3ZG Tool Nest</span>
+          <span class="project-stack">Next.js 16 &middot; Python/FastAPI &middot; Supabase &middot; Docker &middot; Vercel / Railway</span>
+        </div>
+        <p>
+          Internal web platform for 3ZG that centralizes accounting and document&#8209;processing tools under a
+          role&#8209;based access control system. Replaced scattered desktop scripts with a unified, browser&#8209;accessible
+          toolbox.
+        </p>
+        <ul>
+          <li>Bank statement tagger for multiple Mexican banks (BBVA, Banamex, HSBC, Monex, Santander) with OCR support; outputs structured Excel reports.</li>
+          <li>Excel &amp; PDF consolidators, IVA Import Generator (ASC &rarr; SAT), UUID Finder/Consolidator, and formula stripper.</li>
+          <li>Admin panel with granular user &amp; tool management, and a built&#8209;in AI agent powered by Google Gemini.</li>
+          <li>Direct&#8209;to&#8209;worker file upload architecture bypasses Vercel payload limits while preserving auth via token handshake.</li>
+          <li>Full CI/CD via GitHub Actions: linting, testing, pip&#8209;audit, npm audit, and CycloneDX SBOM generation on every build.</li>
+          <li>Complete English/Spanish i18n and Row&#8209;Level Security (RLS) on all Supabase tables.</li>
+        </ul>
+      </div>
+
+      <!-- Galería y Enmarcados del Bajío -->
+      <div class="project">
+        <div class="project-header">
+          <span class="project-name">Galer&iacute;a y Enmarcados del Baj&iacute;o</span>
+          <span class="project-stack">Next.js 15 &middot; React 19 &middot; Supabase &middot; Framer Motion &middot; Vercel</span>
+        </div>
+        <p>
+          E&#8209;commerce platform and art gallery featuring an interactive virtual framer tool. Users can preview custom
+          moldings, mat sizes, and background colors on their artwork in real time before placing a custom order.
+          Includes cart management, gallery &amp; shop sections, and continuous deployment to Vercel.
+        </p>
+      </div>
+
+      <!-- Aunt Sarah's Bakery -->
+      <div class="project">
+        <div class="project-header">
+          <span class="project-name">Aunt Sarah's Bakery &amp; Chef Services</span>
+          <span class="project-stack">React 19 &middot; TypeScript &middot; Vite &middot; Tailwind CSS &middot; Google Gemini &middot; Vercel</span>
+        </div>
+        <p>
+          Artisanal bakery platform with a conversational AI assistant (&ldquo;Aunt Sarah&rdquo;) powered by Google Gemini
+          2.0 Flash. All AI logic runs through a secure serverless proxy, keeping credentials off the client. Features
+          a handcrafted menu, private chef services, and a fully responsive Tailwind CSS design.
+        </p>
+      </div>
+
+      <!-- Javascript Algorithms -->
+      <div class="project">
+        <div class="project-header">
+          <span class="project-name">Javascript Algorithms</span>
+          <span class="project-stack">JavaScript &middot; Python &middot; Node.js</span>
+        </div>
+        <p>
+          Study repository covering algorithms, data structures, and computational logic. Includes the
+          <em>titan&#8209;refactor</em> script (available in both JS and Python) for automated codebase restructuring.
+        </p>
+      </div>
+    </section>
+
+    <!-- Workflow Optimization Tools -->
+    <section class="workflow">
+      <h2 class="section-title">Workflow Optimization</h2>
+      <p>
+        Consistent use of automation and AI&#8209;assisted tools to accelerate development: <strong>Claude Code</strong>
+        as a terminal&#8209;based coding assistant, <strong>GitHub Actions</strong> for CI/CD pipelines,
+        <strong>Docker&nbsp;/&nbsp;Docker Compose</strong> for reproducible environments, and
+        <strong>Vercel&nbsp;/&nbsp;Railway</strong> for zero&#8209;downtime continuous deployments.
+      </p>
+    </section>
+
+  </main>
+</div>
+</body>
+</html>
