@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Currículum — Daniel Sebastian Zamudio Gutiérrez</title>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: 'Georgia', serif;
@@ -16,15 +23,21 @@
       -webkit-print-color-adjust: exact;
     }
 
-    a { color: inherit; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
 
     /* ── Layout ── */
     .page {
       max-width: 900px;
       margin: 40px auto;
       background: #fff;
-      box-shadow: 0 4px 32px rgba(0,0,0,.12);
+      box-shadow: 0 4px 32px rgba(0, 0, 0, .12);
       display: grid;
       grid-template-columns: 260px 1fr;
       min-height: 100vh;
@@ -192,7 +205,9 @@
       margin-bottom: 22px;
     }
 
-    .project:last-child { margin-bottom: 0; }
+    .project:last-child {
+      margin-bottom: 0;
+    }
 
     .project-header {
       display: flex;
@@ -238,7 +253,10 @@
 
     /* Print */
     @media print {
-      body { background: #fff; }
+      body {
+        background: #fff;
+      }
+
       .page {
         margin: 0;
         box-shadow: none;
@@ -248,225 +266,266 @@
     }
 
     @media (max-width: 680px) {
-      .page { grid-template-columns: 1fr; }
-      .sidebar { padding: 30px 20px; }
-      .main { padding: 30px 20px; }
+      .page {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        padding: 30px 20px;
+      }
+
+      .main {
+        padding: 30px 20px;
+      }
     }
   </style>
 </head>
+
 <body>
-<div class="page">
+  <div class="page">
 
-  <!-- ═══════════ SIDEBAR ═══════════ -->
-  <aside class="sidebar">
+    <!-- ═══════════ SIDEBAR ═══════════ -->
+    <aside class="sidebar">
 
-    <div class="photo-wrap">
-      <!-- Reemplaza photo.jpg con tu imagen en la misma carpeta -->
-      <img src="photo.jpg" alt="Daniel Zamudio" />
-      <h1>Daniel Sebastian<br>Zamudio Gutiérrez</h1>
-      <p class="title">Desarrollador Full‑Stack</p>
-    </div>
-
-    <!-- Contacto -->
-    <div class="sidebar-section">
-      <h2>Contacto</h2>
-      <ul class="contact-list">
-        <li>
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M4 4h16v16H4z"/><polyline points="22,6 12,13 2,6"/>
-          </svg>
-          <a href="mailto:zam.zagd@gmail.com">zam.zagd@gmail.com</a>
-        </li>
-        <li>
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2A19.72 19.72 0 013.09 4.18 2 2 0 015.08 2h3a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 9.91a16 16 0 006.99 7l1.27-1.27a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 17.92z"/>
-          </svg>
-          541‑916‑6276
-        </li>
-        <li>
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
-          </svg>
-          Selma, Oregon 97538
-        </li>
-        <li>
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
-          </svg>
-          <a href="https://github.com/DanielZmGt" target="_blank">github.com/DanielZmGt</a>
-        </li>
-        <li>
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
-          </svg>
-          <a href="https://www.linkedin.com/in/daniel-zamudio-84a589385/" target="_blank">LinkedIn</a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Habilidades técnicas -->
-    <div class="sidebar-section">
-      <h2>Habilidades Técnicas</h2>
-      <ul class="skills-list">
-        <li class="skill-item">
-          <span class="label">Next.js / React</span>
-          <div class="skill-bar"><div class="skill-bar-fill" style="width:92%"></div></div>
-        </li>
-        <li class="skill-item">
-          <span class="label">TypeScript</span>
-          <div class="skill-bar"><div class="skill-bar-fill" style="width:88%"></div></div>
-        </li>
-        <li class="skill-item">
-          <span class="label">Python / FastAPI</span>
-          <div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
-        </li>
-        <li class="skill-item">
-          <span class="label">Supabase / PostgreSQL</span>
-          <div class="skill-bar"><div class="skill-bar-fill" style="width:82%"></div></div>
-        </li>
-        <li class="skill-item">
-          <span class="label">Tailwind CSS</span>
-          <div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div>
-        </li>
-        <li class="skill-item">
-          <span class="label">Docker</span>
-          <div class="skill-bar"><div class="skill-bar-fill" style="width:75%"></div></div>
-        </li>
-        <li class="skill-item">
-          <span class="label">JavaScript (Algoritmos)</span>
-          <div class="skill-bar"><div class="skill-bar-fill" style="width:88%"></div></div>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Stack / Herramientas -->
-    <div class="sidebar-section">
-      <h2>Stack &amp; Herramientas</h2>
-      <div class="tag-list">
-        <span class="tag">Next.js 15/16</span>
-        <span class="tag">React 19</span>
-        <span class="tag">TypeScript</span>
-        <span class="tag">Python 3.11</span>
-        <span class="tag">FastAPI</span>
-        <span class="tag">Supabase</span>
-        <span class="tag">Tailwind CSS</span>
-        <span class="tag">Vite</span>
-        <span class="tag">Framer Motion</span>
-        <span class="tag">Docker</span>
-        <span class="tag">Vercel</span>
-        <span class="tag">Railway</span>
-        <span class="tag">GitHub Actions</span>
-        <span class="tag">Playwright</span>
-        <span class="tag">Google Gemini</span>
-        <span class="tag">JWT / Auth</span>
-        <span class="tag">OCR / pandas</span>
+      <div class="photo-wrap">
+        <!-- Reemplaza photo.jpg con tu imagen en la misma carpeta -->
+        <img src="photo.jpg" alt="Daniel Zamudio" />
+        <h1>Daniel Sebastian<br>Zamudio Gutiérrez</h1>
+        <p class="title">Desarrollador Full‑Stack</p>
       </div>
-    </div>
 
-    <!-- Idiomas -->
-    <div class="sidebar-section">
-      <h2>Idiomas</h2>
-      <ul class="lang-list">
-        <li><span>Español</span><span class="lang-level">Nativo</span></li>
-        <li><span>Inglés</span><span class="lang-level">Avanzado</span></li>
-      </ul>
-    </div>
-
-  </aside>
-
-  <!-- ═══════════ MAIN ═══════════ -->
-  <main class="main">
-
-    <!-- Perfil Profesional -->
-    <section class="profile">
-      <h2 class="section-title">Perfil Profesional</h2>
-      <p>
-        Desarrollador Full‑Stack con experiencia en la construcción de plataformas web de producción que combinan
-        frontends modernos con microservicios robustos. Especializado en Next.js, React y Python/FastAPI, con amplio
-        dominio de Supabase, autenticación basada en JWT y despliegues en la nube (Vercel, Railway). Apasionado por
-        resolver problemas reales de negocio mediante software bien estructurado, seguro y escalable. Capacidad
-        demostrada para diseñar arquitecturas de extremo a extremo, desde la base de datos hasta la interfaz de usuario,
-        incluyendo integraciones de IA generativa y procesamiento automatizado de documentos.
-      </p>
-    </section>
-
-    <!-- Proyectos Destacados -->
-    <section>
-      <h2 class="section-title">Proyectos Destacados</h2>
-
-      <!-- 3ZG Tool Nest -->
-      <div class="project">
-        <div class="project-header">
-          <span class="project-name">3ZG Tool Nest</span>
-          <span class="project-stack">Next.js 16 · Python/FastAPI · Supabase · Docker · Vercel / Railway</span>
-        </div>
-        <p>
-          Plataforma web interna para la empresa 3ZG que centraliza herramientas de contabilidad y procesamiento de
-          documentos bajo un sistema de control de acceso por roles. Reemplazó scripts de escritorio dispersos con un
-          entorno de trabajo unificado y accesible desde el navegador.
-        </p>
-        <ul>
-          <li>Tagger de estados de cuenta de múltiples bancos mexicanos con soporte OCR; salida en Excel estructurado.</li>
-          <li>Consolidador de Excel y PDFs, Generador de importación IVA (archivos ASC → SAT), y extractor de UUIDs.</li>
-          <li>Panel de administración con gestión granular de usuarios, herramientas y un agente de IA (Gemini).</li>
-          <li>Arquitectura de carga directa al worker para superar los límites de payload de Vercel manteniendo la autenticación.</li>
-          <li>CI/CD con GitHub Actions: linting, pruebas, pip-audit, npm audit y generación de SBOM (CycloneDX).</li>
-          <li>Internacionalización completa (inglés/español) y seguridad con RLS en todas las tablas de Supabase.</li>
+      <!-- Contacto -->
+      <div class="sidebar-section">
+        <h2>Contacto</h2>
+        <ul class="contact-list">
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16v16H4z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <a href="mailto:zam.zagd@gmail.com">zam.zagd@gmail.com</a>
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2A19.72 19.72 0 013.09 4.18 2 2 0 015.08 2h3a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 9.91a16 16 0 006.99 7l1.27-1.27a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 17.92z" />
+            </svg>
+            541‑916‑6276
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Selma, Oregon 97538
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+            </svg>
+            <a href="https://github.com/DanielZmGt" target="_blank">github.com/DanielZmGt</a>
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            <a href="https://www.linkedin.com/in/daniel-zamudio-84a589385/" target="_blank">LinkedIn</a>
+          </li>
         </ul>
       </div>
 
-      <!-- Galería y Enmarcados del Bajío -->
-      <div class="project">
-        <div class="project-header">
-          <span class="project-name">Galería y Enmarcados del Bajío</span>
-          <span class="project-stack">Next.js 15 · React 19 · Supabase · Framer Motion · Vercel</span>
-        </div>
-        <p>
-          Plataforma de e‑commerce y galería de arte con una herramienta de enmarcado virtual interactiva. Los usuarios
-          pueden previsualizar en tiempo real distintas molduras, matboards y fondos sobre sus obras antes de hacer un
-          pedido personalizado. Integra gestión de carrito, secciones de galería y tienda, y se despliega con CI continuo
-          en Vercel.
-        </p>
+      <!-- Habilidades técnicas -->
+      <div class="sidebar-section">
+        <h2>Habilidades Técnicas</h2>
+        <ul class="skills-list">
+          <li class="skill-item">
+            <span class="label">Next.js / React</span>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="width:92%"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="label">TypeScript</span>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="width:88%"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="label">Python / FastAPI</span>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="width:85%"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="label">Supabase / PostgreSQL</span>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="width:82%"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="label">Tailwind CSS</span>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="width:90%"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="label">Docker</span>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="width:75%"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="label">JavaScript (Algoritmos)</span>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="width:88%"></div>
+            </div>
+          </li>
+        </ul>
       </div>
 
-      <!-- Aunt Sarah's Bakery -->
-      <div class="project">
-        <div class="project-header">
-          <span class="project-name">Aunt Sarah's Bakery &amp; Chef Services</span>
-          <span class="project-stack">React 19 · TypeScript · Vite · Tailwind CSS · Google Gemini · Vercel</span>
+      <!-- Stack / Herramientas -->
+      <div class="sidebar-section">
+        <h2>Stack &amp; Herramientas</h2>
+        <div class="tag-list">
+          <span class="tag">Next.js 15/16</span>
+          <span class="tag">React 19</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Python 3.11</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">Tailwind CSS</span>
+          <span class="tag">Vite</span>
+          <span class="tag">Framer Motion</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Vercel</span>
+          <span class="tag">Railway</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">Playwright</span>
+          <span class="tag">Google Gemini</span>
+          <span class="tag">JWT / Auth</span>
+          <span class="tag">OCR / pandas</span>
         </div>
-        <p>
-          Plataforma artesanal de panadería con asistente de IA conversacional («Aunt Sarah»), impulsada por Google
-          Gemini 2.0 Flash. Toda la lógica de IA corre en un proxy serverless seguro, manteniendo las credenciales
-          fuera del cliente. Incluye menú, servicios de chef privado y un diseño responsivo en Tailwind CSS.
-        </p>
       </div>
 
-      <!-- Javascript Algorithms -->
-      <div class="project">
-        <div class="project-header">
-          <span class="project-name">Javascript Algorithms</span>
-          <span class="project-stack">JavaScript · Python · Node.js</span>
-        </div>
-        <p>
-          Repositorio de práctica y estudio de algoritmos y lógica computacional. Incluye el script
-          <em>titan-refactor</em> (disponible en JS y Python) para la reestructuración automatizada de proyectos de código.
-        </p>
+      <!-- Idiomas -->
+      <div class="sidebar-section">
+        <h2>Idiomas</h2>
+        <ul class="lang-list">
+          <li><span>Español</span><span class="lang-level">Nativo</span></li>
+          <li><span>Inglés</span><span class="lang-level">Avanzado</span></li>
+        </ul>
       </div>
-    </section>
 
-    <!-- Herramientas de Optimización de Flujo de Trabajo -->
-    <section class="workflow">
-      <h2 class="section-title">Optimización de Flujo de Trabajo</h2>
-      <p>
-        Uso habitual de herramientas de automatización e IA para acelerar el desarrollo: <strong>Claude Code</strong>
-        como asistente de codificación por terminal, <strong>GitHub Actions</strong> para pipelines de CI/CD,
-        <strong>Docker&nbsp;/ Docker Compose</strong> para entornos reproducibles, y <strong>Vercel&nbsp;/ Railway</strong>
-        para despliegues continuos con zero-downtime.
-      </p>
-    </section>
+    </aside>
 
-  </main>
-</div>
+    <!-- ═══════════ MAIN ═══════════ -->
+    <main class="main">
+
+      <!-- Perfil Profesional -->
+      <section class="profile">
+        <h2 class="section-title">Perfil Profesional</h2>
+        <p>
+          Desarrollador Full‑Stack con experiencia en la construcción de plataformas web de producción que combinan
+          frontends modernos con microservicios robustos. Especializado en Next.js, React y Python/FastAPI, con amplio
+          dominio de Supabase, autenticación basada en JWT y despliegues en la nube (Vercel, Railway). Apasionado por
+          resolver problemas reales de negocio mediante software bien estructurado, seguro y escalable. Capacidad
+          demostrada para diseñar arquitecturas de extremo a extremo, desde la base de datos hasta la interfaz de
+          usuario,
+          incluyendo integraciones de IA generativa y procesamiento automatizado de documentos.
+        </p>
+      </section>
+
+      <!-- Proyectos Destacados -->
+      <section>
+        <h2 class="section-title">Proyectos Destacados</h2>
+
+        <!-- 3ZG Tool Nest -->
+        <div class="project">
+          <div class="project-header">
+            <span class="project-name"><a href="https://3zg-tool-nest.vercel.app/login" target="_blank" rel="noopener noreferrer">3ZG Tool Nest</a></span>
+            <span class="project-stack">Next.js 16 · Python/FastAPI · Supabase · Docker · Vercel / Railway</span>
+          </div>
+          <p>
+            Plataforma web interna para la empresa 3ZG que centraliza herramientas de contabilidad y procesamiento de
+            documentos bajo un sistema de control de acceso por roles. Reemplazó scripts de escritorio dispersos con un
+            entorno de trabajo unificado y accesible desde el navegador.
+          </p>
+          <ul>
+            <li>Tagger de estados de cuenta de múltiples bancos mexicanos con soporte OCR; salida en Excel estructurado.
+            </li>
+            <li>Consolidador de Excel y PDFs, Generador de importación IVA (archivos ASC → SAT), y extractor de UUIDs.
+            </li>
+            <li>Panel de administración con gestión granular de usuarios, herramientas y un agente de IA (Gemini).</li>
+            <li>Arquitectura de carga directa al worker para superar los límites de payload de Vercel manteniendo la
+              autenticación.</li>
+            <li>CI/CD con GitHub Actions: linting, pruebas, pip-audit, npm audit y generación de SBOM (CycloneDX).</li>
+            <li>Internacionalización completa (inglés/español) y seguridad con RLS en todas las tablas de Supabase.</li>
+          </ul>
+        </div>
+
+        <!-- Galería y Enmarcados del Bajío -->
+        <div class="project">
+          <div class="project-header">
+            <span class="project-name"><a href="https://galeria-y-enmarcados-del-bajio.vercel.app/virtual-framer" target="_blank" rel="noopener noreferrer">Galería y Enmarcados del Bajío</a></span>
+            <span class="project-stack">Next.js 15 · React 19 · Supabase · Framer Motion · Vercel</span>
+          </div>
+          <p>
+            Plataforma de e‑commerce y galería de arte con una herramienta de enmarcado virtual interactiva. Los
+            usuarios
+            pueden previsualizar en tiempo real distintas molduras, matboards y fondos sobre sus obras antes de hacer un
+            pedido personalizado. Integra gestión de carrito, secciones de galería y tienda, y se despliega con CI
+            continuo
+            en Vercel.
+          </p>
+        </div>
+
+        <!-- Aunt Sarah's Bakery -->
+        <div class=" project">
+          <div class="project-header">
+            <span class="project-name"><a href="https://aunt-sarahs-bakery.vercel.app/" target="_blank" rel="noopener noreferrer">Aunt Sarah's Bakery &amp; Chef Services</a></span>
+            <span class="project-stack">React 19 · TypeScript · Vite · Tailwind CSS · Google Gemini ·
+              Vercel</span>
+          </div>
+          <p>
+            Plataforma artesanal de panadería con asistente de IA conversacional («Aunt Sarah»), impulsada por
+            Google
+            Gemini 2.0 Flash. Toda la lógica de IA corre en un proxy serverless seguro, manteniendo las
+            credenciales
+            fuera del cliente. Incluye menú, servicios de chef privado y un diseño responsivo en Tailwind CSS.
+          </p>
+        </div>
+
+        <!-- Javascript Algorithms -->
+        <div class="project">
+          <div class="project-header">
+            <span class="project-name"><a href="https://github.com/DanielZmGt/Javascript-Algorithms" target="_blank" rel="noopener noreferrer">Javascript Algorithms</a></span>
+            <span class="project-stack">JavaScript · Python · Node.js</span>
+          </div>
+          <p>
+            Repositorio de práctica y estudio de algoritmos y lógica computacional. Incluye el script
+            <em>titan-refactor</em> (disponible en JS y Python) para la reestructuración automatizada de proyectos de
+            código.
+          </p>
+        </div>
+      </section>
+
+      <!-- Herramientas de Optimización de Flujo de Trabajo -->
+      <section class="workflow">
+        <h2 class="section-title">Optimización de Flujo de Trabajo</h2>
+        <p>
+          Uso habitual de herramientas de automatización e IA para acelerar el desarrollo: <strong>Claude Code</strong>
+          como asistente de codificación por terminal, <strong>GitHub Actions</strong> para pipelines de CI/CD,
+          <strong>Docker&nbsp;/ Docker Compose</strong> para entornos reproducibles, y <strong>Vercel&nbsp;/
+            Railway</strong>
+          para despliegues continuos con zero-downtime.
+        </p>
+      </section>
+
+    </main>
+  </div>
 </body>
+
 </html>
