@@ -252,6 +252,47 @@
       line-height: 1.7;
     }
 
+    /* Galería de capturas de proyectos */
+    .project-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .project-gallery a {
+      display: block;
+      flex: 1 1 140px;
+      max-width: 200px;
+    }
+
+    .project-gallery img {
+      width: 100%;
+      height: 110px;
+      object-fit: cover;
+      object-position: top center;
+      border: 1px solid #d8d2c8;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    .project-gallery a:hover img {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, .16);
+    }
+
+    .project-note {
+      margin-top: 10px;
+      font-size: .8rem;
+      color: #6b6b6b;
+      font-style: italic;
+      background: #f4f1ec;
+      border-left: 3px solid #c9a86c;
+      padding: 7px 12px;
+      border-radius: 0 4px 4px 0;
+    }
+
     /* Print */
     @media print {
       body {
@@ -263,6 +304,11 @@
         box-shadow: none;
         max-width: 100%;
         grid-template-columns: 240px 1fr;
+      }
+
+      .project-gallery img {
+        height: 90px;
+        box-shadow: none;
       }
     }
 
@@ -408,6 +454,11 @@
           <span class="tag">Google Gemini</span>
           <span class="tag">JWT / Auth</span>
           <span class="tag">OCR / pandas</span>
+          <span class="tag">PHP</span>
+          <span class="tag">SQLite</span>
+          <span class="tag">Bootstrap</span>
+          <span class="tag">C# / .NET</span>
+          <span class="tag">cloudflared</span>
         </div>
       </div>
 
@@ -475,6 +526,63 @@
             <li>CI/CD con GitHub Actions: linting, pruebas, pip-audit, npm audit y generación de SBOM (CycloneDX).</li>
             <li>Internacionalización completa (inglés/español) y seguridad con RLS en todas las tablas de Supabase.</li>
           </ul>
+          <div class="project-gallery">
+            <a href="img/tool-nest-dashboard.png" target="_blank" rel="noopener noreferrer">
+              <img src="img/tool-nest-dashboard.png" alt="3ZG Tool Nest &mdash; panel de herramientas" loading="lazy" />
+            </a>
+            <a href="img/tool-nest-bank-tagger.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="img/tool-nest-bank-tagger.jpg" alt="3ZG Tool Nest &mdash; Tagger de estados de cuenta" loading="lazy" />
+            </a>
+          </div>
+          <p class="project-note">&#128274; Proyecto privado &mdash; puedo otorgar acceso al código a reclutadores para su inspección si es necesario.</p>
+        </div>
+
+        <!-- Nexus POS -->
+        <div class="project">
+          <div class="project-header">
+            <span class="project-name">Nexus &mdash; Punto de Venta</span>
+            <span class="project-stack">PHP &middot; SQLite &middot; Bootstrap &middot; C# / .NET &middot; cloudflared</span>
+          </div>
+          <p>
+            Plataforma de punto de venta e inventario tipo white&#8209;label, desplegada para negocios reales
+            (p.&nbsp;ej. <em>Relieve Agroqu&iacute;micos</em> y <em>Ferreter&iacute;a El Tornillo Feliz</em>). Una sola
+            base de c&oacute;digo PHP&nbsp;/&nbsp;SQLite alimenta una terminal de ventas t&aacute;ctil, respaldada por un
+            servicio complementario en C#&nbsp;/&nbsp;.NET que controla los perif&eacute;ricos locales y expone la
+            terminal a dispositivos m&oacute;viles mediante un t&uacute;nel HTTPS seguro.
+          </p>
+          <ul>
+            <li>Cobro t&aacute;ctil con m&uacute;ltiples m&eacute;todos de pago, c&aacute;lculo de cambio, apartados y
+              entregas pendientes, con atajos de teclado completos (teclas F, Esc&nbsp;/&nbsp;Enter) para operaci&oacute;n
+              r&aacute;pida.</li>
+            <li>M&oacute;dulo de inventario y ajustes con escaneo de c&oacute;digo de barras, conciliaci&oacute;n por
+              conteo f&iacute;sico, reporte autom&aacute;tico de mermas/sobrantes, categor&iacute;as y
+              actualizaci&oacute;n de precios/costos.</li>
+            <li>Gesti&oacute;n del negocio: clientes, puntos y lealtad, proveedores, compras, y cr&eacute;ditos y
+              cobranza.</li>
+            <li>Puente de perif&eacute;ricos en C#&nbsp;/&nbsp;.NET para impresi&oacute;n de tickets de 58&nbsp;mm e
+              integraci&oacute;n de hardware, m&aacute;s acceso m&oacute;vil publicado a trav&eacute;s de un
+              t&uacute;nel HTTPS con <strong>cloudflared</strong>.</li>
+            <li>Backend ligero basado en archivos con <strong>SQLite</strong> para despliegues on&#8209;premise
+              portables y sin configuraci&oacute;n; interfaz responsiva en <strong>Bootstrap</strong>.</li>
+          </ul>
+          <div class="project-gallery">
+            <a href="img/nexus-login.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="img/nexus-login.jpg" alt="Nexus POS &mdash; inicio de sesi&oacute;n (Relieve Agroqu&iacute;micos)" loading="lazy" />
+            </a>
+            <a href="img/nexus-pos-tablet.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="img/nexus-pos-tablet.jpg" alt="Nexus POS &mdash; terminal de ventas t&aacute;ctil" loading="lazy" />
+            </a>
+            <a href="img/nexus-checkout.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="img/nexus-checkout.jpg" alt="Nexus POS &mdash; modal de cobro y pago" loading="lazy" />
+            </a>
+            <a href="img/nexus-sale-registered.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="img/nexus-sale-registered.jpg" alt="Nexus POS &mdash; confirmaci&oacute;n de venta registrada" loading="lazy" />
+            </a>
+            <a href="img/nexus-inventory.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="img/nexus-inventory.jpg" alt="Nexus POS &mdash; m&oacute;dulo de inventario f&iacute;sico" loading="lazy" />
+            </a>
+          </div>
+          <p class="project-note">&#128274; Proyecto privado &mdash; puedo otorgar acceso al código a reclutadores para su inspección si es necesario.</p>
         </div>
 
         <!-- Galería y Enmarcados del Bajío -->
