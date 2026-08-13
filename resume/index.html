@@ -299,6 +299,47 @@
       line-height: 1.7;
     }
 
+    /* Galería de capturas de proyectos */
+    .project-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .project-gallery a {
+      display: block;
+      flex: 1 1 140px;
+      max-width: 200px;
+    }
+
+    .project-gallery img {
+      width: 100%;
+      height: 110px;
+      object-fit: cover;
+      object-position: top center;
+      border: 1px solid #d8d2c8;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    .project-gallery a:hover img {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, .16);
+    }
+
+    .project-note {
+      margin-top: 10px;
+      font-size: .8rem;
+      color: #6b6b6b;
+      font-style: italic;
+      background: #f4f1ec;
+      border-left: 3px solid #c9a86c;
+      padding: 7px 12px;
+      border-radius: 0 4px 4px 0;
+    }
+
     /* Print */
     @media print {
       body {
@@ -380,6 +421,35 @@
 
       .section-title {
         margin-bottom: 10px;
+      }
+
+      /* En papel las capturas van como tira de miniaturas en UNA sola fila:
+         5 imagenes en dos filas costaban una pagina entera. */
+      .project-gallery {
+        gap: 6px;
+        margin-top: 8px;
+        flex-wrap: nowrap;
+      }
+
+      .project-gallery a {
+        flex: 1 1 0;
+        max-width: none;
+      }
+
+      .project-gallery img {
+        height: 66px;
+        box-shadow: none;
+      }
+
+      .project-gallery,
+      .project-note {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .project-note {
+        font-size: .74rem;
+        padding: 5px 10px;
       }
     }
 
@@ -652,6 +722,25 @@
               alta de prueba autoservicio, checkout de Stripe, descargas restringidas, analítica propia sin cookies y
               un asistente de IA en streaming endurecido contra inyección de prompts.</li>
           </ul>
+          <div class="project-gallery">
+            <a href="img/nexus-login.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="img/nexus-login.jpg" alt="Nexus POS — pantalla de acceso" loading="lazy" />
+            </a>
+            <a href="img/nexus-pos-tablet.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="img/nexus-pos-tablet.jpg" alt="Nexus POS — terminal de venta táctil" loading="lazy" />
+            </a>
+            <a href="img/nexus-checkout.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="img/nexus-checkout.jpg" alt="Nexus POS — modal de cobro y pago" loading="lazy" />
+            </a>
+            <a href="img/nexus-sale-registered.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="img/nexus-sale-registered.jpg" alt="Nexus POS — confirmación de venta registrada" loading="lazy" />
+            </a>
+            <a href="img/nexus-inventory.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="img/nexus-inventory.jpg" alt="Nexus POS — módulo de inventario físico" loading="lazy" />
+            </a>
+          </div>
+          <p class="project-note">&#128274; Código privado — puedo dar acceso a reclutadores para revisión, a solicitud.
+          </p>
         </div>
 
         <!-- Infraestructura de Nube y Licenciamiento -->
@@ -683,6 +772,8 @@
             <li><strong>450 casos de prueba</strong> sobre una capa de rutas con inyección de dependencias que corre
               sin red y sin base de datos.</li>
           </ul>
+          <p class="project-note">&#128274; Código privado — puedo dar acceso a reclutadores para revisión, a solicitud.
+          </p>
         </div>
 
         <!-- 3ZG Tool Nest -->
@@ -707,6 +798,16 @@
             <li>CI/CD con GitHub Actions: linting, pruebas, pip-audit, npm audit y generación de SBOM (CycloneDX).</li>
             <li>Internacionalización completa (inglés/español) y seguridad con RLS en todas las tablas de Supabase.</li>
           </ul>
+          <div class="project-gallery">
+            <a href="img/tool-nest-dashboard.png" target="_blank" rel="noopener noreferrer">
+              <img src="img/tool-nest-dashboard.png" alt="3ZG Tool Nest — panel de herramientas" loading="lazy" />
+            </a>
+            <a href="img/tool-nest-bank-tagger.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="img/tool-nest-bank-tagger.jpg" alt="3ZG Tool Nest — tagger de estados de cuenta" loading="lazy" />
+            </a>
+          </div>
+          <p class="project-note">&#128274; Código privado — puedo dar acceso a reclutadores para revisión, a solicitud.
+          </p>
         </div>
 
         <!-- Galería y Enmarcados del Bajío -->
