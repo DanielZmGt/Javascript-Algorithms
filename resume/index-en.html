@@ -242,6 +242,53 @@
       line-height: 1.7;
     }
 
+    /* Experience */
+    .job {
+      margin-bottom: 20px;
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .job-role {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1c2b3a;
+    }
+
+    .job-dates {
+      font-size: .74rem;
+      font-weight: 700;
+      color: #c9a86c;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .job-org {
+      font-size: .76rem;
+      color: #888;
+      font-style: italic;
+      margin-bottom: 4px;
+    }
+
+    .job ul {
+      margin-top: 6px;
+      padding-left: 18px;
+      font-size: .85rem;
+      color: #444;
+      line-height: 1.7;
+    }
+
     .workflow p {
       font-size: .87rem;
       color: #444;
@@ -306,6 +353,104 @@
         box-shadow: none;
         max-width: 100%;
         grid-template-columns: 240px 1fr;
+      }
+
+      .project-header,
+      .job-header {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      .job-org,
+      .project-stack {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      .section-title {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      .project p,
+      .job p,
+      .workflow p,
+      .project li,
+      .job li {
+        orphans: 2;
+        widows: 2;
+      }
+
+      /* Print density: fit the full record without dropping content */
+      .main {
+        padding: 30px 32px;
+        gap: 22px;
+      }
+
+      .sidebar {
+        padding: 30px 22px;
+        gap: 24px;
+      }
+
+      .profile p {
+        font-size: .855rem;
+        line-height: 1.58;
+      }
+
+      .project p,
+      .job p,
+      .workflow p {
+        font-size: .815rem;
+        line-height: 1.52;
+      }
+
+      .project ul,
+      .job ul {
+        font-size: .80rem;
+        line-height: 1.5;
+      }
+
+      .project {
+        margin-bottom: 14px;
+      }
+
+      .job {
+        margin-bottom: 13px;
+      }
+
+      .section-title {
+        margin-bottom: 12px;
+      }
+
+      /* En papel las capturas van como tira de miniaturas en UNA sola fila:
+         5 imagenes en dos filas costaban una pagina entera. */
+      .project-gallery {
+        gap: 6px;
+        margin-top: 8px;
+        flex-wrap: nowrap;
+      }
+
+      .project-gallery a {
+        flex: 1 1 0;
+        max-width: none;
+      }
+
+      .project-gallery img {
+        height: 68px;
+        box-shadow: none;
+      }
+
+      .project-gallery,
+      .project-note {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .project-note {
+        font-size: .75rem;
+        padding: 5px 10px;
       }
     }
 
@@ -386,13 +531,25 @@
         <h2>Technical Skills</h2>
         <ul class="skills-list">
           <li class="skill-item">
+            <span class="label">PHP / Server&#8209;Rendered Apps</span>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="width:94%"></div>
+            </div>
+          </li>
+          <li class="skill-item">
             <span class="label">Next.js / React</span>
             <div class="skill-bar">
               <div class="skill-bar-fill" style="width:92%"></div>
             </div>
           </li>
           <li class="skill-item">
-            <span class="label">TypeScript</span>
+            <span class="label">TypeScript / Node.js</span>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="width:90%"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="label">SQL &mdash; PostgreSQL / MySQL / SQLite</span>
             <div class="skill-bar">
               <div class="skill-bar-fill" style="width:88%"></div>
             </div>
@@ -404,9 +561,9 @@
             </div>
           </li>
           <li class="skill-item">
-            <span class="label">Supabase / PostgreSQL</span>
+            <span class="label">C# / .NET &amp; WPF Desktop</span>
             <div class="skill-bar">
-              <div class="skill-bar-fill" style="width:82%"></div>
+              <div class="skill-bar-fill" style="width:80%"></div>
             </div>
           </li>
           <li class="skill-item">
@@ -416,15 +573,9 @@
             </div>
           </li>
           <li class="skill-item">
-            <span class="label">Docker</span>
+            <span class="label">Docker / CI&nbsp;&amp;&nbsp;CD</span>
             <div class="skill-bar">
-              <div class="skill-bar-fill" style="width:75%"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <span class="label">JavaScript (Algorithms)</span>
-            <div class="skill-bar">
-              <div class="skill-bar-fill" style="width:88%"></div>
+              <div class="skill-bar-fill" style="width:82%"></div>
             </div>
           </li>
         </ul>
@@ -434,11 +585,19 @@
       <div class="sidebar-section">
         <h2>Stack &amp; Tools</h2>
         <div class="tag-list">
+          <span class="tag">PHP 8.2</span>
+          <span class="tag">C# / .NET 8</span>
+          <span class="tag">WPF + WebView2</span>
           <span class="tag">Next.js 15/16</span>
           <span class="tag">React 19</span>
+          <span class="tag">Astro 6</span>
           <span class="tag">TypeScript</span>
+          <span class="tag">Node.js</span>
           <span class="tag">Python 3.11</span>
           <span class="tag">FastAPI</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">MariaDB / MySQL</span>
+          <span class="tag">SQLite</span>
           <span class="tag">Supabase</span>
           <span class="tag">Tailwind CSS</span>
           <span class="tag">Vite</span>
@@ -447,8 +606,12 @@
           <span class="tag">Vercel</span>
           <span class="tag">Railway</span>
           <span class="tag">GitHub Actions</span>
-          <span class="tag">Playwright</span>
+          <span class="tag">Inno Setup</span>
+          <span class="tag">Stripe</span>
+          <span class="tag">Anthropic API</span>
           <span class="tag">Google Gemini</span>
+          <span class="tag">Playwright</span>
+          <span class="tag">vitest / pytest / xUnit</span>
           <span class="tag">JWT / Auth</span>
           <span class="tag">OCR / pandas</span>
           <span class="tag">PHP</span>
@@ -487,21 +650,135 @@
       <section class="profile">
         <h2 class="section-title">Professional Profile</h2>
         <p>
-          Full&#8209;Stack Developer with hands&#8209;on experience building production-grade web platforms that combine
-          modern
-          frontends with robust microservices. Specialized in Next.js, React, and Python/FastAPI, with deep command of
-          Supabase, JWT&#8209;based authentication, and cloud deployments on Vercel and Railway. Passionate about
-          solving
-          real business problems through well&#8209;structured, secure, and scalable software. Proven ability to design
-          end&#8209;to&#8209;end architectures &mdash; from database to UI &mdash; including generative AI integrations
-          and
-          automated document processing.
+          Full&#8209;Stack Developer who ships production software end to end &mdash; Windows desktop, cloud services,
+          and the web. Founder and lead engineer of <strong>Nexus POS</strong>, a commercial point&#8209;of&#8209;sale
+          platform in live production use, where I own every layer: an embedded PHP application server inside a
+          .NET&nbsp;8 WPF launcher, a dual&#8209;engine SQLite/MariaDB data layer, LAN multi&#8209;terminal operation
+          with offline degradation, and a TypeScript licensing, payments and AI backend on Vercel, Railway and Supabase.
+          Equally fluent in the modern web stack &mdash; Next.js, React, Astro, Python/FastAPI &mdash; with a strong
+          bias toward tested, secure systems and automated release pipelines.
         </p>
+      </section>
+
+      <!-- Professional Experience -->
+      <section>
+        <h2 class="section-title">Professional Experience</h2>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-role">Founder &amp; Lead Developer &mdash; Nexus POS</span>
+            <span class="job-dates">2025 &ndash; Present</span>
+          </div>
+          <p class="job-org">Multi&#8209;vertical retail point&#8209;of&#8209;sale platform</p>
+          <ul>
+            <li>Sole architect and principal engineer of a commercial POS running in <strong>live production
+                installs</strong>, configurable across <strong>14 retail verticals</strong> &mdash; desktop
+              application, cloud licensing service, installer, and marketing site.</li>
+            <li>Own the full release pipeline: automated version bump, build, integrity sealing, installer
+              compilation, cloud publish and delivery&#8209;channel verification &mdash; <strong>108 tracked
+                releases</strong> shipped.</li>
+            <li>Built the engineering discipline around it: <strong>383 test files</strong> across five runners
+              (pytest, xUnit, node:test, bash, PHP) and <strong>5 CI workflows</strong>, including a nightly
+              two&#8209;terminal LAN failure drill and a daily probe that catches a dead update channel before
+              customers do.</li>
+            <li>Also built two companion products on the same core: a restaurant vertical (table service, kitchen
+              display system) and a double&#8209;entry accounting add&#8209;on enforcing a balance invariant at write
+              time.</li>
+            <li>Direct client delivery: requirements gathering, legacy data migration, on&#8209;site deployment, and
+              ongoing support.</li>
+          </ul>
+        </div>
       </section>
 
       <!-- Featured Projects -->
       <section>
         <h2 class="section-title">Featured Projects</h2>
+
+        <!-- Nexus POS -->
+        <div class="project">
+          <div class="project-header">
+            <span class="project-name"><a href="https://www.nexuspos.com.mx" target="_blank"
+                rel="noopener noreferrer">Nexus POS &mdash; Desktop Platform</a></span>
+            <span class="project-stack">PHP 8.2 &middot; C#/.NET 8 &middot; WPF + WebView2 &middot; SQLite / MariaDB
+              &middot; Inno Setup &middot; Astro 6</span>
+          </div>
+          <p>
+            Point&#8209;of&#8209;sale platform for small and mid&#8209;sized retail, shipped as a
+            zero&#8209;dependency Windows application configurable to 14 business verticals.
+          </p>
+          <ul>
+            <li>Self&#8209;contained .NET&nbsp;8 WPF launcher hosts WebView2 as the UI shell and supervises an
+              embedded PHP server &mdash; orphan&#8209;process cleanup, HTTPS tunneling for mobile access, automated
+              backups and update orchestration, with no runtime installed on the client machine.</li>
+            <li>Dual&#8209;engine data layer: one SQL codebase runs on both SQLite (portable installs) and MariaDB
+              (multi&#8209;terminal) through a PDO subclass that translates dialect at runtime &mdash; a
+              <strong>60&#8209;table schema</strong> with <strong>36 idempotent self&#8209;healing migrations</strong>
+              that repair older installs without a migration runner.
+            </li>
+            <li>Event&#8209;ledger accounting for inventory, receivables and payables behind single write
+              choke&#8209;points, replacing <strong>14 divergent ad&#8209;hoc balance calculations</strong> &mdash; two
+              of which were shipping production bugs. Reversals are modeled as new marked events, never deletes.</li>
+            <li>LAN multi&#8209;terminal operation: several registers against one database with local mirroring and a
+              degradation gate that keeps the store selling when the server drops, verified by an end&#8209;to&#8209;end
+              test that kills the server mid&#8209;run.</li>
+            <li><strong>201 granular permission keys</strong> across 4 roles via a 144&#8209;entry
+              page&#8209;to&#8209;permission map; every price&#8209;affecting action is gated and written to an audit
+              log.</li>
+            <li>Marketing site at nexuspos.com.mx &mdash; Astro&nbsp;6 with React&nbsp;19 islands and Tailwind&nbsp;v4,
+              featuring self&#8209;serve trial signup, Stripe checkout, gated downloads, cookieless first&#8209;party
+              analytics, and a streaming AI assistant hardened against prompt injection.</li>
+          </ul>
+          <div class="project-gallery">
+            <a href="img/nexus-login.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="img/nexus-login.jpg" alt="Nexus POS &mdash; tenant login screen" loading="lazy" />
+            </a>
+            <a href="img/nexus-pos-tablet.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="img/nexus-pos-tablet.jpg" alt="Nexus POS &mdash; touch sales terminal" loading="lazy" />
+            </a>
+            <a href="img/nexus-checkout.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="img/nexus-checkout.jpg" alt="Nexus POS &mdash; checkout &amp; payment modal" loading="lazy" />
+            </a>
+            <a href="img/nexus-sale-registered.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="img/nexus-sale-registered.jpg" alt="Nexus POS &mdash; sale registered confirmation" loading="lazy" />
+            </a>
+            <a href="img/nexus-inventory.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="img/nexus-inventory.jpg" alt="Nexus POS &mdash; physical inventory module" loading="lazy" />
+            </a>
+          </div>
+          <p class="project-note">&#128274; Private project &mdash; source&#8209;code access can be granted to recruiters for inspection on request.</p>
+        </div>
+
+        <!-- Nexus Cloud & Licensing Infrastructure -->
+        <div class="project">
+          <div class="project-header">
+            <span class="project-name">Nexus Cloud &amp; Licensing Infrastructure</span>
+            <span class="project-stack">TypeScript 5.8 &middot; Node 20 &middot; Vercel &middot; Railway &middot;
+              Supabase &middot; Stripe &middot; Anthropic / NVIDIA NIM</span>
+          </div>
+          <p>
+            The backend that sells, licenses, updates and supports every Nexus installation in the field.
+          </p>
+          <ul>
+            <li><strong>31 HTTP endpoints</strong> across a hybrid deployment &mdash; Vercel serverless functions plus
+              a long&#8209;lived Node server on Railway, with Supabase database webhooks as the asynchronous job
+              trigger. Routing, body parsing, size limits, CORS and rate limiting are hand&#8209;written, with no HTTP
+              framework.</li>
+            <li>Per&#8209;machine licensing and entitlement service: three sales tiers over a 12&#8209;module catalog
+              plus add&#8209;ons sold &agrave; la carte, with the effective module set always derived from a signed
+              artifact rather than client&#8209;writable state.</li>
+            <li>Signed auto&#8209;update channel with a release gate that distinguishes &ldquo;already up to
+              date&rdquo; from &ldquo;the channel is dead&rdquo; &mdash; two conditions that otherwise return an
+              identical HTTP 204 and once stalled an entire release silently.</li>
+            <li>Payments through Stripe (Checkout plus signature&#8209;verified webhooks) and Conekta, covering both
+              one&#8209;time purchases and recurring subscriptions.</li>
+            <li>Two&#8209;provider AI failover (NVIDIA NIM &rarr; Anthropic) behind a bidirectional payload adapter so
+              the rest of the codebase speaks a single dialect; endpoints consolidated into catch&#8209;all routers to
+              fit the platform&rsquo;s 12&#8209;function ceiling.</li>
+            <li><strong>450 test cases</strong> over a dependency&#8209;injected route layer that runs with no network
+              and no database.</li>
+          </ul>
+          <p class="project-note">&#128274; Private project &mdash; source&#8209;code access can be granted to recruiters for inspection on request.</p>
+        </div>
 
         <!-- 3ZG Tool Nest -->
         <div class="project">
@@ -535,51 +812,6 @@
             </a>
             <a href="img/tool-nest-bank-tagger.jpg" target="_blank" rel="noopener noreferrer">
               <img src="img/tool-nest-bank-tagger.jpg" alt="3ZG Tool Nest &mdash; Bank Statement Tagger" loading="lazy" />
-            </a>
-          </div>
-          <p class="project-note">&#128274; Private project &mdash; source&#8209;code access can be granted to recruiters for inspection on request.</p>
-        </div>
-
-        <!-- Nexus POS -->
-        <div class="project">
-          <div class="project-header">
-            <span class="project-name">Nexus &mdash; Point of Sale</span>
-            <span class="project-stack">PHP &middot; SQLite &middot; Bootstrap &middot; C# / .NET &middot; cloudflared</span>
-          </div>
-          <p>
-            White&#8209;label point&#8209;of&#8209;sale and inventory platform deployed for multiple
-            real&#8209;world businesses (e.g. <em>Relieve Agroqu&iacute;micos</em> and
-            <em>Ferreter&iacute;a El Tornillo Feliz</em>). A single PHP&nbsp;/&nbsp;SQLite codebase powers a
-            touch&#8209;friendly sales terminal, backed by a C#&nbsp;/&nbsp;.NET companion service that drives local
-            peripherals and exposes the terminal to mobile devices over a secure HTTPS tunnel.
-          </p>
-          <ul>
-            <li>Touch&#8209;optimized checkout with split payment methods, cash&#8209;change calculation, layaway
-              (&ldquo;apartado&rdquo;), and pending deliveries &mdash; with full keyboard shortcuts (F&#8209;keys,
-              Esc&nbsp;/&nbsp;Enter) for fast operation.</li>
-            <li>Inventory &amp; adjustments module with barcode scanning, physical&#8209;count reconciliation,
-              automatic shrinkage/surplus reporting, categories, and price/cost updates.</li>
-            <li>Business management: customers, loyalty points, suppliers, purchases, and credits &amp; collections.</li>
-            <li>C#&nbsp;/&nbsp;.NET peripheral bridge for 58&nbsp;mm ticket printing and hardware integration, plus
-              mobile access published through a <strong>cloudflared</strong> HTTPS tunnel.</li>
-            <li>Lightweight, file&#8209;based <strong>SQLite</strong> backend for zero&#8209;config, portable
-              on&#8209;premise deployments; responsive <strong>Bootstrap</strong> UI in Spanish.</li>
-          </ul>
-          <div class="project-gallery">
-            <a href="img/nexus-login.jpg" target="_blank" rel="noopener noreferrer">
-              <img src="img/nexus-login.jpg" alt="Nexus POS &mdash; tenant login (Relieve Agroqu&iacute;micos)" loading="lazy" />
-            </a>
-            <a href="img/nexus-pos-tablet.jpg" target="_blank" rel="noopener noreferrer">
-              <img src="img/nexus-pos-tablet.jpg" alt="Nexus POS &mdash; touch sales terminal" loading="lazy" />
-            </a>
-            <a href="img/nexus-checkout.jpg" target="_blank" rel="noopener noreferrer">
-              <img src="img/nexus-checkout.jpg" alt="Nexus POS &mdash; checkout &amp; payment modal" loading="lazy" />
-            </a>
-            <a href="img/nexus-sale-registered.jpg" target="_blank" rel="noopener noreferrer">
-              <img src="img/nexus-sale-registered.jpg" alt="Nexus POS &mdash; sale registered confirmation" loading="lazy" />
-            </a>
-            <a href="img/nexus-inventory.jpg" target="_blank" rel="noopener noreferrer">
-              <img src="img/nexus-inventory.jpg" alt="Nexus POS &mdash; physical inventory module" loading="lazy" />
             </a>
           </div>
           <p class="project-note">&#128274; Private project &mdash; source&#8209;code access can be granted to recruiters for inspection on request.</p>
@@ -636,7 +868,9 @@
             Code</strong>
           as a terminal&#8209;based coding assistant, <strong>GitHub Actions</strong> for CI/CD pipelines,
           <strong>Docker&nbsp;/&nbsp;Docker Compose</strong> for reproducible environments, and
-          <strong>Vercel&nbsp;/&nbsp;Railway</strong> for zero&#8209;downtime continuous deployments.
+          <strong>Vercel&nbsp;/&nbsp;Railway</strong> for zero&#8209;downtime continuous deployments. On Nexus this
+          extends to a fully scripted <strong>release pipeline</strong> whose verification gates abort the release
+          rather than ship a broken delivery channel.
         </p>
       </section>
 
