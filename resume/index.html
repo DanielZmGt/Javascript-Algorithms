@@ -245,6 +245,53 @@
       line-height: 1.7;
     }
 
+    /* Experiencia */
+    .job {
+      margin-bottom: 20px;
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .job-role {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1c2b3a;
+    }
+
+    .job-dates {
+      font-size: .74rem;
+      font-weight: 700;
+      color: #c9a86c;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .job-org {
+      font-size: .76rem;
+      color: #888;
+      font-style: italic;
+      margin-bottom: 4px;
+    }
+
+    .job ul {
+      margin-top: 6px;
+      padding-left: 18px;
+      font-size: .85rem;
+      color: #444;
+      line-height: 1.7;
+    }
+
     /* Workflow tools */
     .workflow p {
       font-size: .87rem;
@@ -263,6 +310,76 @@
         box-shadow: none;
         max-width: 100%;
         grid-template-columns: 240px 1fr;
+      }
+
+      .project-header,
+      .job-header {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      .job-org,
+      .project-stack {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      .section-title {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      .project p,
+      .job p,
+      .workflow p,
+      .project li,
+      .job li {
+        orphans: 2;
+        widows: 2;
+      }
+
+      /* Densidad de impresion: entra todo el historial sin recortar contenido.
+         El espanol corre ~15% mas largo que el ingles, asi que va un punto mas apretado. */
+      .main {
+        padding: 28px 30px;
+        gap: 19px;
+      }
+
+      .sidebar {
+        padding: 28px 21px;
+        gap: 22px;
+      }
+
+      .profile p {
+        font-size: .84rem;
+        line-height: 1.52;
+      }
+
+      .project p,
+      .job p,
+      .workflow p {
+        font-size: .80rem;
+        line-height: 1.46;
+      }
+
+      .project ul,
+      .job ul {
+        font-size: .785rem;
+        line-height: 1.44;
+      }
+
+      .project {
+        margin-bottom: 11px;
+      }
+
+      .job {
+        margin-bottom: 10px;
+      }
+
+      .section-title {
+        margin-bottom: 10px;
       }
     }
 
@@ -343,13 +460,25 @@
         <h2>Habilidades Técnicas</h2>
         <ul class="skills-list">
           <li class="skill-item">
+            <span class="label">PHP / Apps Server‑Rendered</span>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="width:94%"></div>
+            </div>
+          </li>
+          <li class="skill-item">
             <span class="label">Next.js / React</span>
             <div class="skill-bar">
               <div class="skill-bar-fill" style="width:92%"></div>
             </div>
           </li>
           <li class="skill-item">
-            <span class="label">TypeScript</span>
+            <span class="label">TypeScript / Node.js</span>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="width:90%"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="label">SQL — PostgreSQL / MySQL / SQLite</span>
             <div class="skill-bar">
               <div class="skill-bar-fill" style="width:88%"></div>
             </div>
@@ -361,9 +490,9 @@
             </div>
           </li>
           <li class="skill-item">
-            <span class="label">Supabase / PostgreSQL</span>
+            <span class="label">C# / .NET y Escritorio WPF</span>
             <div class="skill-bar">
-              <div class="skill-bar-fill" style="width:82%"></div>
+              <div class="skill-bar-fill" style="width:80%"></div>
             </div>
           </li>
           <li class="skill-item">
@@ -373,15 +502,9 @@
             </div>
           </li>
           <li class="skill-item">
-            <span class="label">Docker</span>
+            <span class="label">Docker / CI&nbsp;y&nbsp;CD</span>
             <div class="skill-bar">
-              <div class="skill-bar-fill" style="width:75%"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <span class="label">JavaScript (Algoritmos)</span>
-            <div class="skill-bar">
-              <div class="skill-bar-fill" style="width:88%"></div>
+              <div class="skill-bar-fill" style="width:82%"></div>
             </div>
           </li>
         </ul>
@@ -391,11 +514,19 @@
       <div class="sidebar-section">
         <h2>Stack &amp; Herramientas</h2>
         <div class="tag-list">
+          <span class="tag">PHP 8.2</span>
+          <span class="tag">C# / .NET 8</span>
+          <span class="tag">WPF + WebView2</span>
           <span class="tag">Next.js 15/16</span>
           <span class="tag">React 19</span>
+          <span class="tag">Astro 6</span>
           <span class="tag">TypeScript</span>
+          <span class="tag">Node.js</span>
           <span class="tag">Python 3.11</span>
           <span class="tag">FastAPI</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">MariaDB / MySQL</span>
+          <span class="tag">SQLite</span>
           <span class="tag">Supabase</span>
           <span class="tag">Tailwind CSS</span>
           <span class="tag">Vite</span>
@@ -404,8 +535,12 @@
           <span class="tag">Vercel</span>
           <span class="tag">Railway</span>
           <span class="tag">GitHub Actions</span>
-          <span class="tag">Playwright</span>
+          <span class="tag">Inno Setup</span>
+          <span class="tag">Stripe</span>
+          <span class="tag">Anthropic API</span>
           <span class="tag">Google Gemini</span>
+          <span class="tag">Playwright</span>
+          <span class="tag">vitest / pytest / xUnit</span>
           <span class="tag">JWT / Auth</span>
           <span class="tag">OCR / pandas</span>
         </div>
@@ -439,19 +574,116 @@
       <section class="profile">
         <h2 class="section-title">Perfil Profesional</h2>
         <p>
-          Desarrollador Full‑Stack con experiencia en la construcción de plataformas web de producción que combinan
-          frontends modernos con microservicios robustos. Especializado en Next.js, React y Python/FastAPI, con amplio
-          dominio de Supabase, autenticación basada en JWT y despliegues en la nube (Vercel, Railway). Apasionado por
-          resolver problemas reales de negocio mediante software bien estructurado, seguro y escalable. Capacidad
-          demostrada para diseñar arquitecturas de extremo a extremo, desde la base de datos hasta la interfaz de
-          usuario,
-          incluyendo integraciones de IA generativa y procesamiento automatizado de documentos.
+          Desarrollador Full‑Stack que entrega software de producción de extremo a extremo: escritorio en Windows,
+          servicios en la nube y web. Fundador e ingeniero principal de <strong>Nexus POS</strong>, una plataforma
+          comercial de punto de venta en uso productivo real, donde soy responsable de todas las capas: un servidor de
+          aplicación PHP embebido dentro de un lanzador WPF en .NET&nbsp;8, una capa de datos de doble motor
+          SQLite/MariaDB, operación multi‑caja en LAN con degradación sin conexión, y un backend de licenciamiento,
+          pagos e IA en TypeScript sobre Vercel, Railway y Supabase. Con el mismo dominio del stack web moderno
+          —Next.js, React, Astro, Python/FastAPI— y una fuerte inclinación por sistemas probados, seguros y con
+          pipelines de release automatizados.
         </p>
+      </section>
+
+      <!-- Experiencia Profesional -->
+      <section>
+        <h2 class="section-title">Experiencia Profesional</h2>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-role">Fundador y Desarrollador Principal — Nexus POS</span>
+            <span class="job-dates">2025 – Actualidad</span>
+          </div>
+          <p class="job-org">Plataforma multi‑vertical de punto de venta para comercio minorista</p>
+          <ul>
+            <li>Arquitecto único e ingeniero principal de un POS comercial en <strong>instalaciones productivas
+                reales</strong>, configurable para <strong>14 giros de negocio</strong>: aplicación de escritorio,
+              servicio de licenciamiento en la nube, instalador y sitio de marketing.</li>
+            <li>Responsable del pipeline de release completo y automatizado: incremento de versión, compilación,
+              sellado de integridad, generación del instalador, publicación en la nube y verificación del canal de
+              entrega — <strong>108 versiones liberadas</strong>.</li>
+            <li>Construí la disciplina de ingeniería del producto: <strong>383 archivos de pruebas</strong> en cinco
+              ejecutores (pytest, xUnit, node:test, bash y PHP) y <strong>5 flujos de CI</strong>, con un simulacro
+              nocturno de falla en LAN y una sonda diaria que detecta un canal de actualización caído antes que el
+              cliente.</li>
+            <li>También desarrollé dos productos complementarios sobre el mismo núcleo: un vertical para restaurantes
+              (servicio a mesa y pantalla de cocina) y un complemento de contabilidad de partida doble con cuadre
+              forzado en escritura.</li>
+            <li>Entrega directa a clientes: levantamiento de requerimientos, migración de datos desde sistemas
+              heredados, despliegue en sitio y soporte continuo.</li>
+          </ul>
+        </div>
       </section>
 
       <!-- Proyectos Destacados -->
       <section>
         <h2 class="section-title">Proyectos Destacados</h2>
+
+        <!-- Nexus POS -->
+        <div class="project">
+          <div class="project-header">
+            <span class="project-name"><a href="https://www.nexuspos.com.mx" target="_blank"
+                rel="noopener noreferrer">Nexus POS — Plataforma de Escritorio</a></span>
+            <span class="project-stack">PHP 8.2 · C#/.NET 8 · WPF + WebView2 · SQLite / MariaDB · Inno Setup ·
+              Astro 6</span>
+          </div>
+          <p>
+            Plataforma de punto de venta para comercio pequeño y mediano, distribuida como aplicación de Windows sin
+            dependencias y configurable a 14 giros de negocio.
+          </p>
+          <ul>
+            <li>Un lanzador WPF en .NET&nbsp;8 autocontenido hospeda WebView2 como capa de interfaz y supervisa un
+              servidor PHP embebido: limpieza de procesos huérfanos, túnel HTTPS para acceso móvil, respaldos
+              automáticos y orquestación de actualizaciones, sin que el cliente instale ningún runtime.</li>
+            <li>Capa de datos de doble motor: un mismo cuerpo de SQL corre sobre SQLite (instalaciones portátiles) y
+              MariaDB (multi‑caja) mediante una subclase de PDO que traduce el dialecto en tiempo de ejecución — un
+              esquema de <strong>60 tablas</strong> con <strong>36 migraciones idempotentes de auto‑reparación</strong>
+              que reparan instalaciones antiguas sin un ejecutor de migraciones.</li>
+            <li>Contabilidad por libro de eventos para inventario, cuentas por cobrar y por pagar, con un único punto
+              de escritura, que reemplazó <strong>14 cálculos de saldo divergentes</strong> —dos con errores en
+              producción—. Las reversas se modelan como eventos nuevos marcados, nunca como borrados.</li>
+            <li>Operación multi‑caja en LAN: varias cajas contra una sola base de datos, con espejo local y una
+              compuerta de degradación que permite seguir vendiendo cuando el servidor se cae, verificada por una
+              prueba de extremo a extremo que apaga el servidor a mitad de la corrida.</li>
+            <li><strong>201 permisos granulares</strong> sobre 4 roles mediante un mapa de 144 entradas de página a
+              permiso; toda acción que afecte precios está restringida y queda registrada en bitácora de auditoría.
+            </li>
+            <li>Sitio de marketing en nexuspos.com.mx — Astro&nbsp;6 con islas de React&nbsp;19 y Tailwind&nbsp;v4, con
+              alta de prueba autoservicio, checkout de Stripe, descargas restringidas, analítica propia sin cookies y
+              un asistente de IA en streaming endurecido contra inyección de prompts.</li>
+          </ul>
+        </div>
+
+        <!-- Infraestructura de Nube y Licenciamiento -->
+        <div class="project">
+          <div class="project-header">
+            <span class="project-name">Infraestructura de Nube y Licenciamiento de Nexus</span>
+            <span class="project-stack">TypeScript 5.8 · Node 20 · Vercel · Railway · Supabase · Stripe ·
+              Anthropic / NVIDIA NIM</span>
+          </div>
+          <p>
+            El backend que vende, licencia, actualiza y da soporte a cada instalación de Nexus en campo.
+          </p>
+          <ul>
+            <li><strong>31 endpoints HTTP</strong> sobre un despliegue híbrido: funciones serverless en Vercel más un
+              servidor Node de larga vida en Railway, con webhooks de base de datos de Supabase como disparador de
+              trabajos asíncronos. El ruteo, el parseo de cuerpo, los topes de tamaño, CORS y el limitador de tasa
+              están escritos a mano, sin framework HTTP.</li>
+            <li>Servicio de licenciamiento y habilitación por equipo: tres niveles de venta sobre un catálogo de 12
+              módulos más complementos a la carta, donde el conjunto vigente siempre se deriva de un artefacto firmado,
+              nunca de datos que el cliente pueda escribir.</li>
+            <li>Canal de actualización firmado con una compuerta de release que distingue «ya estás al día» de «el
+              canal está muerto», dos condiciones que de otro modo devuelven el mismo HTTP 204 y que una vez detuvieron
+              un release completo en silencio.</li>
+            <li>Pagos con Stripe (Checkout y webhooks con verificación de firma) y Conekta, cubriendo compras únicas y
+              suscripciones recurrentes.</li>
+            <li>Conmutación por falla entre dos proveedores de IA (NVIDIA NIM → Anthropic) detrás de un adaptador
+              bidireccional de payload, para que el resto del código hable un solo dialecto; endpoints consolidados en
+              routers catch‑all para caber en el tope de 12 funciones de la plataforma.</li>
+            <li><strong>450 casos de prueba</strong> sobre una capa de rutas con inyección de dependencias que corre
+              sin red y sin base de datos.</li>
+          </ul>
+        </div>
 
         <!-- 3ZG Tool Nest -->
         <div class="project">
@@ -494,7 +726,7 @@
         </div>
 
         <!-- Aunt Sarah's Bakery -->
-        <div class=" project">
+        <div class="project">
           <div class="project-header">
             <span class="project-name"><a href="https://aunt-sarahs-bakery.vercel.app/" target="_blank" rel="noopener noreferrer">Aunt Sarah's Bakery &amp; Chef Services</a></span>
             <span class="project-stack">React 19 · TypeScript · Vite · Tailwind CSS · Google Gemini ·
@@ -531,7 +763,9 @@
           como asistente de codificación por terminal, <strong>GitHub Actions</strong> para pipelines de CI/CD,
           <strong>Docker&nbsp;/ Docker Compose</strong> para entornos reproducibles, y <strong>Vercel&nbsp;/
             Railway</strong>
-          para despliegues continuos con zero-downtime.
+          para despliegues continuos con zero-downtime. En Nexus esto se extiende a un <strong>pipeline de release
+            completamente automatizado</strong> cuyas compuertas de verificación abortan el release antes que entregar
+          un canal roto.
         </p>
       </section>
 
